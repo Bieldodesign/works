@@ -577,6 +577,7 @@ a.case-card { display: grid; color: inherit; text-decoration: none; }
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  align-items: flex-start;
 }
 
 /* SELECTED WORKS */
@@ -1328,7 +1329,7 @@ body.cursor-hover #cursor-label { opacity: 1; }
   #about { grid-template-columns: 1fr; }
   .about-left { border-right: none; border-bottom: var(--border); }
   .case-card { grid-template-columns: 60px 1fr; }
-  .case-card.featured { grid-template-columns: 60px 1fr; }
+  .case-card.featured { grid-template-columns: 60px 1fr; min-height: 280px; }
   .case-card .case-meta { display: none; }
   .about-axes { grid-template-columns: 1fr; }
   .gallery-grid { grid-template-columns: 1fr 1fr; }
