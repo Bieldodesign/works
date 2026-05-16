@@ -1,0 +1,2300 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Spline+Sans+Mono:ital,wght@0,300..700;1,300..700&display=swap" rel="stylesheet">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Gabriel Mengável — UX & Product Designer</title>
+<style>
+@font-face { font-family: 'Desconexa'; src: url('data:font/otf;base64,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') format('opentype'); font-weight: normal; font-style: normal; }
+
+:root {
+  --yellow: #FFE338;
+  --coral: #E84B35;
+  --dark: #0D0D0D;
+  --warm-white: #F5F0E8;
+  --mid: #1A1A1A;
+  --muted: #5C5C5C;
+  --border: 2px solid #0D0D0D;
+  --font-display: 'Desconexa', 'Arial Black', sans-serif;
+  --font-body: 'Spline Sans Mono', 'DM Mono', 'Courier New', monospace;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  background: var(--warm-white);
+  color: var(--dark);
+  font-family: var(--font-body);
+  font-size: 14px;
+  line-height: 1.6;
+  cursor: crosshair;
+}
+
+a { color: inherit; text-decoration: none; }
+
+/* GRID OVERLAY */
+body::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  background-image:
+    linear-gradient(rgba(13,13,13,0.04) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(13,13,13,0.04) 1px, transparent 1px);
+  background-size: 40px 40px;
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* NAV */
+nav {
+  position: fixed;
+  top: 0; left: 0; right: 0;
+  z-index: 100;
+  background: var(--yellow);
+  border-bottom: var(--border);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 40px;
+  height: 52px;
+}
+
+.nav-logo {
+  font-family: var(--font-display);
+  font-size: 18px;
+  letter-spacing: -0.02em;
+  text-transform: uppercase;
+}
+
+.nav-links {
+  display: flex;
+  gap: 0;
+  list-style: none;
+}
+
+.nav-links li a {
+  display: block;
+  padding: 16px 20px;
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  border-left: 1px solid rgba(13,13,13,0.2);
+  transition: background 0.1s;
+}
+
+.nav-links li a:hover { background: rgba(13,13,13,0.08); }
+
+/* HERO */
+#hero {
+  min-height: 100vh;
+  padding-top: 52px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  border-bottom: var(--border);
+  position: relative;
+}
+
+.hero-left {
+  padding: 80px 60px 60px;
+  border-right: var(--border);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.hero-eyebrow {
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  color: var(--muted);
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 48px;
+}
+
+.hero-eyebrow::before {
+  content: '';
+  display: block;
+  width: 32px;
+  height: 1px;
+  background: var(--muted);
+}
+
+.hero-name {
+  font-family: var(--font-display);
+  font-size: clamp(72px, 9vw, 128px);
+  line-height: 0.88;
+  text-transform: uppercase;
+  letter-spacing: -0.04em;
+}
+
+.hero-name span {
+  display: block;
+}
+
+.hero-name .accent {
+  color: var(--coral);
+  -webkit-text-stroke: 0px;
+}
+
+.hero-name .outline {
+  -webkit-text-stroke: 2px var(--dark);
+  color: transparent;
+}
+
+.hero-tagline {
+  font-size: 13px;
+  line-height: 1.7;
+  max-width: 360px;
+  color: var(--muted);
+  margin-top: 40px;
+}
+
+.hero-bottom {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 48px;
+  border-top: 1px solid rgba(13,13,13,0.15);
+  margin-top: auto;
+}
+
+.hero-cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  background: var(--dark);
+  color: var(--warm-white);
+  padding: 14px 24px;
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  transition: background 0.15s, transform 0.1s;
+}
+
+.hero-cta:hover {
+  background: var(--coral);
+  transform: translate(-2px, -2px);
+}
+
+.hero-meta {
+  font-size: 11px;
+  color: var(--muted);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  text-align: right;
+  line-height: 1.9;
+}
+
+/* HERO RIGHT — DECORATIVE */
+.hero-right {
+  background: var(--dark);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 60px;
+  position: relative;
+  overflow: hidden;
+}
+
+.hero-shape {
+  position: absolute;
+  top: -80px; right: -80px;
+  width: 320px; height: 320px;
+  border-radius: 50%;
+  background: var(--yellow);
+  opacity: 0.12;
+}
+
+.hero-shape-2 {
+  position: absolute;
+  bottom: 80px; left: 40px;
+  width: 160px; height: 160px;
+  border-radius: 50%;
+  background: var(--coral);
+  opacity: 0.25;
+}
+
+.hero-disciplines {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  z-index: 1;
+}
+
+.hero-disciplines li {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 18px 0;
+  border-bottom: 1px solid rgba(245,240,232,0.1);
+  color: var(--warm-white);
+  font-size: 13px;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  opacity: 0.7;
+  transition: opacity 0.2s, padding-left 0.2s;
+}
+
+.hero-disciplines li:hover {
+  opacity: 1;
+  padding-left: 12px;
+}
+
+.hero-disciplines li span {
+  font-size: 10px;
+  opacity: 0.4;
+}
+
+.hero-year {
+  font-family: var(--font-display);
+  font-size: 120px;
+  color: rgba(245,240,232,0.05);
+  position: absolute;
+  bottom: -20px;
+  right: 20px;
+  line-height: 1;
+  pointer-events: none;
+}
+
+/* SECTION LABEL */
+.section-label {
+  font-size: 10px;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  color: var(--muted);
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 48px;
+}
+
+.section-label::before {
+  content: attr(data-num);
+  font-family: var(--font-display);
+  font-size: 13px;
+  color: var(--coral);
+  min-width: 24px;
+}
+
+/* ABOUT */
+#about {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  border-bottom: var(--border);
+}
+
+.about-left {
+  padding: 80px 60px;
+  border-right: var(--border);
+  background: var(--yellow);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.about-title {
+  font-family: var(--font-display);
+  font-size: 64px;
+  text-transform: uppercase;
+  line-height: 0.9;
+  letter-spacing: -0.03em;
+}
+
+.about-left-meta {
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--muted);
+  line-height: 2;
+}
+
+.about-right {
+  padding: 80px 80px;
+}
+
+.about-bio {
+  font-size: 22px;
+  line-height: 1.55;
+  max-width: 620px;
+  margin-bottom: 60px;
+  font-family: var(--font-body);
+}
+
+.about-bio strong {
+  font-weight: 700;
+}
+
+.about-axes {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0;
+  border: var(--border);
+}
+
+.axis {
+  padding: 32px 28px;
+  border-right: var(--border);
+}
+
+.axis:last-child { border-right: none; }
+
+.axis-num {
+  font-family: var(--font-display);
+  font-size: 48px;
+  color: rgba(13,13,13,0.08);
+  line-height: 1;
+  margin-bottom: 16px;
+}
+
+.axis-title {
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  font-weight: 700;
+  margin-bottom: 12px;
+}
+
+.axis-items {
+  font-size: 12px;
+  color: var(--muted);
+  line-height: 2;
+  list-style: none;
+}
+
+.axis-items li::before {
+  content: '→ ';
+  color: var(--coral);
+}
+
+/* CASE STUDIES */
+#work {
+  border-bottom: var(--border);
+}
+
+.work-header {
+  padding: 60px 60px 48px;
+  border-bottom: var(--border);
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+}
+
+.work-title {
+  font-family: var(--font-display);
+  font-size: 64px;
+  text-transform: uppercase;
+  line-height: 0.9;
+  letter-spacing: -0.03em;
+}
+
+.work-count {
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: var(--muted);
+}
+
+/* CASE STUDY CARD */
+.case-card {
+  display: grid;
+  grid-template-columns: 80px 1fr 1fr;
+  border-bottom: var(--border);
+  min-height: 280px;
+  transition: background 0.15s;
+}
+a.case-card { display: grid; color: inherit; text-decoration: none; }
+
+.case-card { position: relative; overflow: hidden; }
+
+.case-num-col {
+  border-right: var(--border);
+  padding: 32px 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.case-num {
+  font-family: var(--font-display);
+  font-size: 32px;
+  color: rgba(13,13,13,0.15);
+  writing-mode: vertical-rl;
+  transform: rotate(180deg);
+  letter-spacing: 0.1em;
+}
+
+.case-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: var(--coral);
+}
+
+.case-body {
+  padding: 48px 60px;
+  border-right: var(--border);
+}
+
+.case-tag {
+  display: inline-block;
+  font-size: 10px;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  border: 1px solid var(--muted);
+  padding: 4px 10px;
+  color: var(--muted);
+  margin-bottom: 20px;
+}
+
+.case-title {
+  font-family: var(--font-display);
+  font-size: 42px;
+  text-transform: uppercase;
+  line-height: 0.92;
+  letter-spacing: -0.02em;
+  margin-bottom: 24px;
+}
+
+.case-desc {
+  font-size: 13px;
+  line-height: 1.75;
+  color: var(--muted);
+  max-width: 420px;
+}
+
+.case-meta {
+  padding: 48px 60px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  position: relative;
+  overflow: hidden;
+}
+
+/* bg image layer on case-meta */
+.case-meta::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image: var(--card-bg, none);
+  background-size: cover;
+  background-position: center;
+  filter: grayscale(100%) brightness(0.35) contrast(1.1);
+  opacity: 0;
+  transition: opacity 0.45s ease;
+  z-index: 0;
+}
+
+/* tint overlay on case-meta */
+.case-meta::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  transition: opacity 0.45s ease;
+  z-index: 1;
+  mix-blend-mode: screen;
+}
+
+.case-card[data-tint="yellow"] .case-meta::after { background: rgba(200, 155, 0, 0.55); }
+.case-card[data-tint="coral"]  .case-meta::after { background: rgba(180, 40, 20, 0.55); }
+
+.case-card[data-tint]:hover .case-meta::before { opacity: 1; }
+.case-card[data-tint]:hover .case-meta::after  { opacity: 1; }
+
+/* text stays above pseudo-layers */
+.case-meta > * { position: relative; z-index: 2; }
+
+/* text colour flip when hovered */
+.case-card[data-tint]:hover .case-meta .meta-item-label,
+.case-card[data-tint]:hover .case-meta .meta-item-value { color: var(--warm-white); }
+
+.case-card[data-tint]:hover .case-meta .case-link {
+  border-color: var(--warm-white);
+  color: var(--warm-white);
+}
+
+.case-meta-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px 16px;
+}
+
+.meta-item-label {
+  font-size: 10px;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: var(--muted);
+  margin-bottom: 4px;
+}
+
+.meta-item-value {
+  font-size: 12px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.case-link {
+  align-self: flex-end;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  border: var(--border);
+  padding: 12px 20px;
+  background: transparent;
+  transition: background 0.12s, color 0.12s, transform 0.1s;
+  cursor: pointer;
+}
+
+.case-link:hover {
+  background: var(--dark);
+  color: var(--warm-white);
+  transform: translate(-2px, -2px);
+}
+
+/* FEATURED CARD — URUCÚ */
+.case-card.featured {
+  grid-template-columns: 80px 1fr 1fr;
+  min-height: 400px;
+}
+
+/* featured uses case-body as left col, case-meta as right col — same as regular */
+.case-card.featured .case-body {
+  border-right: var(--border);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+/* SELECTED WORKS */
+#gallery {
+  border-bottom: var(--border);
+}
+
+.gallery-header {
+  padding: 60px 60px 48px;
+  border-bottom: var(--border);
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+}
+
+.gallery-title {
+  font-family: var(--font-display);
+  font-size: 64px;
+  text-transform: uppercase;
+  line-height: 0.9;
+  letter-spacing: -0.03em;
+}
+
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.gallery-item {
+  border-right: var(--border);
+  border-bottom: var(--border);
+  padding: 48px 40px;
+  position: relative;
+  overflow: hidden;
+  transition: color 0.3s;
+}
+
+.gallery-item:nth-child(3n) { border-right: none; }
+.gallery-item:nth-last-child(-n+3) { border-bottom: none; }
+
+/* bg image layer */
+.gallery-item::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image: var(--bg-img);
+  background-size: cover;
+  background-position: center;
+  filter: grayscale(100%) brightness(0.3) contrast(1.1);
+  opacity: 0;
+  transition: opacity 0.4s ease;
+  z-index: 0;
+}
+
+/* tint overlay layer */
+.gallery-item::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  transition: opacity 0.4s ease;
+  z-index: 1;
+  mix-blend-mode: screen;
+}
+
+.gallery-item[data-tint="yellow"]::after  { background: rgba(200, 155, 0, 0.5); }
+.gallery-item[data-tint="coral"]::after   { background: rgba(180, 40, 20, 0.5); }
+
+.gallery-item:hover::before { opacity: 1; }
+.gallery-item:hover::after  { opacity: 1; }
+
+/* text must sit above pseudo-elements */
+.gallery-item > * { position: relative; z-index: 2; }
+
+/* when hovered, flip text to dark for yellow, light for coral */
+.gallery-item[data-tint]:hover .gallery-item-tag,
+.gallery-item[data-tint]:hover .gallery-item-title,
+.gallery-item[data-tint]:hover .gallery-item-desc { color: var(--warm-white); }
+
+/* font-item (dark bg) stays readable */
+.gallery-item.font-item::after { mix-blend-mode: screen; background: rgba(200, 155, 0, 0.45) !important; }
+.gallery-item.font-item:hover .font-specimen { color: var(--warm-white); }
+
+.gallery-item-tag {
+  font-size: 10px;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  color: var(--muted);
+  margin-bottom: 32px;
+}
+
+.gallery-item-title {
+  font-family: var(--font-display);
+  font-size: 28px;
+  text-transform: uppercase;
+  line-height: 1;
+  letter-spacing: -0.01em;
+  margin-bottom: 16px;
+}
+
+.gallery-item-desc {
+  font-size: 12px;
+  color: var(--muted);
+  line-height: 1.7;
+}
+
+
+.gallery-link-arrow {
+  position: absolute;
+  top: 20px;
+  right: 24px;
+  font-size: 20px;
+  opacity: 0;
+  transform: translate(-4px, 4px);
+  transition: opacity 0.2s, transform 0.2s;
+  z-index: 3;
+  line-height: 1;
+}
+
+a.gallery-item:hover .gallery-link-arrow { opacity: 1; transform: translate(0,0); }
+a.gallery-item[data-tint]:hover .gallery-link-arrow { color: var(--warm-white); }
+a.gallery-item.font-item:hover .gallery-link-arrow { color: var(--dark); }
+
+/* Make anchor gallery items behave like divs */
+a.gallery-item { display: block; text-decoration: none; color: inherit; }
+
+/* FONT SPECIMEN */
+.gallery-item.font-item {
+  background: var(--dark);
+  color: var(--warm-white);
+}
+
+.gallery-item.font-item .gallery-item-tag { color: rgba(245,240,232,0.4); }
+.gallery-item.font-item .gallery-item-desc { color: rgba(245,240,232,0.5); }
+
+.font-specimen {
+  font-family: var(--font-display);
+  font-size: 80px;
+  line-height: 0.9;
+  margin-bottom: 20px;
+  letter-spacing: -0.03em;
+  color: var(--warm-white);
+}
+
+/* CONTACT */
+#contact {
+  background: var(--dark);
+  color: var(--warm-white);
+  padding: 80px 60px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 80px;
+  align-items: end;
+}
+
+.contact-title {
+  font-family: var(--font-display);
+  font-size: 96px;
+  text-transform: uppercase;
+  line-height: 0.85;
+  letter-spacing: -0.04em;
+}
+
+.contact-title .hollow {
+  -webkit-text-stroke: 2px var(--warm-white);
+  color: transparent;
+}
+
+.contact-title .coral {
+  color: var(--coral);
+  -webkit-text-stroke: 0;
+}
+
+.contact-links {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+.contact-link {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px 0;
+  border-bottom: 1px solid rgba(245,240,232,0.1);
+  font-size: 13px;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  opacity: 0.6;
+  transition: opacity 0.15s, padding-left 0.15s, color 0.15s;
+}
+
+.contact-link:hover {
+  opacity: 1;
+  padding-left: 16px;
+  color: var(--yellow);
+}
+
+.contact-link span {
+  font-size: 10px;
+  opacity: 0.4;
+  letter-spacing: 0.05em;
+}
+
+.contact-email {
+  font-family: var(--font-display);
+  font-size: 18px;
+  color: var(--yellow);
+  margin-bottom: 48px;
+  text-transform: uppercase;
+  letter-spacing: -0.01em;
+}
+
+.contact-bio-note {
+  font-size: 12px;
+  color: rgba(245,240,232,0.4);
+  line-height: 1.8;
+  max-width: 320px;
+}
+
+/* FOOTER */
+footer {
+  background: var(--dark);
+  color: rgba(245,240,232,0.3);
+  padding: 20px 60px;
+  border-top: 1px solid rgba(245,240,232,0.1);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 10px;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+}
+
+/* SCROLL ANIMATIONS */
+.reveal {
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.reveal.visible {
+  opacity: 1;
+  transform: none;
+}
+
+/* MARQUEE STRIP */
+.marquee-strip {
+  background: var(--coral);
+  color: var(--warm-white);
+  border-top: var(--border);
+  border-bottom: var(--border);
+  overflow: hidden;
+  white-space: nowrap;
+  padding: 12px 0;
+}
+
+.marquee-track {
+  display: inline-block;
+  animation: marquee 22s linear infinite;
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+}
+
+@keyframes marquee {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+
+
+/* LANG TOGGLE */
+#lang-toggle {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  background: var(--dark);
+  color: var(--warm-white);
+  border: none;
+  padding: 7px 14px;
+  font-family: var(--font-body);
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  cursor: none;
+  transition: background 0.15s;
+  margin-left: 20px;
+  flex-shrink: 0;
+}
+#lang-toggle:hover { background: var(--coral); }
+#lang-toggle::before {
+  content: '⌘';
+  font-size: 13px;
+  opacity: 0.5;
+}
+
+
+/* ── INNER PAGES ── */
+#inner-overlay {
+  position: fixed;
+  inset: 0;
+  background: var(--warm-white);
+  z-index: 500;
+  transform: translateY(100%);
+  transition: transform 0.5s cubic-bezier(0.16,1,0.3,1);
+  overflow-y: auto;
+}
+
+#inner-overlay.open {
+  transform: translateY(0);
+}
+
+.inner-nav {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  background: var(--yellow);
+  border-bottom: 2px solid var(--dark);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 60px;
+  height: 52px;
+}
+
+.inner-back {
+  font-family: var(--font-body);
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  background: none;
+  border: none;
+  cursor: none;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: var(--dark);
+  padding: 0;
+  transition: opacity 0.15s;
+}
+.inner-back:hover { opacity: 0.6; }
+
+.inner-breadcrumb {
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  color: var(--muted);
+}
+
+.inner-hero {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  min-height: 420px;
+  border-bottom: 2px solid var(--dark);
+}
+
+.inner-hero-left {
+  padding: 80px 60px;
+  border-right: 2px solid var(--dark);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.inner-hero-right {
+  padding: 80px 60px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  background: var(--dark);
+  color: var(--warm-white);
+}
+
+.inner-category {
+  font-size: 10px;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  color: var(--muted);
+  margin-bottom: 24px;
+}
+
+.inner-title {
+  font-family: var(--font-display);
+  font-size: clamp(56px, 7vw, 96px);
+  text-transform: uppercase;
+  line-height: 0.88;
+  letter-spacing: -0.03em;
+  margin-bottom: 0;
+}
+
+.inner-title .accent { color: var(--coral); }
+.inner-title .hollow {
+  -webkit-text-stroke: 2px var(--dark);
+  color: transparent;
+}
+
+.inner-subtitle {
+  font-size: 13px;
+  line-height: 1.7;
+  color: var(--muted);
+  max-width: 380px;
+  margin-top: 32px;
+}
+
+.inner-meta-row {
+  display: flex;
+  gap: 48px;
+  margin-top: 40px;
+  padding-top: 32px;
+  border-top: 1px solid rgba(13,13,13,0.15);
+}
+
+.inner-meta-block label {
+  display: block;
+  font-size: 10px;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: var(--muted);
+  margin-bottom: 6px;
+}
+
+.inner-meta-block span {
+  font-size: 12px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.inner-hero-right .inner-quote {
+  font-size: 20px;
+  line-height: 1.5;
+  color: var(--warm-white);
+  font-style: italic;
+  margin-bottom: 32px;
+  max-width: 400px;
+}
+
+.inner-hero-right .inner-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.inner-tag {
+  font-size: 10px;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  border: 1px solid rgba(245,240,232,0.3);
+  padding: 5px 12px;
+  color: rgba(245,240,232,0.7);
+}
+
+/* Image gallery strip */
+.inner-img-strip {
+  display: grid;
+  border-bottom: 2px solid var(--dark);
+  overflow: hidden;
+}
+
+.inner-img-strip.cols-2 { grid-template-columns: 1fr 1fr; }
+.inner-img-strip.cols-3 { grid-template-columns: 1fr 1fr 1fr; }
+.inner-img-strip.cols-1 { grid-template-columns: 1fr; }
+
+.inner-img-cell {
+  border-right: 2px solid var(--dark);
+  overflow: hidden;
+  aspect-ratio: 16/10;
+  background: var(--mid);
+  position: relative;
+}
+.inner-img-cell:last-child { border-right: none; }
+.inner-img-cell.tall { aspect-ratio: 4/5; }
+.inner-img-cell.wide { aspect-ratio: 21/9; }
+.inner-img-cell.square { aspect-ratio: 1; }
+
+.inner-img-cell img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.5s ease;
+}
+.inner-img-cell:hover img { transform: scale(1.04); }
+
+.inner-img-cell .cell-label {
+  position: absolute;
+  bottom: 0; left: 0; right: 0;
+  background: var(--yellow);
+  border-top: 2px solid var(--dark);
+  font-size: 9px;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  padding: 6px 12px;
+  font-family: var(--font-body);
+}
+
+/* Text sections */
+.inner-text-section {
+  display: grid;
+  grid-template-columns: 280px 1fr;
+  border-bottom: 2px solid var(--dark);
+}
+
+.inner-text-label {
+  padding: 60px 40px;
+  border-right: 2px solid var(--dark);
+  font-family: var(--font-display);
+  font-size: 36px;
+  text-transform: uppercase;
+  line-height: 0.95;
+  letter-spacing: -0.02em;
+}
+
+.inner-text-body {
+  padding: 60px 60px;
+  font-size: 15px;
+  line-height: 1.75;
+  color: var(--muted);
+  max-width: 640px;
+}
+
+.inner-text-body strong { color: var(--dark); font-weight: 700; }
+
+/* Colour palette strip */
+.inner-palette {
+  display: flex;
+  border-bottom: 2px solid var(--dark);
+}
+
+.inner-swatch {
+  flex: 1;
+  height: 120px;
+  border-right: 2px solid var(--dark);
+  display: flex;
+  align-items: flex-end;
+  padding: 12px 16px;
+  font-size: 10px;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  font-family: var(--font-body);
+}
+.inner-swatch:last-child { border-right: none; }
+
+/* Mockup full-width */
+.inner-fullwidth {
+  border-bottom: 2px solid var(--dark);
+  overflow: hidden;
+}
+
+.inner-fullwidth img {
+  width: 100%;
+  display: block;
+}
+
+/* CTA row */
+.inner-cta-row {
+  padding: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: var(--dark);
+  color: var(--warm-white);
+}
+
+.inner-cta-text {
+  font-family: var(--font-display);
+  font-size: 40px;
+  text-transform: uppercase;
+  line-height: 0.95;
+}
+
+.inner-cta-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  background: var(--yellow);
+  color: var(--dark);
+  border: 2px solid var(--yellow);
+  padding: 16px 32px;
+  font-family: var(--font-body);
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  cursor: none;
+  transition: background 0.15s, color 0.15s;
+  text-decoration: none;
+}
+.inner-cta-btn:hover {
+  background: var(--coral);
+  border-color: var(--coral);
+  color: var(--warm-white);
+}
+
+/* Spec grid */
+.inner-spec-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  border-bottom: 2px solid var(--dark);
+}
+
+.inner-spec {
+  padding: 40px 36px;
+  border-right: 2px solid var(--dark);
+}
+.inner-spec:last-child { border-right: none; }
+
+.inner-spec-num {
+  font-family: var(--font-display);
+  font-size: 56px;
+  line-height: 1;
+  margin-bottom: 8px;
+  color: var(--coral);
+}
+
+.inner-spec-label {
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--muted);
+  line-height: 1.5;
+}
+
+/* Page content hidden initially */
+.inner-page { display: none; }
+.inner-page.active { display: block; }
+
+/* ── CUSTOM CURSOR ── */
+*, *::before, *::after { cursor: none !important; }
+
+#cursor-outer {
+  position: fixed;
+  width: 36px; height: 36px;
+  border: 2px solid var(--dark);
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 9999;
+  transform: translate(-50%, -50%);
+  transition: width 0.2s ease, height 0.2s ease, border-color 0.2s ease, background 0.2s ease;
+  mix-blend-mode: normal;
+}
+
+#cursor-dot {
+  position: fixed;
+  width: 6px; height: 6px;
+  background: var(--coral);
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 10000;
+  transform: translate(-50%, -50%);
+  transition: width 0.1s, height 0.1s;
+}
+
+/* cursor states */
+body.cursor-hover #cursor-outer {
+  width: 60px; height: 60px;
+  background: var(--yellow);
+  border-color: var(--yellow);
+}
+
+body.cursor-hover #cursor-dot {
+  width: 4px; height: 4px;
+}
+
+body.cursor-link #cursor-outer {
+  width: 48px; height: 48px;
+  background: var(--coral);
+  border-color: var(--coral);
+}
+
+#cursor-label {
+  position: fixed;
+  pointer-events: none;
+  z-index: 10001;
+  font-size: 9px;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: var(--dark);
+  font-family: var(--font-body);
+  transform: translate(-50%, -50%);
+  white-space: nowrap;
+  opacity: 0;
+  transition: opacity 0.15s;
+}
+
+body.cursor-hover #cursor-label { opacity: 1; }
+
+/* ── IMAGE PREVIEW ON HOVER ── */
+#img-preview {
+  position: fixed;
+  width: 280px;
+  height: 190px;
+  pointer-events: none;
+  z-index: 9990;
+  border: 2px solid var(--dark);
+  overflow: hidden;
+  opacity: 0;
+  transform: rotate(-2deg) scale(0.92);
+  transition: opacity 0.25s ease, transform 0.25s ease;
+  background: var(--dark);
+}
+
+#img-preview.visible {
+  opacity: 1;
+  transform: rotate(-1.5deg) scale(1);
+}
+
+#img-preview img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  filter: saturate(1.1) contrast(1.05);
+}
+
+#img-preview .preview-label {
+  position: absolute;
+  bottom: 0; left: 0; right: 0;
+  background: var(--yellow);
+  border-top: 2px solid var(--dark);
+  font-size: 9px;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  padding: 6px 10px;
+  font-family: var(--font-body);
+  color: var(--dark);
+}
+
+#img-preview .tint-overlay {
+  position: absolute;
+  inset: 0 0 28px 0;
+  opacity: 1;
+  mix-blend-mode: screen;
+  pointer-events: none;
+  z-index: 1;
+  transition: background 0.2s;
+}
+
+#img-preview img { filter: grayscale(100%) brightness(0.35) contrast(1.1); }
+
+/* case card hover state */
+.case-card[data-preview]:hover .case-num { color: var(--coral); }
+.case-card[data-preview]:hover .case-title { -webkit-text-stroke: 0; }
+
+/* RESPONSIVE */
+@media (max-width: 900px) {
+  #hero { grid-template-columns: 1fr; }
+  .hero-right { display: none; }
+  #about { grid-template-columns: 1fr; }
+  .about-left { border-right: none; border-bottom: var(--border); }
+  .case-card { grid-template-columns: 60px 1fr; }
+  .case-card .case-meta { display: none; }
+  .about-axes { grid-template-columns: 1fr; }
+  .gallery-grid { grid-template-columns: 1fr 1fr; }
+  #contact { grid-template-columns: 1fr; }
+  .contact-title { font-size: 64px; }
+}
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <a href="#hero" class="nav-logo">Gabriel Mengável</a>
+  <ul class="nav-links">
+    <li><a href="#about" data-pt="Sobre" data-en="About">Sobre</a></li>
+    <li><a href="#work" data-pt="Work" data-en="Work">Work</a></li>
+    <li><a href="#gallery" data-pt="Craft" data-en="Craft">Craft</a></li>
+    <li><a href="#contact" data-pt="Contacto" data-en="Contact">Contacto</a></li>
+  </ul>
+  <button id="lang-toggle" onclick="toggleLang()" aria-label="Switch language">
+    <span id="lang-label">EN</span>
+  </button>
+</nav>
+
+<!-- HERO -->
+<section id="hero">
+  <div class="hero-left reveal">
+    <div>
+      <div class="hero-eyebrow" data-pt="UX & Product Designer · Vila Real, PT" data-en="UX & Product Designer · Vila Real, Portugal">UX & Product Designer · Vila Real, PT</div>
+      <h1 class="hero-name">
+        <span>Gabriel</span>
+        <span>Menga-</span>
+        <span class="accent">vel</span>
+        <span class="outline">Palaoro</span>
+      </h1>
+      <p class="hero-tagline" data-pt="Designer formado entre o analógico e o digital — do editorial ao produto, da identidade visual à ergonomia de sistemas complexos. Mestrando em Multimédia, UTAD." data-en="Designer shaped between analogue and digital — from editorial to product, from visual identity to the ergonomics of complex systems. MSc in Multimedia, UTAD.">
+        Designer formado entre o analógico e o digital — do editorial ao produto, da identidade visual à ergonomia de sistemas complexos. Mestrando em Multimédia, UTAD.
+      </p>
+    </div>
+    <div class="hero-bottom">
+      <a href="#work" class="hero-cta" data-pt="Ver portfólio →" data-en="View portfolio →">Ver portfólio →</a>
+      <div class="hero-meta" data-pt="UX Research<br>Product Design<br>HCI · Ergonomia Digital" data-en="UX Research<br>Product Design<br>HCI · Digital Ergonomics">
+        UX Research<br>
+        Product Design<br>
+        HCI · Ergonomia Digital
+      </div>
+    </div>
+  </div>
+  <div class="hero-right">
+    <div class="hero-shape"></div>
+    <div class="hero-shape-2"></div>
+    <ul class="hero-disciplines">
+      <li data-pt="UX Research" data-en="UX Research">UX Research <span>→</span></li>
+      <li data-pt="Product Design" data-en="Product Design">Product Design <span>→</span></li>
+      <li data-pt="Design Editorial" data-en="Editorial Design">Design Editorial <span>→</span></li>
+      <li data-pt="Identidade Visual" data-en="Visual Identity">Identidade Visual <span>→</span></li>
+      <li data-pt="Type Design" data-en="Type Design">Type Design <span>→</span></li>
+      <li data-pt="Front-end · Low-code" data-en="Front-end · Low-code">Front-end · Low-code <span>→</span></li>
+    </ul>
+    <div class="hero-year">26</div>
+  </div>
+</section>
+
+<!-- MARQUEE -->
+<div class="marquee-strip">
+  <div id="marquee-track" class="marquee-track"
+    data-pt="UX Research &nbsp;·&nbsp; Product Design &nbsp;·&nbsp; HCI &nbsp;·&nbsp; Ergonomia Digital &nbsp;·&nbsp; Design Editorial &nbsp;·&nbsp; Type Design &nbsp;·&nbsp; FlutterFlow &nbsp;·&nbsp; Figma &nbsp;·&nbsp; Mestrado UTAD &nbsp;·&nbsp; Brasil &amp; Portugal &nbsp;·&nbsp;"
+    data-en="UX Research &nbsp;·&nbsp; Product Design &nbsp;·&nbsp; HCI &nbsp;·&nbsp; Digital Ergonomics &nbsp;·&nbsp; Editorial Design &nbsp;·&nbsp; Type Design &nbsp;·&nbsp; FlutterFlow &nbsp;·&nbsp; Figma &nbsp;·&nbsp; MSc UTAD &nbsp;·&nbsp; Brazil &amp; Portugal &nbsp;·&nbsp;">
+    UX Research &nbsp;·&nbsp; Product Design &nbsp;·&nbsp; HCI &nbsp;·&nbsp; Ergonomia Digital &nbsp;·&nbsp; Design Editorial &nbsp;·&nbsp; Type Design &nbsp;·&nbsp; FlutterFlow &nbsp;·&nbsp; Figma &nbsp;·&nbsp; Mestrado UTAD &nbsp;·&nbsp; Brasil &amp; Portugal &nbsp;·&nbsp;
+    UX Research &nbsp;·&nbsp; Product Design &nbsp;·&nbsp; HCI &nbsp;·&nbsp; Ergonomia Digital &nbsp;·&nbsp; Design Editorial &nbsp;·&nbsp; Type Design &nbsp;·&nbsp; FlutterFlow &nbsp;·&nbsp; Figma &nbsp;·&nbsp; Mestrado UTAD &nbsp;·&nbsp; Brasil &amp; Portugal &nbsp;·&nbsp;
+  </div>
+</div>
+
+<!-- ABOUT -->
+<section id="about">
+  <div class="about-left reveal">
+    <div class="section-label" data-num="00" data-pt="Sobre" data-en="About">Sobre</div>
+    <div class="about-title" data-pt="Sobre<br>Mim" data-en="About<br>Me">Sobre<br>Mim</div>
+    <div class="about-left-meta">
+      <span data-pt="Gabriel Mengável Gomes Palaoro — Vila Real, Portugal" data-en="Gabriel Mengável Gomes Palaoro — Vila Real, Portugal">Gabriel Mengável<br>Gomes Palaoro<br>— Vila Real, Portugal</span><br>bieldodesign@gmail.com
+    </div>
+  </div>
+  <div class="about-right reveal">
+    <p class="about-bio" data-pt="Designer com background em <strong>comunicação visual, editoração e UX</strong> — formado pela UFES (Brasil) e a completar mestrado em Multimédia pela UTAD (Portugal). A minha prática cruza <strong>HCI, ergonomia digital e sistemas de produto</strong> com raízes no design gráfico analógico." data-en="Designer with a background in <strong>visual communication, editorial design and UX</strong> — graduated from UFES (Brazil), completing an MSc in Multimedia at UTAD (Portugal). My practice crosses <strong>HCI, digital ergonomics and product systems</strong> with roots in analogue graphic design.">
+      Designer com background em <strong>comunicação visual, editoração e UX</strong> — formado pela UFES (Brasil) e a completar mestrado em Multimédia pela UTAD (Portugal). A minha prática cruza <strong>HCI, ergonomia digital e sistemas de produto</strong> com raízes no design gráfico analógico.
+    </p>
+    <div class="about-axes">
+      <div class="axis">
+        <div class="axis-num">01</div>
+        <div class="axis-title" data-pt="Systems" data-en="Systems">Systems</div>
+        <ul class="axis-items">
+          <li data-pt="UX Research" data-en="UX Research">UX Research</li>
+          <li data-pt="Product Design" data-en="Product Design">Product Design</li>
+          <li data-pt="HCI &amp; Ergonomia" data-en="HCI &amp; Ergonomics">HCI &amp; Ergonomia</li>
+          <li data-pt="Low-code · Figma" data-en="Low-code · Figma">Low-code · Figma</li>
+        </ul>
+      </div>
+      <div class="axis">
+        <div class="axis-num">02</div>
+        <div class="axis-title" data-pt="Communication" data-en="Communication">Communication</div>
+        <ul class="axis-items">
+          <li data-pt="Social Media" data-en="Social Media">Social Media</li>
+          <li data-pt="Identidade Visual" data-en="Visual Identity">Identidade Visual</li>
+          <li data-pt="Web Design" data-en="Web Design">Web Design</li>
+          <li data-pt="Produção Gráfica" data-en="Graphic Production">Produção Gráfica</li>
+        </ul>
+      </div>
+      <div class="axis">
+        <div class="axis-num">03</div>
+        <div class="axis-title" data-pt="Craft" data-en="Craft">Craft</div>
+        <ul class="axis-items">
+          <li data-pt="Design Editorial" data-en="Editorial Design">Design Editorial</li>
+          <li data-pt="Type Design" data-en="Type Design">Type Design</li>
+          <li data-pt="Ilustração" data-en="Illustration">Ilustração</li>
+          <li data-pt="Front-end" data-en="Front-end">Front-end</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- WORK -->
+<section id="work">
+  <div class="work-header reveal">
+    <div>
+      <div class="section-label" data-num="01" data-pt="Case Studies" data-en="Case Studies">Case Studies</div>
+      <div class="work-title" data-pt="Selected<br>Work" data-en="Selected<br>Work">Selected<br>Work</div>
+    </div>
+    <div class="work-count" data-pt="4 projetos" data-en="4 projects">4 projetos</div>
+  </div>
+
+  <!-- CASE 1: URUCÚ -->
+  <a href="urucú.html" class="case-card featured reveal" data-preview="assets/urucu_orgs.png" data-label="Uruçú App" data-tint="yellow" style="--card-bg: url('assets/urucu_tags.png');">
+    <div class="case-num-col">
+      <div class="case-num">01</div>
+      <div class="case-dot"></div>
+    </div>
+    <div class="case-body">
+      <div class="case-tag" data-pt="Mobile App · Rede Social Interna · UX Research" data-en="Mobile App · Internal Social Network · UX Research">Mobile App · Rede Social Interna · UX Research</div>
+      <h2 class="case-title" data-pt="Uruçú<br>App" data-en="Uruçú<br>App">Uruçú<br>App</h2>
+      <p class="case-desc" data-pt="Rede social interna para fomentar a inovação colaborativa entre colaboradores de uma empresa. O nome Uruçú cria identidade e pertença — do discovery ao sistema visual, com foco em engajamento e cultura de inovação." data-en="Internal social network to foster collaborative innovation among a company's employees. The Uruçú name builds identity and belonging — from discovery to the visual system, focused on engagement and innovation culture.">
+        Rede social interna para fomentar a inovação colaborativa entre colaboradores de uma empresa. O nome Uruçú cria identidade e pertença — do discovery ao sistema visual, com foco em engajamento e cultura de inovação.
+      </p>
+    </div>
+    <div class="case-meta">
+      <div class="case-meta-grid">
+        <div>
+          <div class="meta-item-label" data-pt="Contexto" data-en="Context">Contexto</div>
+          <div class="meta-item-value" data-pt="Proj. Académico" data-en="Academic Project">Proj. Académico</div>
+        </div>
+        <div>
+          <div class="meta-item-label" data-pt="Plataforma" data-en="Platform">Plataforma</div>
+          <div class="meta-item-value">iOS · Android</div>
+        </div>
+        <div>
+          <div class="meta-item-label">Tools</div>
+          <div class="meta-item-value">Figma</div>
+        </div>
+        <div>
+          <div class="meta-item-label" data-pt="Disciplinas" data-en="Disciplines">Disciplinas</div>
+          <div class="meta-item-value">UX · UI · Research</div>
+        </div>
+      </div>
+      <span data-href="https://www.figma.com/community/file/1268341838919470640" class="case-link" data-pt="Ver case study →" data-en="View case study →">Ver case study →</span>
+    </div>
+  </a>
+
+  <!-- CASE 2: 2A CONSULTING -->
+  <a href="2a.html" class="case-card reveal" data-preview="https://images.unsplash.com/photo-1531403009284-440f080d1e12?w=600&q=80" data-label="2A Consulting SI" data-tint="coral" style="--card-bg: url('https://images.unsplash.com/photo-1531403009284-440f080d1e12?w=600&q=80');">
+    <div class="case-num-col">
+      <div class="case-num">02</div>
+      <div class="case-dot"></div>
+    </div>
+    <div class="case-body">
+      <div class="case-tag" data-pt="Web App · B2B · FlutterFlow · UTAD" data-en="Web App · B2B · FlutterFlow · UTAD">Web App · B2B · FlutterFlow · UTAD</div>
+      <h2 class="case-title" data-pt="2A Con-<br>sulting SI" data-en="2A Con-<br>sulting SI">2A Con-<br>sulting SI</h2>
+      <p class="case-desc" data-pt="Plataforma de gestão de projectos para empresa de consultoria IT. Sistema com 4 perfis de utilizador (Admin, GP, TM, DEV), gestão de clientes, projectos, tarefas e indicadores de execução. Desenvolvida com FlutterFlow no contexto do mestrado em Engenharia Informática." data-en="Project management platform for an IT consultancy. System with 4 user profiles (Admin, PM, TM, DEV), managing clients, projects, tasks and execution indicators. Built with FlutterFlow as part of the MSc in Software Engineering.">
+        Plataforma de gestão de projectos para empresa de consultoria IT. Sistema com 4 perfis de utilizador (Admin, GP, TM, DEV), gestão de clientes, projectos, tarefas e indicadores de execução. Desenvolvida com FlutterFlow no contexto do mestrado em Engenharia Informática.
+      </p>
+    </div>
+    <div class="case-meta">
+      <div class="case-meta-grid">
+        <div>
+          <div class="meta-item-label" data-pt="Contexto" data-en="Context">Contexto</div>
+          <div class="meta-item-value" data-pt="Mestrado UTAD" data-en="MSc UTAD">Mestrado UTAD</div>
+        </div>
+        <div>
+          <div class="meta-item-label" data-pt="Plataforma" data-en="Platform">Plataforma</div>
+          <div class="meta-item-value" data-pt="Web Responsiva" data-en="Responsive Web">Web Responsiva</div>
+        </div>
+        <div>
+          <div class="meta-item-label">Tools</div>
+          <div class="meta-item-value">Figma · FlutterFlow</div>
+        </div>
+        <div>
+          <div class="meta-item-label" data-pt="Disciplinas" data-en="Disciplines">Disciplinas</div>
+          <div class="meta-item-value">UX · IA · Low-code</div>
+        </div>
+      </div>
+      <span class="case-link" style="opacity:.45;cursor:default;" data-pt="Em desenvolvimento →" data-en="In development →">Em desenvolvimento →</span>
+    </div>
+  </a>
+
+  <!-- CASE 3: MOTORBIKE -->
+  <a href="motorbike.html" class="case-card reveal" data-preview="assets/moto_hero.png" data-label="Motorbike Dashboard" data-tint="yellow" style="--card-bg: url('assets/moto_hero.png');">
+    <div class="case-num-col">
+      <div class="case-num">03</div>
+      <div class="case-dot"></div>
+    </div>
+    <div class="case-body">
+      <div class="case-tag" data-pt="Dashboard · HCI · Data Viz" data-en="Dashboard · HCI · Data Viz">Dashboard · HCI · Data Viz</div>
+      <h2 class="case-title" data-pt="Motorbike<br>Dashboard" data-en="Motorbike<br>Dashboard">Motorbike<br>Dashboard</h2>
+      <p class="case-desc" data-pt="Dashboard digital para painel de motocicleta — projecto de investigação em HCI e ergonomia. Foco em hierarquia de informação, leitura em movimento e usabilidade contextual." data-en="Digital dashboard for a motorcycle panel — HCI and ergonomics research project. Focused on information hierarchy, readability in motion and contextual usability.">
+        Dashboard digital para painel de motocicleta — projecto de investigação em HCI e ergonomia. Foco em hierarquia de informação, leitura em movimento e usabilidade contextual.
+      </p>
+    </div>
+    <div class="case-meta">
+      <div class="case-meta-grid">
+        <div>
+          <div class="meta-item-label" data-pt="Contexto" data-en="Context">Contexto</div>
+          <div class="meta-item-value" data-pt="Mestrado UTAD" data-en="MSc UTAD">Mestrado UTAD</div>
+        </div>
+        <div>
+          <div class="meta-item-label" data-pt="Plataforma" data-en="Platform">Plataforma</div>
+          <div class="meta-item-value">Embedded UI</div>
+        </div>
+        <div>
+          <div class="meta-item-label">Tools</div>
+          <div class="meta-item-value">Figma</div>
+        </div>
+        <div>
+          <div class="meta-item-label" data-pt="Disciplinas" data-en="Disciplines">Disciplinas</div>
+          <div class="meta-item-value">HCI · Ergonomia · UX</div>
+        </div>
+      </div>
+      <span data-href="https://www.figma.com/proto/ZhPeI3JnitRsGyehLN78l8" class="case-link" data-pt="Ver protótipo →" data-en="View prototype →">Ver protótipo →</span>
+    </div>
+  </a>
+
+  <!-- CASE 4: MFM -->
+  <a href="mfm.html" class="case-card reveal" data-preview="assets/mfm_hero.png" data-label="Meu Futuro Melhor" data-tint="coral" style="--card-bg: url('assets/mfm_hero.png');">
+    <div class="case-num-col">
+      <div class="case-num">04</div>
+      <div class="case-dot"></div>
+    </div>
+    <div class="case-body">
+      <div class="case-tag" data-pt="Web Design · Editorial · Editora Formar" data-en="Web Design · Editorial · Editora Formar">Web Design · Editorial · Editora Formar</div>
+      <h2 class="case-title" data-pt="Meu Futuro<br>Melhor" data-en="Meu Futuro<br>Melhor">Meu Futuro<br>Melhor</h2>
+      <p class="case-desc" data-pt="Site para a colecção editorial Meu Futuro Melhor da Editora Formar — projecto de web design com foco em content strategy, hierarquia tipográfica e UX editorial para público infantojuvenil." data-en="Website for the Meu Futuro Melhor editorial collection by Editora Formar — a web design project focused on content strategy, typographic hierarchy and editorial UX for a young audience.">
+        Site para a colecção editorial &ldquo;Meu Futuro Melhor&rdquo; da Editora Formar — projecto de web design com foco em content strategy, hierarquia tipográfica e UX editorial para público infantojuvenil.
+      </p>
+    </div>
+    <div class="case-meta">
+      <div class="case-meta-grid">
+        <div>
+          <div class="meta-item-label" data-pt="Cliente" data-en="Client">Cliente</div>
+          <div class="meta-item-value">Editora Formar</div>
+        </div>
+        <div>
+          <div class="meta-item-label" data-pt="Plataforma" data-en="Platform">Plataforma</div>
+          <div class="meta-item-value">Web</div>
+        </div>
+        <div>
+          <div class="meta-item-label">Tools</div>
+          <div class="meta-item-value">Figma</div>
+        </div>
+        <div>
+          <div class="meta-item-label" data-pt="Disciplinas" data-en="Disciplines">Disciplinas</div>
+          <div class="meta-item-value">Web · Editorial · UX</div>
+        </div>
+      </div>
+      <span data-href="https://www.figma.com/proto/rhGaxp0paxsCO0KrmW91r4/Meu-Futuro-Melhor" class="case-link" data-pt="Ver protótipo →" data-en="View prototype →">Ver protótipo →</span>
+    </div>
+  </a>
+</section>
+
+<!-- GALLERY -->
+<section id="gallery">
+  <div class="gallery-header reveal">
+    <div>
+      <div class="section-label" data-num="02" data-pt="Selected Works" data-en="Selected Works">Selected Works</div>
+      <div class="gallery-title" data-pt="Craft &<br>Arquivo" data-en="Craft &<br>Archive">Craft &<br>Arquivo</div>
+    </div>
+  </div>
+  <div class="gallery-grid">
+
+    <a class="gallery-item font-item reveal"
+      data-preview="https://images.unsplash.com/photo-1617042375876-a13e36732a04?w=600&q=80"
+      data-tint="yellow" data-label="Desconexa Typeface" target="_blank" rel="noopener" href="desconexa.html">
+      <div class="gallery-item-tag" data-pt="Type Design · 2022" data-en="Type Design · 2022">Type Design · 2022</div>
+      <div class="font-specimen">Abc<br>123</div>
+      <div class="gallery-item-title" data-pt="Desconexa" data-en="Desconexa">Desconexa</div>
+      <p class="gallery-item-desc" data-pt="Typeface display criada durante a graduação na UFES. Família Medium com cobertura completa do alfabeto latino — identidade tipográfica própria." data-en="Display typeface created during undergraduate studies at UFES. Medium weight with full Latin alphabet coverage — a personal typographic identity.">Typeface display criada durante a graduação na UFES. Família Medium com cobertura completa do alfabeto latino — identidade tipográfica própria.</p>
+    
+      <div class="gallery-link-arrow">↗</div>
+    </a>
+
+    <a class="gallery-item reveal"
+      data-preview="assets/entre_capa.png"
+      data-tint="coral" data-label="Entre Passos e Gingas" target="_blank" rel="noopener" href="entre.html">
+      <div class="gallery-item-tag" data-pt="Design Editorial · Ilustração" data-en="Editorial Design · Illustration">Design Editorial · Ilustração</div>
+      <div class="gallery-item-title" data-pt="Entre Passos<br>e Gingas" data-en="Entre Passos<br>e Gingas">Entre Passos<br>e Gingas</div>
+      <p class="gallery-item-desc" data-pt="Editoração e ilustração do livro &quot;Entre Passos e Gingas&quot; — projecto cultural com desenvolvimento completo de miolo, capa e sistema visual." data-en="Editorial design and illustration for &quot;Entre Passos e Gingas&quot; — a cultural project with full development of interior, cover and visual system.">Editoração e ilustração do livro "Entre Passos e Gingas" — projecto cultural com desenvolvimento completo de miolo, capa e sistema visual.</p>
+    
+      <div class="gallery-link-arrow">↗</div>
+    </a>
+
+    <a class="gallery-item reveal"
+      data-preview="assets/mana_id.png"
+      data-tint="yellow" data-label="Capotaria Maná" target="_blank" rel="noopener" href="mana.html">
+      <div class="gallery-item-tag" data-pt="Branding · Identidade Visual" data-en="Branding · Visual Identity">Branding · Identidade Visual</div>
+      <div class="gallery-item-title" data-pt="Capotaria<br>Maná" data-en="Capotaria<br>Maná">Capotaria<br>Maná</div>
+      <p class="gallery-item-desc" data-pt="Sistema de identidade visual completo para empresa de capotaria — logotipo, paleta, tipografia e aplicações em materiais de comunicação." data-en="Full visual identity system for an upholstery company — logo, palette, typography and applications across communication materials.">Sistema de identidade visual completo para empresa de capotaria — logotipo, paleta, tipografia e aplicações em materiais de comunicação.</p>
+    
+      <div class="gallery-link-arrow">↗</div>
+    </a>
+
+    <a class="gallery-item reveal"
+      data-preview="assets/brom_01.png"
+      data-tint="coral" data-label="Projecto Bromélias" target="_blank" rel="noopener" href="bromelias.html">
+      <div class="gallery-item-tag" data-pt="Design Editorial · 10 anos" data-en="Editorial Design · 10 years">Design Editorial · 10 anos</div>
+      <div class="gallery-item-title" data-pt="Projecto<br>Bromélias" data-en="Projecto<br>Bromélias">Projecto<br>Bromélias</div>
+      <p class="gallery-item-desc" data-pt="Confecção do portfólio comemorativo de 10 anos do Projecto Bromélias — publicação editorial com curadoria visual e produção gráfica integral." data-en="Production of the 10th anniversary portfolio for Projecto Bromélias — editorial publication with full visual curation and graphic production.">Confecção do portfólio comemorativo de 10 anos do Projecto Bromélias — publicação editorial com curadoria visual e produção gráfica integral.</p>
+    
+      <div class="gallery-link-arrow">↗</div>
+    </a>
+
+    <a class="gallery-item reveal"
+      data-preview="assets/pierce.png"
+      data-tint="yellow" data-label="Poster Pierce — lambe-lambe" target="_blank" rel="noopener" href="pierce.html">
+      <div class="gallery-item-tag" data-pt="Poster Design · Serigrafia" data-en="Poster Design · Screen Print">Poster Design · Serigrafia</div>
+      <div class="gallery-item-title" data-pt="Poster<br>Pierce" data-en="Poster<br>Pierce">Poster<br>Pierce</div>
+      <p class="gallery-item-desc" data-pt="Lambe-lambe e poster para exposição académica — composição tipográfica e ilustrativa no formato lambe-lambe, técnica de comunicação urbana." data-en="Street poster and lambe-lambe for academic exhibition — typographic and illustrative composition using the lambe-lambe format, an urban communication technique.">Lambe-lambe e poster para exposição académica — composição tipográfica e ilustrativa no formato lambe-lambe, técnica de comunicação urbana.</p>
+    
+      <div class="gallery-link-arrow">↗</div>
+    </a>
+
+    <a class="gallery-item reveal"
+      data-preview="assets/miaufia_capa.png"
+      data-tint="coral" data-label="Miaufia HQ" target="_blank" rel="noopener" href="miaufia.html">
+      <div class="gallery-item-tag" data-pt="Co-autoria · HQ" data-en="Co-authorship · Comics">Co-autoria · HQ</div>
+      <div class="gallery-item-title" data-pt="Miaufia<br>HQ" data-en="Miaufia<br>Comics">Miaufia<br>HQ</div>
+      <p class="gallery-item-desc" data-pt="Co-autoria da história em quadrinhos Miaufia — direcção de arte, composição de páginas e definição do universo visual da publicação." data-en="Co-authorship of the Miaufia comic book — art direction, page composition and definition of the publication's visual universe.">Co-autoria da história em quadrinhos Miaufia — direcção de arte, composição de páginas e definição do universo visual da publicação.</p>
+    
+      <div class="gallery-link-arrow">↗</div>
+    </a>
+
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact">
+  <div class="reveal">
+    <div class="section-label" data-num="03" style="color: rgba(245,240,232,0.4);" data-pt="Contacto" data-en="Contact">Contacto</div>
+    <h2 class="contact-title">
+      Let's<br>
+      <span class="hollow" data-pt="Work" data-en="Work">Work</span><br>
+      <span class="coral" data-pt="Together" data-en="Together">Together</span>
+    </h2>
+  </div>
+  <div class="reveal">
+    <p class="contact-email">bieldodesign@gmail.com</p>
+    <div class="contact-links">
+      <a href="https://www.linkedin.com/in/bieldodesign/" class="contact-link" target="_blank">
+        LinkedIn <span>↗</span>
+      </a>
+      <a href="https://github.com/Bieldodesign" class="contact-link" target="_blank">
+        GitHub <span>↗</span>
+      </a>
+      <a href="https://www.figma.com/@bieldodesign" class="contact-link" target="_blank">
+        Figma Community <span>↗</span>
+      </a>
+      <a href="mailto:bieldodesign@gmail.com" class="contact-link">
+        Email directo <span>→</span>
+      </a>
+    </div>
+    <br>
+    <p class="contact-bio-note" data-pt="Disponível para projectos freelance, colaborações e oportunidades de UX / Product Design — remoto, presencial em Portugal (Vila Real) ou projectos do Brasil." data-en="Available for freelance projects, collaborations and UX / Product Design opportunities — remote, on-site in Portugal (Vila Real) or projects from Brazil.">Disponível para projectos freelance, colaborações e oportunidades de UX / Product Design — remoto, presencial em Portugal (Vila Real) ou projectos do Brasil.</p>
+  </div>
+</section>
+
+<footer>
+  <span data-pt="Gabriel Mengável Gomes Palaoro — Vila Real, Portugal · Brasil — 2026" data-en="Gabriel Mengável Gomes Palaoro — Vila Real, Portugal · Brazil — 2026">Gabriel Mengável Gomes Palaoro — Vila Real, Portugal · Brasil — 2026</span>
+  <span data-pt="Typeface Desconexa por Gabriel Mengável · UTAD · UFES" data-en="Desconexa typeface by Gabriel Mengável · UTAD · UFES">Typeface Desconexa por Gabriel Mengável · UTAD · UFES</span>
+  <span data-pt="Vila Real, Portugal · Brasil" data-en="Vila Real, Portugal · Brazil">Vila Real, Portugal · Brasil</span>
+</footer>
+
+<div id="cursor-outer"></div>
+<div id="cursor-dot"></div>
+<div id="cursor-label">View</div>
+<div id="img-preview">
+  <img id="preview-img" src="#" alt="">
+  <div class="tint-overlay" id="tint-overlay"></div>
+  <div class="preview-label" id="preview-label"></div>
+</div>
+
+<script>
+/* ── Language Toggle ── */
+let currentLang = 'pt';
+
+function toggleLang() {
+  currentLang = currentLang === 'pt' ? 'en' : 'pt';
+  const label = document.getElementById('lang-label');
+  label.textContent = currentLang === 'pt' ? 'EN' : 'PT';
+
+  document.querySelectorAll('[data-pt][data-en]').forEach(el => {
+    const val = el.dataset[currentLang];
+    if (val === undefined) return;
+    // preserve contact-link and case-link child arrow spans
+    if (el.classList.contains('contact-link') || el.classList.contains('case-link')) return;
+    // marquee: duplicate the text for seamless loop
+    if (el.id === 'marquee-track') {
+      el.innerHTML = val + ' ' + val;
+      return;
+    }
+    el.innerHTML = val;
+  });
+}
+
+/* ── Intersection Observer ── */
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(e => {
+    if (e.isIntersecting) e.target.classList.add('visible');
+  });
+}, { threshold: 0.1 });
+document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+
+/* ── Custom Cursor ── */
+const outer = document.getElementById('cursor-outer');
+const dot   = document.getElementById('cursor-dot');
+const label = document.getElementById('cursor-label');
+let mx = -200, my = -200;
+let ox = -200, oy = -200;
+
+document.addEventListener('mousemove', e => {
+  mx = e.clientX; my = e.clientY;
+  dot.style.left = mx + 'px';
+  dot.style.top  = my + 'px';
+});
+
+function lerp(a, b, t) { return a + (b - a) * t; }
+
+(function animCursor() {
+  ox = lerp(ox, mx, 0.12);
+  oy = lerp(oy, my, 0.12);
+  outer.style.left = ox + 'px';
+  outer.style.top  = oy + 'px';
+  label.style.left = ox + 'px';
+  label.style.top  = (oy + 14) + 'px';
+  requestAnimationFrame(animCursor);
+})();
+
+/* hover states */
+document.querySelectorAll('a, button, .case-link, .gallery-item').forEach(el => {
+  el.addEventListener('mouseenter', () => document.body.classList.add('cursor-link'));
+  el.addEventListener('mouseleave', () => document.body.classList.remove('cursor-link'));
+});
+
+/* ── Image Preview ── */
+const preview  = document.getElementById('img-preview');
+const prevImg  = document.getElementById('preview-img');
+const prevLbl  = document.getElementById('preview-label');
+let previewX = 0, previewY = 0;
+let previewTX = 0, previewTY = 0;
+let previewActive = false;
+const OFFSET_X = 24, OFFSET_Y = -100;
+
+document.querySelectorAll('.case-card[data-preview], .gallery-item[data-preview]').forEach(card => {
+  card.addEventListener('mouseenter', e => {
+    const src = card.dataset.preview;
+    const lbl = card.dataset.label || '';
+    const tint = card.dataset.tint || 'yellow';
+    prevImg.src = src;
+    prevLbl.textContent = lbl;
+    prevLbl.style.background = tint === 'coral' ? 'var(--coral)' : 'var(--yellow)';
+    prevLbl.style.color = tint === 'coral' ? 'var(--warm-white)' : 'var(--dark)';
+    document.getElementById('tint-overlay').style.background = tint === 'coral' ? 'rgba(180,40,20,0.55)' : 'rgba(200,155,0,0.5)';
+    preview.classList.add('visible');
+    document.body.classList.add('cursor-hover');
+    label.textContent = 'View →';
+    previewActive = true;
+  });
+
+  card.addEventListener('mouseleave', () => {
+    preview.classList.remove('visible');
+    document.body.classList.remove('cursor-hover');
+    previewActive = false;
+  });
+});
+
+document.addEventListener('mousemove', e => {
+  previewTX = e.clientX + OFFSET_X;
+  previewTY = e.clientY + OFFSET_Y;
+});
+
+/* Set bg-image CSS var on gallery items */
+document.querySelectorAll('.gallery-item[data-preview]').forEach(item => {
+  item.style.setProperty('--bg-img', `url('${item.dataset.preview}')`);
+});
+
+(function animPreview() {
+  previewX = lerp(previewX, previewTX, 0.1);
+  previewY = lerp(previewY, previewTY, 0.1);
+  preview.style.left = previewX + 'px';
+  preview.style.top  = previewY + 'px';
+  requestAnimationFrame(animPreview);
+})();
+
+/* case-link spans: open external URL without navigating the card */
+document.querySelectorAll('.case-link[data-href]').forEach(el => {
+  el.addEventListener('click', e => {
+    e.stopPropagation();
+    e.preventDefault();
+    window.open(el.dataset.href, '_blank', 'noopener');
+  });
+});
+</script>
+
+<!-- ── INNER PAGE OVERLAY ── -->
+<div id="inner-overlay">
+  <nav class="inner-nav">
+    <button class="inner-back">← Voltar</button>
+    <span class="inner-breadcrumb" id="inner-breadcrumb">Craft & Arquivo</span>
+  </nav>
+  <div id="inner-content"></div>
+</div>
+
+<!-- ── PAGE DATA ── -->
+<template id="page-mana">
+  <div class="inner-page active">
+
+    <div class="inner-hero">
+      <div class="inner-hero-left">
+        <div>
+          <div class="inner-category">Branding · Identidade Visual · 2023</div>
+          <h1 class="inner-title">Capo<span class="accent">taria</span><br><span class="hollow">Maná</span></h1>
+          <p class="inner-subtitle">
+            Redesign completo da identidade visual de uma empresa familiar de estética automotiva com mais de 10 anos de história em Andorinhas, Grande Vitória — Brasil. O desafio: modernizar sem apagar a memória.
+          </p>
+        </div>
+        <div class="inner-meta-row">
+          <div class="inner-meta-block"><label>Cliente</label><span>Capotaria Maná</span></div>
+          <div class="inner-meta-block"><label>Ano</label><span>2023</span></div>
+          <div class="inner-meta-block"><label>Co-design</label><span>Hugo Bello</span></div>
+          <div class="inner-meta-block"><label>Orientação</label><span>Juliana Lisboa</span></div>
+        </div>
+      </div>
+      <div class="inner-hero-right">
+        <p class="inner-quote">"A Kombi tinha que fazer parte da identidade assim como faz parte da história da marca."</p>
+        <div class="inner-tags">
+          <span class="inner-tag">Branding</span>
+          <span class="inner-tag">Identidade Visual</span>
+          <span class="inner-tag">Social Media</span>
+          <span class="inner-tag">Sinalização</span>
+          <span class="inner-tag">Papelaria</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Palette -->
+    <div class="inner-palette">
+      <div class="inner-swatch" style="background:#004A2F; color:#FFD700;">Verde<br>Institucional<br>#004A2F</div>
+      <div class="inner-swatch" style="background:#E84B35; color:#fff;">Vermelho<br>Kombi<br>#E84B35</div>
+      <div class="inner-swatch" style="background:#FFD700; color:#004A2F;">Amarelo<br>Destaque<br>#FFD700</div>
+      <div class="inner-swatch" style="background:#0D0D0D; color:#F5F0E8;">Preto<br>Base<br>#0D0D0D</div>
+      <div class="inner-swatch" style="background:#F5F0E8; color:#0D0D0D; border-left: 2px solid #0D0D0D;">Off-white<br>Fundo<br>#F5F0E8</div>
+    </div>
+
+    <!-- Specs -->
+    <div class="inner-spec-grid">
+      <div class="inner-spec">
+        <div class="inner-spec-num">4</div>
+        <div class="inner-spec-label">Variações de logótipo (vertical, horizontal, selo)</div>
+      </div>
+      <div class="inner-spec">
+        <div class="inner-spec-num">10+</div>
+        <div class="inner-spec-label">Anos de história da marca preservados no redesign</div>
+      </div>
+      <div class="inner-spec">
+        <div class="inner-spec-num">6</div>
+        <div class="inner-spec-label">Aplicações desenvolvidas (fachada, camisetas, cartão, boné, bandeira, fundo foto)</div>
+      </div>
+      <div class="inner-spec">
+        <div class="inner-spec-num">IBM</div>
+        <div class="inner-spec-label">Plex Sans — tipografia institucional escolhida para clareza e modernidade</div>
+      </div>
+    </div>
+
+    <!-- Process text -->
+    <div class="inner-text-section">
+      <div class="inner-text-label">O<br>Desafio</div>
+      <div class="inner-text-body">
+        <p>A Capotaria Maná não é uma empresa nova — ela tem uma <strong>história bela e singular</strong>. A marca já era reconhecida no ramo de capotaria e estética automotiva em Andorinhas e na Grande Vitória, mas a identidade visual original não comunicava essa excelência.</p>
+        <p>A questão central: <strong>como integrar as marcas existentes e manter uma linha de continuidade com a história que constitui a Maná?</strong> A resposta veio da própria história da empresa — a Kombi, veículo que marcou o início do negócio, tornando-se o símbolo central da nova identidade.</p>
+      </div>
+    </div>
+
+    <!-- Images: before / after -->
+    <div class="inner-img-strip cols-2">
+      <div class="inner-img-cell">
+        <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=800&q=80" alt="Identidade antiga">
+        <div class="cell-label">Marca anterior — identidade original</div>
+      </div>
+      <div class="inner-img-cell">
+        <img src="https://images.unsplash.com/photo-1503736334956-4c8f8e4f8b10?w=800&q=80" alt="Nova identidade">
+        <div class="cell-label">Nova identidade — sistema visual</div>
+      </div>
+    </div>
+
+    <!-- Logo construction -->
+    <div class="inner-text-section">
+      <div class="inner-text-label">Cons<br>trução</div>
+      <div class="inner-text-body">
+        <p>O processo iniciou com <strong>esboços à mão</strong> — a Kombi foi desenhada, desconstruída em círculos e rectângulos, testada em vistas frontal e lateral. O ícone final é uma Kombi estilizada com proporções geométricas, <strong>combinada com a tipografia arredondada do logótipo</strong> "MANÁ" que complementa a personalidade da marca sem a endurecer.</p>
+        <p>O <strong>selo circular</strong> — inspirado num rabisco do cliente no brief original — tornou-se uma variação autónoma para aplicações em bordado (boné) e materiais pequenos.</p>
+      </div>
+    </div>
+
+    <!-- Mockups grid -->
+    <div class="inner-img-strip cols-3">
+      <div class="inner-img-cell square">
+        <img src="https://images.unsplash.com/photo-1598300042247-d088f8ab3a91?w=600&q=80" alt="Cartão de visitas">
+        <div class="cell-label">Cartão de visitas — verso e frente</div>
+      </div>
+      <div class="inner-img-cell square">
+        <img src="https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=600&q=80" alt="Fachada">
+        <div class="cell-label">Fachada da loja — mockup</div>
+      </div>
+      <div class="inner-img-cell square">
+        <img src="https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?w=600&q=80" alt="Camisetas">
+        <div class="cell-label">Camisetas — 3 variações</div>
+      </div>
+    </div>
+
+    <!-- Applications text -->
+    <div class="inner-text-section">
+      <div class="inner-text-label">Apli<br>cações</div>
+      <div class="inner-text-body">
+        <p>O sistema foi aplicado em <strong>6 categorias de materiais</strong>: sinalização de fachada, papelaria (cartão de visitas), uniformes (camisetas e boné), materiais de comunicação (bandeira e fundo para fotos), presença digital (Instagram, WhatsApp Business, PicPay) e posts educativos para redes sociais.</p>
+        <p>A <strong>paleta tricolor verde/laranja/amarelo</strong> permite flexibilidade — o verde funciona como base institucional, o laranja-vermelho como cor de destaque e energia (cor da Kombi), e o amarelo como acento comunicativo.</p>
+      </div>
+    </div>
+
+    <div class="inner-img-strip cols-2">
+      <div class="inner-img-cell">
+        <img src="https://images.unsplash.com/photo-1611162617213-7d7a39e9b1d7?w=800&q=80" alt="Instagram">
+        <div class="cell-label">Instagram — perfil e stories</div>
+      </div>
+      <div class="inner-img-cell">
+        <img src="https://images.unsplash.com/photo-1416339306562-f3d12fefd36f?w=800&q=80" alt="Fundo fotos">
+        <div class="cell-label">Fundo para fotos — padrão xadrez</div>
+      </div>
+    </div>
+
+    <div class="inner-cta-row">
+      <div class="inner-cta-text">Capotaria<br>Maná</div>
+      <a href="https://drive.google.com/file/d/1m0Sf7iGLb1TnJ1VRHfrGCMmxfGGPCfsK/view" target="_blank" class="inner-cta-btn">Ver apresentação completa ↗</a>
+    </div>
+  </div>
+</template>
+
+<template id="page-entre">
+  <div class="inner-page active">
+
+    <div class="inner-hero">
+      <div class="inner-hero-left">
+        <div>
+          <div class="inner-category">Design Editorial · Ilustração · 2023</div>
+          <h1 class="inner-title">Entre<br><span class="accent">Passos</span><br>e Gingas</h1>
+          <p class="inner-subtitle">
+            Projecto gráfico completo de um livro infantojuvenil sobre capoeira, natureza e cultura afro-brasileira — publicado pela Editora Formar. Ilustrações realizadas em parceria com Adobe Firefly, curadoria e direcção de arte por Gabriel Mengável.
+          </p>
+        </div>
+        <div class="inner-meta-row">
+          <div class="inner-meta-block"><label>Autor</label><span>Douglas Aguilar</span></div>
+          <div class="inner-meta-block"><label>Editora</label><span>Editora Formar</span></div>
+          <div class="inner-meta-block"><label>Ano</label><span>2023</span></div>
+          <div class="inner-meta-block"><label>ISBN</label><span>978-65-8912-193-0</span></div>
+        </div>
+      </div>
+      <div class="inner-hero-right">
+        <p class="inner-quote">"A capoeira é sim cultura e diversão. Só entra na roda quem ginga, meu irmão!"</p>
+        <div class="inner-tags">
+          <span class="inner-tag">Design Editorial</span>
+          <span class="inner-tag">Direcção de Arte</span>
+          <span class="inner-tag">Ilustração</span>
+          <span class="inner-tag">Adobe Firefly</span>
+          <span class="inner-tag">Livro Infantil</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Specs -->
+    <div class="inner-spec-grid">
+      <div class="inner-spec">
+        <div class="inner-spec-num">16</div>
+        <div class="inner-spec-label">Páginas com projeto gráfico integral — miolo e capa</div>
+      </div>
+      <div class="inner-spec">
+        <div class="inner-spec-num">20cm</div>
+        <div class="inner-spec-label">Formato quadrado — escolha para ampliar as ilustrações</div>
+      </div>
+      <div class="inner-spec">
+        <div class="inner-spec-num">AI+</div>
+        <div class="inner-spec-label">Ilustrações em co-criação com Adobe Firefly e intervenção manual</div>
+      </div>
+      <div class="inner-spec">
+        <div class="inner-spec-num">CIP</div>
+        <div class="inner-spec-label">Catalogação Biblioteca Nacional — publicação editorial formal</div>
+      </div>
+    </div>
+
+    <!-- Capa full width -->
+    <div class="inner-img-strip cols-1">
+      <div class="inner-img-cell wide">
+        <img src="https://images.unsplash.com/photo-1501854140801-50d01698950b?w=1200&q=80" alt="Capa do livro">
+        <div class="cell-label">Capa — ilustração tropical com paper art generativo + tipografia display</div>
+      </div>
+    </div>
+
+    <!-- Process text -->
+    <div class="inner-text-section">
+      <div class="inner-text-label">O<br>Projecto</div>
+      <div class="inner-text-body">
+        <p>O texto de Douglas Aguilar percorre dois temas centrais: a <strong>natureza do Cerrado brasileiro</strong> (com suas plantas em extinção como o Jequitibá e Jeriquitim) e a <strong>capoeira como expressão cultural afro-brasileira</strong> — história, música, luta e superação.</p>
+        <p>O desafio do projecto gráfico foi criar um universo visual que <strong>honrasse ambos os temas sem os hierarquizar</strong>: o mundo natural como cenário e a capoeira como acção. A capa usa uma <strong>ilustração generativa de paper art tropical</strong>, direccionada para transmitir profundidade e camadas — como a própria capoeira.</p>
+      </div>
+    </div>
+
+    <!-- Interior spreads -->
+    <div class="inner-img-strip cols-3">
+      <div class="inner-img-cell">
+        <img src="https://images.unsplash.com/photo-1544161515-4ab6ce6db874?w=600&q=80" alt="Spread natureza">
+        <div class="cell-label">Spread — natureza e preservação ambiental</div>
+      </div>
+      <div class="inner-img-cell">
+        <img src="https://images.unsplash.com/photo-1553361371-9b22f78e8b1d?w=600&q=80" alt="Spread capoeira">
+        <div class="cell-label">Spread — capoeira como cultura e luta</div>
+      </div>
+      <div class="inner-img-cell">
+        <img src="https://images.unsplash.com/photo-1529156069898-49953e39b3ac?w=600&q=80" alt="Spread mestres">
+        <div class="cell-label">Spread — Mestre Bimba e Mestre Pastinha</div>
+      </div>
+    </div>
+
+    <!-- Typography / system -->
+    <div class="inner-text-section">
+      <div class="inner-text-label">Siste<br>ma</div>
+      <div class="inner-text-body">
+        <p>A tipografia do miolo usa <strong>fontes display expressivas em caixa alta</strong> para os versos — respeitando o ritmo poético do texto. O corpo do poema é tratado como elemento gráfico: tamanho grande, espaçamento generoso, sem serifa.</p>
+        <p>As ilustrações foram <strong>geradas com Adobe Firefly e curadas manualmente</strong> — cada imagem passou por selecção, recorte e ajuste de cor para garantir coerência com a paleta editorial. A co-autoria com IA é explicitada nos créditos, tornando este projecto também um <strong>exercício de transparência em design com ferramentas generativas</strong>.</p>
+      </div>
+    </div>
+
+    <!-- Credits palette -->
+    <div class="inner-palette">
+      <div class="inner-swatch" style="background:#4CAF50; color:#fff;">Verde<br>Mata<br>#4CAF50</div>
+      <div class="inner-swatch" style="background:#FFD54F; color:#333;">Amarelo<br>Sol<br>#FFD54F</div>
+      <div class="inner-swatch" style="background:#87CEEB; color:#333;">Azul<br>Céu<br>#87CEEB</div>
+      <div class="inner-swatch" style="background:#D2691E; color:#fff;">Terracota<br>Terra<br>#D2691E</div>
+      <div class="inner-swatch" style="background:#F5F0E8; color:#333; border-left:2px solid #333;">Off-white<br>Papel<br>#F5F0E8</div>
+    </div>
+
+    <div class="inner-cta-row">
+      <div class="inner-cta-text">Entre<br>Passos<br>e Gingas</div>
+      <a href="https://bieldodesign.github.io/portifolio/images/Entre%20Passos%20e%20Gingas%20-%20Miolo.pdf" target="_blank" class="inner-cta-btn">Ver miolo completo ↗</a>
+    </div>
+  </div>
+</template>
+
+<template id="page-desconexa">
+  <div class="inner-page active">
+    <div class="inner-hero">
+      <div class="inner-hero-left">
+        <div>
+          <div class="inner-category">Type Design · Typeface · 2022</div>
+          <h1 class="inner-title" style="font-family:var(--font-display)">Des<span class="accent">co</span><br>nexa</h1>
+          <p class="inner-subtitle">
+            Fonte display criada durante a graduação em Design na UFES — Brasil. Família Medium com cobertura completa do alfabeto latino, números e pontuação. Versão 2.000, formato OTF.
+          </p>
+        </div>
+        <div class="inner-meta-row">
+          <div class="inner-meta-block"><label>Formato</label><span>OTF</span></div>
+          <div class="inner-meta-block"><label>Versão</label><span>2.000</span></div>
+          <div class="inner-meta-block"><label>Weight</label><span>Medium</span></div>
+          <div class="inner-meta-block"><label>Contexto</label><span>UFES · 2022</span></div>
+        </div>
+      </div>
+      <div class="inner-hero-right">
+        <p class="inner-quote" style="font-family:var(--font-display);font-size:64px;line-height:0.9;font-style:normal;letter-spacing:-0.02em;">Abc<br>123</p>
+        <div class="inner-tags">
+          <span class="inner-tag">Display</span>
+          <span class="inner-tag">Latin Extended</span>
+          <span class="inner-tag">OTF</span>
+          <span class="inner-tag">Identidade Própria</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Full alphabet specimen -->
+    <div style="padding:60px;border-bottom:2px solid var(--dark);background:var(--dark);">
+      <div style="font-family:var(--font-display);font-size:clamp(48px,8vw,96px);color:var(--warm-white);line-height:1.05;letter-spacing:-0.02em;text-transform:uppercase;">
+        ABCDEFG<br>HIJKLMN<br>OPQRSTU<br>VWXYZ
+      </div>
+    </div>
+
+    <div style="padding:60px;border-bottom:2px solid var(--dark);">
+      <div style="font-family:var(--font-display);font-size:clamp(32px,5vw,64px);color:var(--dark);line-height:1.1;letter-spacing:-0.01em;">
+        abcdefghijklm<br>nopqrstuvwxyz
+      </div>
+    </div>
+
+    <div style="padding:60px;border-bottom:2px solid var(--dark);background:var(--yellow);">
+      <div style="font-family:var(--font-display);font-size:clamp(48px,7vw,80px);color:var(--dark);line-height:1;">
+        0123456789<br>!@#&amp;?.,;:
+      </div>
+    </div>
+
+    <!-- Spec grid -->
+    <div class="inner-spec-grid">
+      <div class="inner-spec">
+        <div class="inner-spec-num">95</div>
+        <div class="inner-spec-label">Glifos — cobertura completa ASCII + caracteres especiais portugueses/brasileiros</div>
+      </div>
+      <div class="inner-spec">
+        <div class="inner-spec-num">OTF</div>
+        <div class="inner-spec-label">Formato OpenType com tabelas kern, liga e ordn activas</div>
+      </div>
+      <div class="inner-spec">
+        <div class="inner-spec-num">Med</div>
+        <div class="inner-spec-label">Peso único Medium — optimizado para títulos e display em grande escala</div>
+      </div>
+      <div class="inner-spec">
+        <div class="inner-spec-num">v2</div>
+        <div class="inner-spec-label">Versão 2.000 — iteração com kern e pares de letras refinados</div>
+      </div>
+    </div>
+
+    <!-- Type in use -->
+    <div class="inner-text-section">
+      <div class="inner-text-label">Em<br>uso</div>
+      <div class="inner-text-body">
+        <p>A Desconexa foi criada como <strong>exercício de identidade tipográfica própria</strong> — uma resposta à necessidade de ter uma fonte que representasse a voz do designer. O nome reflecte a <strong>natureza discontínua e irregular</strong> das formas, que quebram deliberadamente os padrões de continuidade de contorno típicos das fontes geométricas.</p>
+        <p>Este portfólio usa a Desconexa em todos os títulos e elementos de display — é a fonte que vês nos headings, nas cards de projecto e na hero section. A decisão de a usar aqui foi intencional: <strong>o portfólio é o maior case study da própria fonte</strong>.</p>
+      </div>
+    </div>
+
+    <!-- Usage examples -->
+    <div style="display:grid;grid-template-columns:1fr 1fr;border-bottom:2px solid var(--dark);">
+      <div style="padding:60px;border-right:2px solid var(--dark);background:var(--coral);">
+        <div style="font-family:var(--font-display);font-size:72px;color:var(--warm-white);line-height:0.9;text-transform:uppercase;letter-spacing:-0.02em;">Design<br>Find<br>Me.</div>
+      </div>
+      <div style="padding:60px;">
+        <div style="font-family:var(--font-display);font-size:48px;color:var(--dark);line-height:1;text-transform:uppercase;letter-spacing:-0.01em;">
+          Turning<br>complexity<br>into<br><span style="color:var(--coral);">human.</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="inner-cta-row">
+      <div class="inner-cta-text">Desconexa<br>Medium</div>
+      <span class="inner-cta-btn" style="cursor:default;opacity:0.6;">Fonte em uso neste portfólio</span>
+    </div>
+  </div>
+</template>
+
+<!-- Generic templates for other works -->
+<template id="page-bromelias">
+  <div class="inner-page active">
+    <div class="inner-hero">
+      <div class="inner-hero-left">
+        <div>
+          <div class="inner-category">Design Editorial · 10 Anos · 2022</div>
+          <h1 class="inner-title">Projecto<br><span class="accent">Bro</span><br>mélias</h1>
+          <p class="inner-subtitle">Portfólio comemorativo de 10 anos do Projecto Bromélias — publicação editorial com curadoria visual, design de miolo e capa, e produção gráfica integral para o Instituto Marcus Daniel.</p>
+        </div>
+        <div class="inner-meta-row">
+          <div class="inner-meta-block"><label>Cliente</label><span>Instituto Marcus Daniel</span></div>
+          <div class="inner-meta-block"><label>Ano</label><span>2022</span></div>
+          <div class="inner-meta-block"><label>Contexto</label><span>Estágio UFES</span></div>
+        </div>
+      </div>
+      <div class="inner-hero-right">
+        <p class="inner-quote">"10 anos de impacto social documentados num objecto gráfico que deve à altura da história que conta."</p>
+        <div class="inner-tags">
+          <span class="inner-tag">Design Editorial</span><span class="inner-tag">Publicação</span><span class="inner-tag">Curadoria Visual</span>
+        </div>
+      </div>
+    </div>
+    <div class="inner-img-strip cols-2">
+      <div class="inner-img-cell"><img src="https://images.unsplash.com/photo-1503736334956-4c8f8e4f8b10?w=800&q=80" alt="Capa"></div>
+      <div class="inner-img-cell"><img src="https://images.unsplash.com/photo-1481627834876-b7833e8f5570?w=800&q=80" alt="Interior"></div>
+    </div>
+    <div class="inner-cta-row">
+      <div class="inner-cta-text">Projecto<br>Bromélias</div>
+      <a href="https://drive.google.com/file/u/3/d/114WJ8A0S1X3nYyWLUoM4u8aUZkciPCfx/view" target="_blank" class="inner-cta-btn">Ver documento ↗</a>
+    </div>
+  </div>
+</template>
+
+<template id="page-pierce">
+  <div class="inner-page active">
+    <div class="inner-hero">
+      <div class="inner-hero-left">
+        <div>
+          <div class="inner-category">Poster Design · Lambe-lambe · 2022</div>
+          <h1 class="inner-title">Poster<br><span class="hollow">Pierce</span></h1>
+          <p class="inner-subtitle">Lambe-lambe e poster para exposição académica — composição tipográfica e ilustrativa para comunicação urbana. Técnica brasileira de colagem urbana aplicada a contexto de exposição.</p>
+        </div>
+        <div class="inner-meta-row">
+          <div class="inner-meta-block"><label>Formato</label><span>Lambe-lambe</span></div>
+          <div class="inner-meta-block"><label>Ano</label><span>2022</span></div>
+          <div class="inner-meta-block"><label>Contexto</label><span>UFES</span></div>
+        </div>
+      </div>
+      <div class="inner-hero-right">
+        <p class="inner-quote">"O lambe-lambe como manifesto — tipografia que ocupa o espaço público com intenção."</p>
+        <div class="inner-tags">
+          <span class="inner-tag">Poster</span><span class="inner-tag">Lambe-lambe</span><span class="inner-tag">Tipografia</span>
+        </div>
+      </div>
+    </div>
+    <div class="inner-img-strip cols-1">
+      <div class="inner-img-cell wide">
+        <img src="https://images.unsplash.com/photo-1561731216-c3a4d99437d5?w=1200&q=80" alt="Poster Pierce">
+        <div class="cell-label">Poster Pierce — versão lambe-lambe</div>
+      </div>
+    </div>
+    <div class="inner-cta-row">
+      <div class="inner-cta-text">Poster<br>Pierce</div>
+      <a href="https://bieldodesign.github.io/Portifolio2022/images/outros/lambe-lambe-Pierce.png" target="_blank" class="inner-cta-btn">Ver imagem completa ↗</a>
+    </div>
+  </div>
+</template>
+
+<template id="page-miaufia">
+  <div class="inner-page active">
+    <div class="inner-hero">
+      <div class="inner-hero-left">
+        <div>
+          <div class="inner-category">Co-autoria · HQ · Banda Desenhada · 2022</div>
+          <h1 class="inner-title">Miau<span class="accent">fia</span><br>HQ</h1>
+          <p class="inner-subtitle">Co-autoria da história em quadrinhos Miaufia — direcção de arte, composição de páginas e definição do universo visual da publicação. Projecto académico de narrativa gráfica.</p>
+        </div>
+        <div class="inner-meta-row">
+          <div class="inner-meta-block"><label>Formato</label><span>HQ / Comics</span></div>
+          <div class="inner-meta-block"><label>Ano</label><span>2022</span></div>
+          <div class="inner-meta-block"><label>Papel</label><span>Co-autor · DA</span></div>
+        </div>
+      </div>
+      <div class="inner-hero-right">
+        <p class="inner-quote">"Narrativa visual onde cada página é uma decisão de design — ritmo, peso, espaço e cor ao serviço da história."</p>
+        <div class="inner-tags">
+          <span class="inner-tag">HQ</span><span class="inner-tag">Direcção de Arte</span><span class="inner-tag">Narrativa Visual</span>
+        </div>
+      </div>
+    </div>
+    <div class="inner-img-strip cols-2">
+      <div class="inner-img-cell"><img src="https://images.unsplash.com/photo-1608889825205-eebdb9fc5806?w=800&q=80" alt="Miaufia"></div>
+      <div class="inner-img-cell"><img src="https://images.unsplash.com/photo-1612036782180-6f0b6cd846fe?w=800&q=80" alt="Páginas"></div>
+    </div>
+    <div class="inner-cta-row">
+      <div class="inner-cta-text">Miaufia<br>HQ</div>
+      <span class="inner-cta-btn" style="opacity:0.6;cursor:default;">Em arquivo físico</span>
+    </div>
+  </div>
+</template>
+
+</body>
+</html>
