@@ -974,10 +974,70 @@ footer {
   font-size: 11px;
 }
 
+.ueq-instructions {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  border-bottom: var(--border);
+}
+.ueq-inst-left {
+  padding: 56px 60px;
+  border-right: var(--border);
+  display: flex;
+  align-items: center;
+}
+.ueq-inst-desc {
+  font-size: 14px;
+  line-height: 1.8;
+  color: rgba(13,13,13,.7);
+  max-width: 460px;
+}
+.ueq-inst-right {
+  padding: 56px 60px;
+}
+.ueq-tasks-label {
+  font-size: 10px;
+  text-transform: uppercase;
+  letter-spacing: .16em;
+  color: rgba(13,13,13,.45);
+  margin-bottom: 24px;
+}
+.ueq-tasks {
+  list-style: none;
+  counter-reset: task-counter;
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+.ueq-tasks li {
+  counter-increment: task-counter;
+  display: grid;
+  grid-template-columns: 36px 1fr;
+  align-items: baseline;
+  gap: 0;
+  padding: 14px 0;
+  border-bottom: 1px solid rgba(13,13,13,.1);
+  font-size: 13px;
+  line-height: 1.6;
+  color: rgba(13,13,13,.75);
+}
+.ueq-tasks li:last-child { border-bottom: none; }
+.ueq-tasks li::before {
+  content: counter(task-counter, decimal-leading-zero);
+  font-family: var(--font-display);
+  font-size: 20px;
+  color: var(--coral);
+  line-height: 1;
+  padding-top: 2px;
+}
+.ueq-tasks li strong { color: var(--dark); font-weight: 700; }
+
 @media (max-width: 900px) {
   .ueq-header { grid-template-columns: 1fr; }
   .ueq-header-left { border-right: none; border-bottom: var(--border); padding: 40px 24px; }
   .ueq-header-right { padding: 40px 24px; }
+  .ueq-instructions { grid-template-columns: 1fr; }
+  .ueq-inst-left { border-right: none; border-bottom: var(--border); padding: 40px 24px; }
+  .ueq-inst-right { padding: 40px 24px; }
   .ueq-placeholder { margin: 20px; padding: 40px 24px; }
 }
 
@@ -1940,6 +2000,31 @@ body.cursor-hover #cursor-label { opacity: 1; }
     <div class="ueq-strip-track">
       UEQ-S &nbsp;·&nbsp; User Experience Questionnaire &nbsp;·&nbsp; Avaliação de Portfólio &nbsp;·&nbsp; Mestrado UTAD &nbsp;·&nbsp; Menos de 3 minutos &nbsp;·&nbsp; Versão Portuguesa &nbsp;·&nbsp;
       UEQ-S &nbsp;·&nbsp; User Experience Questionnaire &nbsp;·&nbsp; Avaliação de Portfólio &nbsp;·&nbsp; Mestrado UTAD &nbsp;·&nbsp; Menos de 3 minutos &nbsp;·&nbsp; Versão Portuguesa &nbsp;·&nbsp;
+    </div>
+  </div>
+
+  <div class="ueq-instructions reveal">
+    <div class="ueq-inst-left">
+      <p class="ueq-inst-desc"
+        data-pt="Este questionário avalia a tua experiência ao navegar no portfólio. Não há respostas certas ou erradas — interessa apenas a tua perceção genuína. Os dados são usados exclusivamente para fins académicos no âmbito do Mestrado em Multimédia da UTAD."
+        data-en="This questionnaire evaluates your experience navigating the portfolio. There are no right or wrong answers — only your genuine perception matters. Data is used exclusively for academic purposes within the MSc in Multimedia at UTAD.">
+        Este questionário avalia a tua experiência ao navegar no portfólio. Não há respostas certas ou erradas — interessa apenas a tua perceção genuína. Os dados são usados exclusivamente para fins académicos no âmbito do Mestrado em Multimédia da UTAD.
+      </p>
+    </div>
+    <div class="ueq-inst-right">
+      <div class="ueq-tasks-label"
+        data-pt="Antes de responder, percorre o portfólio:"
+        data-en="Before answering, browse the portfolio:">
+        Antes de responder, percorre o portfólio:
+      </div>
+      <ol class="ueq-tasks">
+        <li data-pt="Lê a <strong>secção de apresentação</strong> — quem sou, formação e área de trabalho" data-en="Read the <strong>about section</strong> — who I am, education and area of work">Lê a <strong>secção de apresentação</strong> — quem sou, formação e área de trabalho</li>
+        <li data-pt="Explora os <strong>Selected Works</strong> — passa pelos 3 projectos em destaque" data-en="Explore <strong>Selected Works</strong> — browse the 3 featured projects">Explora os <strong>Selected Works</strong> — passa pelos 3 projectos em destaque</li>
+        <li data-pt="Abre um <strong>case study completo</strong> — lê a narrativa de pelo menos um projecto até ao fim" data-en="Open a <strong>full case study</strong> — read through at least one project from start to finish">Abre um <strong>case study completo</strong> — lê a narrativa de pelo menos um projecto até ao fim</li>
+        <li data-pt="Visita a secção <strong>Craft</strong> — vê os trabalhos da galeria" data-en="Visit the <strong>Craft section</strong> — browse the gallery works">Visita a secção <strong>Craft</strong> — vê os trabalhos da galeria</li>
+        <li data-pt="Tenta <strong>encontrar o contacto</strong> — localiza o email ou redes sociais" data-en="Try to <strong>find the contact</strong> — locate the email or social links">Tenta <strong>encontrar o contacto</strong> — localiza o email ou redes sociais</li>
+        <li data-pt="<strong>Muda o idioma</strong> — usa o botão EN/PT e volta ao português" data-en="<strong>Switch the language</strong> — use the EN/PT toggle and switch back">Muda o <strong>idioma</strong> — usa o botão EN/PT e volta ao português</li>
+      </ol>
     </div>
   </div>
 
