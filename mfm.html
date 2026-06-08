@@ -66,6 +66,20 @@ nav {
   font-size:10px; text-transform:uppercase;
   letter-spacing:.14em; color:rgba(245,240,232,.6);
 }
+.nav-right { display:flex; align-items:center; gap:16px; }
+#lang-toggle {
+  background: transparent;
+  border: 1px solid rgba(245,240,232,.5);
+  color: var(--warm);
+  font-family: var(--fb);
+  font-size: 10px;
+  text-transform: uppercase;
+  letter-spacing: .12em;
+  padding: 4px 10px;
+  cursor: pointer;
+  transition: background .15s;
+}
+#lang-toggle:hover { background: rgba(245,240,232,.15); }
 
 .hero {
   display:grid; grid-template-columns:1fr 1fr;
@@ -226,13 +240,18 @@ nav {
 <body>
 
 <nav>
-  <a href="portfolio.html" class="nav-back">← Portfolio</a>
+  <a href="portfolio.html" class="nav-back" data-pt="← Portfolio" data-en="← Portfolio">← Portfolio</a>
   <span class="nav-title">Meu Futuro Melhor</span>
-  <span class="nav-cat">Web Design · Editorial · Editora Formar</span>
+  <div class="nav-right">
+    <span class="nav-cat" data-pt="Web Design · Editorial · Editora Formar" data-en="Web Design · Editorial · Editora Formar">Web Design · Editorial · Editora Formar</span>
+    <button id="lang-toggle" onclick="toggleLang()" aria-label="Switch language">EN</button>
+  </div>
 </nav>
 
 <div class="mstrip">
-  <div class="mtrack">
+  <div class="mtrack"
+    data-pt="Meu Futuro Melhor &nbsp;·&nbsp; Editora Formar &nbsp;·&nbsp; Web Design &nbsp;·&nbsp; Editorial &nbsp;·&nbsp; Content Strategy &nbsp;·&nbsp; UX Editorial &nbsp;·&nbsp; Público Infantojuvenil &nbsp;·&nbsp; Tipografia &nbsp;·&nbsp; Meu Futuro Melhor &nbsp;·&nbsp; Editora Formar &nbsp;·&nbsp; Web Design &nbsp;·&nbsp; Editorial &nbsp;·&nbsp; Content Strategy &nbsp;·&nbsp; UX Editorial &nbsp;·&nbsp; Público Infantojuvenil &nbsp;·&nbsp; Tipografia &nbsp;·&nbsp;"
+    data-en="Meu Futuro Melhor &nbsp;·&nbsp; Editora Formar &nbsp;·&nbsp; Web Design &nbsp;·&nbsp; Editorial &nbsp;·&nbsp; Content Strategy &nbsp;·&nbsp; Editorial UX &nbsp;·&nbsp; Young Audience &nbsp;·&nbsp; Typography &nbsp;·&nbsp; Meu Futuro Melhor &nbsp;·&nbsp; Editora Formar &nbsp;·&nbsp; Web Design &nbsp;·&nbsp; Editorial &nbsp;·&nbsp; Content Strategy &nbsp;·&nbsp; Editorial UX &nbsp;·&nbsp; Young Audience &nbsp;·&nbsp; Typography &nbsp;·&nbsp;">
     Meu Futuro Melhor &nbsp;·&nbsp; Editora Formar &nbsp;·&nbsp; Web Design &nbsp;·&nbsp; Editorial &nbsp;·&nbsp; Content Strategy &nbsp;·&nbsp; UX Editorial &nbsp;·&nbsp; Público Infantojuvenil &nbsp;·&nbsp; Tipografia &nbsp;·&nbsp;
     Meu Futuro Melhor &nbsp;·&nbsp; Editora Formar &nbsp;·&nbsp; Web Design &nbsp;·&nbsp; Editorial &nbsp;·&nbsp; Content Strategy &nbsp;·&nbsp; UX Editorial &nbsp;·&nbsp; Público Infantojuvenil &nbsp;·&nbsp; Tipografia &nbsp;·&nbsp;
   </div>
@@ -241,19 +260,19 @@ nav {
 <div class="hero rev">
   <div class="hero-left">
     <div>
-      <div class="hero-cat">Web Design · Editorial · Editora Formar · Público Infantojuvenil</div>
+      <div class="hero-cat" data-pt="Web Design · Editorial · Editora Formar · Público Infantojuvenil" data-en="Web Design · Editorial · Editora Formar · Young Audience">Web Design · Editorial · Editora Formar · Público Infantojuvenil</div>
       <h1 class="hero-title">Meu<br>Fu<span class="a">tu</span><br><span class="o">ro</span></h1>
-      <p class="hero-sub">Site para a colecção editorial "Meu Futuro Melhor" da Editora Formar — projecto de web design com foco em content strategy, hierarquia tipográfica e UX editorial desenhado para um público infantojuvenil e os seus mediadores.</p>
+      <p class="hero-sub" data-pt='Site para a colecção editorial "Meu Futuro Melhor" da Editora Formar — projecto de web design com foco em content strategy, hierarquia tipográfica e UX editorial desenhado para um público infantojuvenil e os seus mediadores.' data-en='Website for Editora Formar&apos;s "Meu Futuro Melhor" editorial collection — a web design project focused on content strategy, typographic hierarchy and editorial UX designed for a young audience and their mediators.'>Site para a colecção editorial "Meu Futuro Melhor" da Editora Formar — projecto de web design com foco em content strategy, hierarquia tipográfica e UX editorial desenhado para um público infantojuvenil e os seus mediadores.</p>
     </div>
     <div class="hero-meta">
-      <div class="hero-meta-item"><label>Cliente</label><span>Editora Formar</span></div>
-      <div class="hero-meta-item"><label>Plataforma</label><span>Web</span></div>
+      <div class="hero-meta-item"><label data-pt="Cliente" data-en="Client">Cliente</label><span>Editora Formar</span></div>
+      <div class="hero-meta-item"><label data-pt="Plataforma" data-en="Platform">Plataforma</label><span>Web</span></div>
       <div class="hero-meta-item"><label>Tools</label><span>Figma</span></div>
-      <div class="hero-meta-item"><label>Disciplinas</label><span>Web · Editorial · UX</span></div>
+      <div class="hero-meta-item"><label data-pt="Disciplinas" data-en="Disciplines">Disciplinas</label><span>Web · Editorial · UX</span></div>
     </div>
   </div>
   <div class="hero-right">
-    <p class="hero-quote">"Um site para crianças não pode só ser bonito — tem de ser compreensível para quem ainda está a aprender a ler o mundo digital."</p>
+    <p class="hero-quote" data-pt='"Um site para crianças não pode só ser bonito — tem de ser compreensível para quem ainda está a aprender a ler o mundo digital."' data-en='"A website for children cannot just be pretty — it has to be comprehensible for those still learning to read the digital world."'>"Um site para crianças não pode só ser bonito — tem de ser compreensível para quem ainda está a aprender a ler o mundo digital."</p>
     <div class="hero-tags">
       <span class="htag">Web Design</span>
       <span class="htag">Editorial</span>
@@ -267,80 +286,93 @@ nav {
 <div class="igrid c1 rev">
   <div class="icell r21">
     <img src="assets/mfm_hero.png" alt="Meu Futuro Melhor — página inicial">
-    <div class="ilbl">Página inicial — apresentação da colecção com hierarquia visual orientada ao leitor jovem</div>
+    <div class="ilbl" data-pt="Página inicial — apresentação da colecção com hierarquia visual orientada ao leitor jovem" data-en="Home page — collection presentation with visual hierarchy oriented to the young reader">Página inicial — apresentação da colecção com hierarquia visual orientada ao leitor jovem</div>
   </div>
 </div>
 
 <div class="specs rev">
   <div class="spec"><div class="spec-num">2</div>
-    <div class="spec-lbl">Audiências em simultâneo — crianças como leitores e adultos como mediadores/compradores</div></div>
+    <div class="spec-lbl" data-pt="Audiências em simultâneo — crianças como leitores e adultos como mediadores/compradores" data-en="Simultaneous audiences — children as readers and adults as mediators/buyers">Audiências em simultâneo — crianças como leitores e adultos como mediadores/compradores</div></div>
   <div class="spec"><div class="spec-num">Col.</div>
-    <div class="spec-lbl">Site de colecção editorial — não de produto individual, mas de universo de marca</div></div>
+    <div class="spec-lbl" data-pt="Site de colecção editorial — não de produto individual, mas de universo de marca" data-en="Editorial collection website — not a single product but a brand universe">Site de colecção editorial — não de produto individual, mas de universo de marca</div></div>
   <div class="spec"><div class="spec-num">UX</div>
-    <div class="spec-lbl">Foco em content strategy e hierarquia tipográfica como instrumentos de UX editorial</div></div>
+    <div class="spec-lbl" data-pt="Foco em content strategy e hierarquia tipográfica como instrumentos de UX editorial" data-en="Focus on content strategy and typographic hierarchy as editorial UX instruments">Foco em content strategy e hierarquia tipográfica como instrumentos de UX editorial</div></div>
   <div class="spec"><div class="spec-num">Web</div>
-    <div class="spec-lbl">Plataforma web responsiva desenhada em Figma com prototipagem interactiva</div></div>
+    <div class="spec-lbl" data-pt="Plataforma web responsiva desenhada em Figma com prototipagem interactiva" data-en="Responsive web platform designed in Figma with interactive prototyping">Plataforma web responsiva desenhada em Figma com prototipagem interactiva</div></div>
 </div>
 
 <div class="tsec rev">
-  <div class="tsec-lbl">O<br>Projecto</div>
+  <div class="tsec-lbl" data-pt="O<br>Projecto" data-en="The<br>Project">O<br>Projecto</div>
   <div class="tsec-body">
-    <p>A colecção "Meu Futuro Melhor" da Editora Formar é uma linha de livros orientados ao desenvolvimento pessoal e à orientação vocacional para jovens. O desafio foi criar um <strong>site que funcionasse simultaneamente para dois públicos distintos</strong>: as crianças e adolescentes (leitores directos) e os adultos que compram os livros (pais, professores, bibliotecários).</p>
-    <p>A abordagem editorial partiu da <strong>linguagem dos próprios livros</strong> — positiva, acessível, com cor e ilustração — e traduziu-a num sistema web com tipografia generosa, imagens editoriais fortes e uma navegação intuitiva que não assumisse literacia digital avançada por parte do utilizador jovem.</p>
+    <p data-pt='A colecção "Meu Futuro Melhor" da Editora Formar é uma linha de livros orientados ao desenvolvimento pessoal e à orientação vocacional para jovens. O desafio foi criar um <strong>site que funcionasse simultaneamente para dois públicos distintos</strong>: as crianças e adolescentes (leitores directos) e os adultos que compram os livros (pais, professores, bibliotecários).' data-en='Editora Formar&apos;s "Meu Futuro Melhor" collection is a line of books focused on personal development and vocational guidance for young people. The challenge was to create a <strong>site that worked simultaneously for two distinct audiences</strong>: children and teenagers (direct readers) and the adults who buy the books (parents, teachers, librarians).'>A colecção "Meu Futuro Melhor" da Editora Formar é uma linha de livros orientados ao desenvolvimento pessoal e à orientação vocacional para jovens. O desafio foi criar um <strong>site que funcionasse simultaneamente para dois públicos distintos</strong>: as crianças e adolescentes (leitores directos) e os adultos que compram os livros (pais, professores, bibliotecários).</p>
+    <p data-pt="A abordagem editorial partiu da <strong>linguagem dos próprios livros</strong> — positiva, acessível, com cor e ilustração — e traduziu-a num sistema web com tipografia generosa, imagens editoriais fortes e uma navegação intuitiva que não assumisse literacia digital avançada por parte do utilizador jovem." data-en="The editorial approach drew from the <strong>language of the books themselves</strong> — positive, accessible, with colour and illustration — and translated it into a web system with generous typography, strong editorial images and intuitive navigation that did not assume advanced digital literacy from the young user.">A abordagem editorial partiu da <strong>linguagem dos próprios livros</strong> — positiva, acessível, com cor e ilustração — e traduziu-a num sistema web com tipografia generosa, imagens editoriais fortes e uma navegação intuitiva que não assumisse literacia digital avançada por parte do utilizador jovem.</p>
   </div>
 </div>
 
 <div class="igrid c2 rev">
   <div class="icell r16">
     <img src="assets/mfm_colecao.png" alt="Página de colecção">
-    <div class="ilbl">Página de colecção — grelha de livros com filtros por faixa etária e tema</div>
+    <div class="ilbl" data-pt="Página de colecção — grelha de livros com filtros por faixa etária e tema" data-en="Collection page — book grid with filters by age group and theme">Página de colecção — grelha de livros com filtros por faixa etária e tema</div>
   </div>
   <div class="icell r16">
     <img src="assets/mfm_livro.png" alt="Página de livro">
-    <div class="ilbl">Página de livro — sinopse, excerto, autora e opções de compra</div>
+    <div class="ilbl" data-pt="Página de livro — sinopse, excerto, autora e opções de compra" data-en="Book page — synopsis, excerpt, author and purchase options">Página de livro — sinopse, excerto, autora e opções de compra</div>
   </div>
 </div>
 
 <div class="tsec rev">
-  <div class="tsec-lbl">Siste<br>ma</div>
+  <div class="tsec-lbl" data-pt="Siste<br>ma" data-en="Sys<br>tem">Siste<br>ma</div>
   <div class="tsec-body">
-    <p>O sistema tipográfico usa <strong>escala generosa com contraste de peso</strong> — títulos em bold display para impacto imediato, corpo em regular com line-height alto para leitura confortável por utilizadores mais jovens. A paleta segue as capas da colecção: saturada, alegre, sem tons corporativos.</p>
-    <p>A <strong>content strategy definiu a hierarquia de informação</strong> em cada página: a criança encontra primeiro o que o livro conta e as personagens; o adulto encontra a ficha técnica, a faixa etária recomendada e o preço. Os dois percursos coexistem sem conflito na mesma página.</p>
+    <p data-pt="O sistema tipográfico usa <strong>escala generosa com contraste de peso</strong> — títulos em bold display para impacto imediato, corpo em regular com line-height alto para leitura confortável por utilizadores mais jovens. A paleta segue as capas da colecção: saturada, alegre, sem tons corporativos." data-en="The typographic system uses a <strong>generous scale with weight contrast</strong> — bold display headings for immediate impact, regular body text with a high line-height for comfortable reading by younger users. The palette follows the collection covers: saturated, joyful, no corporate tones.">O sistema tipográfico usa <strong>escala generosa com contraste de peso</strong> — títulos em bold display para impacto imediato, corpo em regular com line-height alto para leitura confortável por utilizadores mais jovens. A paleta segue as capas da colecção: saturada, alegre, sem tons corporativos.</p>
+    <p data-pt="A <strong>content strategy definiu a hierarquia de informação</strong> em cada página: a criança encontra primeiro o que o livro conta e as personagens; o adulto encontra a ficha técnica, a faixa etária recomendada e o preço. Os dois percursos coexistem sem conflito na mesma página." data-en="The <strong>content strategy defined the information hierarchy</strong> on each page: the child first finds what the book is about and the characters; the adult finds the technical sheet, the recommended age range and the price. The two journeys coexist without conflict on the same page.">A <strong>content strategy definiu a hierarquia de informação</strong> em cada página: a criança encontra primeiro o que o livro conta e as personagens; o adulto encontra a ficha técnica, a faixa etária recomendada e o preço. Os dois percursos coexistem sem conflito na mesma página.</p>
   </div>
 </div>
 
 <div class="igrid c3 rev">
   <div class="icell r1">
     <img src="assets/mfm_mobile.png" alt="Vista mobile">
-    <div class="ilbl">Vista mobile — adaptação para tablet, principal dispositivo do público jovem</div>
+    <div class="ilbl" data-pt="Vista mobile — adaptação para tablet, principal dispositivo do público jovem" data-en="Mobile view — tablet adaptation, the young audience's main device">Vista mobile — adaptação para tablet, principal dispositivo do público jovem</div>
   </div>
   <div class="icell r1">
     <img src="assets/mfm_er.png" alt="Sobre a colecção">
-    <div class="ilbl">MFM — celebrando a diversidade Étnico-Racial</div>
+    <div class="ilbl" data-pt="MFM — celebrando a diversidade Étnico-Racial" data-en="MFM — celebrating Ethnic-Racial Diversity">MFM — celebrando a diversidade Étnico-Racial</div>
   </div>
   <div class="icell r1">
     <img src="assets/mfm_EF.png" alt="Sistema de componentes">
-    <div class="ilbl">MFM - Eucação Financeira para a Vida</div>
+    <div class="ilbl" data-pt="MFM - Eucação Financeira para a Vida" data-en="MFM — Financial Education for Life">MFM - Eucação Financeira para a Vida</div>
   </div>
 </div>
 
 <div class="dark-band rev" style="border-bottom:var(--border);">
-  <div style="font-family:var(--fd);font-size:clamp(36px,5vw,72px);color:var(--warm);line-height:.9;text-transform:uppercase;letter-spacing:-.02em;margin-bottom:24px;">
+  <div style="font-family:var(--fd);font-size:clamp(36px,5vw,72px);color:var(--warm);line-height:.9;text-transform:uppercase;letter-spacing:-.02em;margin-bottom:24px;"
+    data-pt="<span style='color:var(--coral);'>Editorial</span><br>ao serviço<br>do <span style='color:var(--coral);'>leitor</span>"
+    data-en="<span style='color:var(--coral);'>Editorial</span><br>at the service<br>of the <span style='color:var(--coral);'>reader</span>">
     <span style="color:var(--coral);">Editorial</span><br>
     ao serviço<br>
     do <span style="color:var(--coral);">leitor</span>
   </div>
-  <p style="font-size:11px;color:rgba(245,240,232,.4);text-transform:uppercase;letter-spacing:.12em;margin-top:16px;">
+  <p style="font-size:11px;color:rgba(245,240,232,.4);text-transform:uppercase;letter-spacing:.12em;margin-top:16px;"
+    data-pt="— Meu Futuro Melhor · Editora Formar · Web Design · UX Editorial"
+    data-en="— Meu Futuro Melhor · Editora Formar · Web Design · Editorial UX">
     — Meu Futuro Melhor · Editora Formar · Web Design · UX Editorial
   </p>
 </div>
 
 <div class="cta-row rev">
   <div class="cta-title">Meu Futuro<br>Melhor</div>
-  <a href="https://www.figma.com/proto/rhGaxp0paxsCO0KrmW91r4/Meu-Futuro-Melhor" target="_blank" class="cta-btn">Ver protótipo ↗</a>
+  <a href="https://www.figma.com/proto/rhGaxp0paxsCO0KrmW91r4/Meu-Futuro-Melhor" target="_blank" class="cta-btn" data-pt="Ver protótipo ↗" data-en="View prototype ↗">Ver protótipo ↗</a>
 </div>
 
 <script>
+let currentLang = 'pt';
+function toggleLang() {
+  currentLang = currentLang === 'pt' ? 'en' : 'pt';
+  document.documentElement.lang = currentLang;
+  document.getElementById('lang-toggle').textContent = currentLang === 'pt' ? 'EN' : 'PT';
+  document.querySelectorAll('[data-pt][data-en]').forEach(el => {
+    el.innerHTML = el.dataset[currentLang];
+  });
+}
 const obs = new IntersectionObserver(es => es.forEach(e => {
   if(e.isIntersecting) e.target.classList.add('vis');
 }), {threshold:.08});

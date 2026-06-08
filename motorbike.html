@@ -66,6 +66,20 @@ nav {
   font-size:10px; text-transform:uppercase;
   letter-spacing:.14em; color:var(--muted);
 }
+.nav-right { display:flex; align-items:center; gap:16px; }
+#lang-toggle {
+  background: transparent;
+  border: 1px solid rgba(13,13,13,.35);
+  color: var(--dark);
+  font-family: var(--fb);
+  font-size: 10px;
+  text-transform: uppercase;
+  letter-spacing: .12em;
+  padding: 4px 10px;
+  cursor: pointer;
+  transition: background .15s;
+}
+#lang-toggle:hover { background: rgba(13,13,13,.08); }
 
 .hero {
   display:grid; grid-template-columns:1fr 1fr;
@@ -225,13 +239,18 @@ nav {
 <body>
 
 <nav>
-  <a href="portfolio.html" class="nav-back">← Portfolio</a>
+  <a href="portfolio.html" class="nav-back" data-pt="← Portfolio" data-en="← Portfolio">← Portfolio</a>
   <span class="nav-title">Motorbike Dashboard</span>
-  <span class="nav-cat">HCI · Dashboard · Data Viz</span>
+  <div class="nav-right">
+    <span class="nav-cat" data-pt="HCI · Dashboard · Data Viz" data-en="HCI · Dashboard · Data Viz">HCI · Dashboard · Data Viz</span>
+    <button id="lang-toggle" onclick="toggleLang()" aria-label="Switch language">EN</button>
+  </div>
 </nav>
 
 <div class="mstrip">
-  <div class="mtrack">
+  <div class="mtrack"
+    data-pt="Motorbike Dashboard &nbsp;·&nbsp; HCI &nbsp;·&nbsp; Ergonomia &nbsp;·&nbsp; Embedded UI &nbsp;·&nbsp; Hierarquia de Informação &nbsp;·&nbsp; Leitura em Movimento &nbsp;·&nbsp; Mestrado UTAD &nbsp;·&nbsp; Data Viz &nbsp;·&nbsp; Motorbike Dashboard &nbsp;·&nbsp; HCI &nbsp;·&nbsp; Ergonomia &nbsp;·&nbsp; Embedded UI &nbsp;·&nbsp; Hierarquia de Informação &nbsp;·&nbsp; Leitura em Movimento &nbsp;·&nbsp; Mestrado UTAD &nbsp;·&nbsp; Data Viz &nbsp;·&nbsp;"
+    data-en="Motorbike Dashboard &nbsp;·&nbsp; HCI &nbsp;·&nbsp; Ergonomics &nbsp;·&nbsp; Embedded UI &nbsp;·&nbsp; Information Hierarchy &nbsp;·&nbsp; Reading in Motion &nbsp;·&nbsp; MSc UTAD &nbsp;·&nbsp; Data Viz &nbsp;·&nbsp; Motorbike Dashboard &nbsp;·&nbsp; HCI &nbsp;·&nbsp; Ergonomics &nbsp;·&nbsp; Embedded UI &nbsp;·&nbsp; Information Hierarchy &nbsp;·&nbsp; Reading in Motion &nbsp;·&nbsp; MSc UTAD &nbsp;·&nbsp; Data Viz &nbsp;·&nbsp;">
     Motorbike Dashboard &nbsp;·&nbsp; HCI &nbsp;·&nbsp; Ergonomia &nbsp;·&nbsp; Embedded UI &nbsp;·&nbsp; Hierarquia de Informação &nbsp;·&nbsp; Leitura em Movimento &nbsp;·&nbsp; Mestrado UTAD &nbsp;·&nbsp; Data Viz &nbsp;·&nbsp;
     Motorbike Dashboard &nbsp;·&nbsp; HCI &nbsp;·&nbsp; Ergonomia &nbsp;·&nbsp; Embedded UI &nbsp;·&nbsp; Hierarquia de Informação &nbsp;·&nbsp; Leitura em Movimento &nbsp;·&nbsp; Mestrado UTAD &nbsp;·&nbsp; Data Viz &nbsp;·&nbsp;
   </div>
@@ -240,19 +259,19 @@ nav {
 <div class="hero rev">
   <div class="hero-left">
     <div>
-      <div class="hero-cat">Dashboard · HCI · Ergonomia · Embedded UI · Mestrado UTAD</div>
+      <div class="hero-cat" data-pt="Dashboard · HCI · Ergonomia · Embedded UI · Mestrado UTAD" data-en="Dashboard · HCI · Ergonomics · Embedded UI · MSc UTAD">Dashboard · HCI · Ergonomia · Embedded UI · Mestrado UTAD</div>
       <h1 class="hero-title">Motor<br><span class="a">bike</span><br><span class="o">Dash</span></h1>
-      <p class="hero-sub">Dashboard digital para painel de motocicleta — projecto de investigação em HCI e ergonomia. Foco em hierarquia de informação crítica, legibilidade em condições de movimento e usabilidade contextual para uso com capacete e luvas.</p>
+      <p class="hero-sub" data-pt="Dashboard digital para painel de motocicleta — projecto de investigação em HCI e ergonomia. Foco em hierarquia de informação crítica, legibilidade em condições de movimento e usabilidade contextual para uso com capacete e luvas." data-en="Digital dashboard for a motorcycle instrument panel — a research project in HCI and ergonomics. Focus on critical information hierarchy, legibility in motion conditions and contextual usability for use with helmet and gloves.">Dashboard digital para painel de motocicleta — projecto de investigação em HCI e ergonomia. Foco em hierarquia de informação crítica, legibilidade em condições de movimento e usabilidade contextual para uso com capacete e luvas.</p>
     </div>
     <div class="hero-meta">
-      <div class="hero-meta-item"><label>Contexto</label><span>Mestrado UTAD</span></div>
-      <div class="hero-meta-item"><label>Plataforma</label><span>Embedded UI</span></div>
+      <div class="hero-meta-item"><label data-pt="Contexto" data-en="Context">Contexto</label><span data-pt="Mestrado UTAD" data-en="MSc UTAD">Mestrado UTAD</span></div>
+      <div class="hero-meta-item"><label data-pt="Plataforma" data-en="Platform">Plataforma</label><span>Embedded UI</span></div>
       <div class="hero-meta-item"><label>Tools</label><span>Figma</span></div>
-      <div class="hero-meta-item"><label>Disciplinas</label><span>HCI · Ergonomia · UX</span></div>
+      <div class="hero-meta-item"><label data-pt="Disciplinas" data-en="Disciplines">Disciplinas</label><span data-pt="HCI · Ergonomia · UX" data-en="HCI · Ergonomics · UX">HCI · Ergonomia · UX</span></div>
     </div>
   </div>
   <div class="hero-right">
-    <p class="hero-quote">"Quando o contexto é 120 km/h, cada milissegundo de leitura conta — a interface não pode pedir atenção que o condutor não tem."</p>
+    <p class="hero-quote" data-pt='"Quando o contexto é 120 km/h, cada milissegundo de leitura conta — a interface não pode pedir atenção que o condutor não tem."' data-en='"When the context is 120 km/h, every millisecond of reading counts — the interface cannot demand attention the rider does not have."'>"Quando o contexto é 120 km/h, cada milissegundo de leitura conta — a interface não pode pedir atenção que o condutor não tem."</p>
     <div class="hero-tags">
       <span class="htag">HCI</span>
       <span class="htag">Ergonomia</span>
@@ -266,26 +285,26 @@ nav {
 <div class="igrid c1 rev">
   <div class="icell r21">
     <img src="assets/moto_hero.png" alt="Motorbike Dashboard — visão geral">
-    <div class="ilbl">Visão geral do dashboard — modo condução com velocidade, rotação e alertas críticos</div>
+    <div class="ilbl" data-pt="Visão geral do dashboard — modo condução com velocidade, rotação e alertas críticos" data-en="Dashboard overview — riding mode with speed, RPM and critical alerts">Visão geral do dashboard — modo condução com velocidade, rotação e alertas críticos</div>
   </div>
 </div>
 
 <div class="specs rev">
   <div class="spec"><div class="spec-num">2s</div>
-    <div class="spec-lbl">Tempo máximo de leitura aceitável para informação secundária em movimento</div></div>
+    <div class="spec-lbl" data-pt="Tempo máximo de leitura aceitável para informação secundária em movimento" data-en="Maximum acceptable reading time for secondary information in motion">Tempo máximo de leitura aceitável para informação secundária em movimento</div></div>
   <div class="spec"><div class="spec-num">HCI</div>
-    <div class="spec-lbl">Human-Computer Interaction como quadro teórico central da investigação</div></div>
+    <div class="spec-lbl" data-pt="Human-Computer Interaction como quadro teórico central da investigação" data-en="Human-Computer Interaction as the central theoretical framework of the research">Human-Computer Interaction como quadro teórico central da investigação</div></div>
   <div class="spec"><div class="spec-num">50+</div>
-    <div class="spec-lbl">Testes com usuários (5-second test + SUS)</div></div>
+    <div class="spec-lbl" data-pt="Testes com usuários (5-second test + SUS)" data-en="User tests (5-second test + SUS)">Testes com usuários (5-second test + SUS)</div></div>
   <div class="spec"><div class="spec-num">1</div>
-    <div class="spec-lbl">desenho de uainterface que desempenhebem em todas situações e usuários&nbsp;</div></div>
+    <div class="spec-lbl" data-pt="desenho de uainterface que desempenhebem em todas situações e usuários" data-en="Interface designed to perform well in all situations and for all users">desenho de uainterface que desempenhebem em todas situações e usuários&nbsp;</div></div>
 </div>
 
 <div class="tsec rev">
-  <div class="tsec-lbl">O<br>Projecto</div>
+  <div class="tsec-lbl" data-pt="O<br>Projecto" data-en="The<br>Project">O<br>Projecto</div>
   <div class="tsec-body">
-    <p>O dashboard de motocicleta é um dos contextos de uso mais exigentes em HCI — o utilizador está em movimento a velocidade elevada, usa equipamento que limita a motricidade fina (luvas) e não pode desviar a atenção do ambiente de condução por mais de alguns segundos. <strong>O design tem de ser correcto à primeira leitura.</strong></p>
-    <p>O projecto partiu de uma revisão de literatura em <strong>ergonomia cognitiva e interfaces de veículos</strong>, seguida de análise de dashboards existentes (analógicos e digitais). O foco foi identificar a hierarquia de informação crítica — o que o condutor precisa de saber imediatamente, o que pode ser consultado, e o que nunca deve distrair.</p>
+    <p data-pt="O dashboard de motocicleta é um dos contextos de uso mais exigentes em HCI — o utilizador está em movimento a velocidade elevada, usa equipamento que limita a motricidade fina (luvas) e não pode desviar a atenção do ambiente de condução por mais de alguns segundos. <strong>O design tem de ser correcto à primeira leitura.</strong>" data-en="The motorcycle dashboard is one of the most demanding use contexts in HCI — the user is moving at high speed, wearing equipment that limits fine motor control (gloves) and cannot divert attention from the riding environment for more than a few seconds. <strong>The design must be correct on the first read.</strong>">O dashboard de motocicleta é um dos contextos de uso mais exigentes em HCI — o utilizador está em movimento a velocidade elevada, usa equipamento que limita a motricidade fina (luvas) e não pode desviar a atenção do ambiente de condução por mais de alguns segundos. <strong>O design tem de ser correcto à primeira leitura.</strong></p>
+    <p data-pt="O projecto partiu de uma revisão de literatura em <strong>ergonomia cognitiva e interfaces de veículos</strong>, seguida de análise de dashboards existentes (analógicos e digitais). O foco foi identificar a hierarquia de informação crítica — o que o condutor precisa de saber imediatamente, o que pode ser consultado, e o que nunca deve distrair." data-en="The project started from a literature review in <strong>cognitive ergonomics and vehicle interfaces</strong>, followed by analysis of existing dashboards (analogue and digital). The focus was to identify the critical information hierarchy — what the rider needs to know immediately, what can be consulted, and what should never distract.">O projecto partiu de uma revisão de literatura em <strong>ergonomia cognitiva e interfaces de veículos</strong>, seguida de análise de dashboards existentes (analógicos e digitais). O foco foi identificar a hierarquia de informação crítica — o que o condutor precisa de saber imediatamente, o que pode ser consultado, e o que nunca deve distrair.</p>
   </div>
 </div>
 
@@ -293,54 +312,67 @@ nav {
   <div class="igrid c2 rev">
   <div class="icell r16">
     <img src="assets/moto_alt1.png" alt="Modo diurno">
-    <div class="ilbl">Alternativa de design — reprovada por pesquisa</div>
+    <div class="ilbl" data-pt="Alternativa de design — reprovada por pesquisa" data-en="Design alternative — rejected by research">Alternativa de design — reprovada por pesquisa</div>
   </div>
   <div class="icell r16">
     <img src="assets/moto_alt2.png" alt="Modo nocturno">
-    <div class="ilbl">aAlternativa de design - reprovada já na execução</div>
+    <div class="ilbl" data-pt="aAlternativa de design - reprovada já na execução" data-en="Design alternative — rejected during execution">aAlternativa de design - reprovada já na execução</div>
   </div>
 </div>
 
 <div class="tsec rev">
-  <div class="tsec-lbl">Hie<br>rar<br>quia</div>
+  <div class="tsec-lbl" data-pt="Hie<br>rar<br>quia" data-en="Hie<br>rar<br>chy">Hie<br>rar<br>quia</div>
   <div class="tsec-body">
-    <p>A hierarquia de informação foi estruturada em <strong>três níveis: crítico, operacional e contextual</strong>. Leando em conta definições feitas aparir do estudo semiótico de esquisos de estudantes.</p>
-    <p>A <strong>tipografia foi escolhida por legibilidade em condições adversas</strong> — fontes com espaçamento generoso, sem serifas, com abertura de contadores ampla. Os ícones usam formas distintas (não apenas cor) para serem reconhecíveis com visão periférica ou em daltonismo.</p>
+    <p data-pt="A hierarquia de informação foi estruturada em <strong>três níveis: crítico, operacional e contextual</strong>. Leando em conta definições feitas aparir do estudo semiótico de esquisos de estudantes." data-en="The information hierarchy was structured into <strong>three levels: critical, operational and contextual</strong>. Taking into account definitions derived from the semiotic study of student sketches.">A hierarquia de informação foi estruturada em <strong>três níveis: crítico, operacional e contextual</strong>. Leando em conta definições feitas aparir do estudo semiótico de esquisos de estudantes.</p>
+    <p data-pt="A <strong>tipografia foi escolhida por legibilidade em condições adversas</strong> — fontes com espaçamento generoso, sem serifas, com abertura de contadores ampla. Os ícones usam formas distintas (não apenas cor) para serem reconhecíveis com visão periférica ou em daltonismo." data-en="<strong>Typography was selected for legibility in adverse conditions</strong> — typefaces with generous spacing, no serifs, wide counter apertures. Icons use distinct shapes (not just colour) to be recognisable with peripheral vision or in colour blindness.">A <strong>tipografia foi escolhida por legibilidade em condições adversas</strong> — fontes com espaçamento generoso, sem serifas, com abertura de contadores ampla. Os ícones usam formas distintas (não apenas cor) para serem reconhecíveis com visão periférica ou em daltonismo.</p>
   </div>
 </div>
 
 <div class="igrid c3 rev">
   <div class="icell r1">
     <img src="assets/moto_heat1.png" alt="Sistema de alertas">
-    <div class="ilbl">Heatmap — velocimetro</div>
+    <div class="ilbl" data-pt="Heatmap — velocimetro" data-en="Heatmap — speedometer">Heatmap — velocimetro</div>
   </div>
   <div class="icell r1">
     <img src="assets/moto_heat2.png" alt="Navegação GPS">
-    <div class="ilbl">Heatmap — piscas/setas</div>
+    <div class="ilbl" data-pt="Heatmap — piscas/setas" data-en="Heatmap — indicators/arrows">Heatmap — piscas/setas</div>
   </div>
   <div class="icell r1">
     <img src="assets/moto_heat3.png" alt="Configuração">
-    <div class="ilbl">Heatmap — icones</div>
+    <div class="ilbl" data-pt="Heatmap — icones" data-en="Heatmap — icons">Heatmap — icones</div>
   </div>
 </div>
 
 <div class="dark-band rev" style="border-bottom:var(--border);">
-  <div style="font-family:var(--fd);font-size:clamp(36px,5vw,72px);color:var(--warm);line-height:.9;text-transform:uppercase;letter-spacing:-.02em;margin-bottom:24px;">
+  <div style="font-family:var(--fd);font-size:clamp(36px,5vw,72px);color:var(--warm);line-height:.9;text-transform:uppercase;letter-spacing:-.02em;margin-bottom:24px;"
+    data-pt="<span style='color:var(--yellow);'>Legível</span><br>a 120<br><span style='color:var(--yellow);'>km/h</span>"
+    data-en="<span style='color:var(--yellow);'>Readable</span><br>at 120<br><span style='color:var(--yellow);'>km/h</span>">
     <span style="color:var(--yellow);">Legível</span><br>
     a 120<br>
     <span style="color:var(--yellow);">km/h</span>
   </div>
-  <p style="font-size:11px;color:rgba(245,240,232,.4);text-transform:uppercase;letter-spacing:.12em;margin-top:16px;">
+  <p style="font-size:11px;color:rgba(245,240,232,.4);text-transform:uppercase;letter-spacing:.12em;margin-top:16px;"
+    data-pt="— Motorbike Dashboard · HCI · Ergonomia · Embedded UI · Mestrado UTAD"
+    data-en="— Motorbike Dashboard · HCI · Ergonomics · Embedded UI · MSc UTAD">
     — Motorbike Dashboard · HCI · Ergonomia · Embedded UI · Mestrado UTAD
   </p>
 </div>
 
 <div class="cta-row rev">
   <div class="cta-title">Motorbike<br>Dashboard</div>
-  <a href="https://www.figma.com/proto/ZhPeI3JnitRsGyehLN78l8" target="_blank" class="cta-btn">Ver protótipo ↗</a>
+  <a href="https://www.figma.com/proto/ZhPeI3JnitRsGyehLN78l8" target="_blank" class="cta-btn" data-pt="Ver protótipo ↗" data-en="View prototype ↗">Ver protótipo ↗</a>
 </div>
 
 <script>
+let currentLang = 'pt';
+function toggleLang() {
+  currentLang = currentLang === 'pt' ? 'en' : 'pt';
+  document.documentElement.lang = currentLang;
+  document.getElementById('lang-toggle').textContent = currentLang === 'pt' ? 'EN' : 'PT';
+  document.querySelectorAll('[data-pt][data-en]').forEach(el => {
+    el.innerHTML = el.dataset[currentLang];
+  });
+}
 const obs = new IntersectionObserver(es => es.forEach(e => {
   if(e.isIntersecting) e.target.classList.add('vis');
 }), {threshold:.08});

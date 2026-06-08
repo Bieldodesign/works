@@ -67,6 +67,20 @@ nav {
   font-size:10px; text-transform:uppercase;
   letter-spacing:.14em; color:var(--muted);
 }
+.nav-right { display:flex; align-items:center; gap:16px; }
+#lang-toggle {
+  background: transparent;
+  border: 1px solid rgba(13,13,13,.35);
+  color: var(--dark);
+  font-family: var(--fb);
+  font-size: 10px;
+  text-transform: uppercase;
+  letter-spacing: .12em;
+  padding: 4px 10px;
+  cursor: pointer;
+  transition: background .15s;
+}
+#lang-toggle:hover { background: rgba(13,13,13,.08); }
 
 /* ── HERO ── */
 .hero {
@@ -244,13 +258,18 @@ nav {
 </head>
 <body>
 <nav>
-  <a href="portfolio.html" class="nav-back">← Portfolio</a>
+  <a href="portfolio.html" class="nav-back" data-pt="← Portfolio" data-en="← Portfolio">← Portfolio</a>
   <span class="nav-title">Entre Passos e Gingas</span>
-  <span class="nav-cat">Design Editorial · Ilustração</span>
+  <div class="nav-right">
+    <span class="nav-cat" data-pt="Design Editorial · Ilustração" data-en="Editorial Design · Illustration">Design Editorial · Ilustração</span>
+    <button id="lang-toggle" onclick="toggleLang()" aria-label="Switch language">EN</button>
+  </div>
 </nav>
 
 <div class="mstrip">
-  <div class="mtrack">
+  <div class="mtrack"
+    data-pt="Entre Passos e Gingas &nbsp;·&nbsp; Livro Infantil &nbsp;·&nbsp; Editora Formar &nbsp;·&nbsp; Capoeira &nbsp;·&nbsp; Natureza &nbsp;·&nbsp; Adobe Firefly &nbsp;·&nbsp; Design Editorial &nbsp;·&nbsp; Ilustração &nbsp;·&nbsp; Douglas Aguilar &nbsp;·&nbsp; Entre Passos e Gingas &nbsp;·&nbsp; Livro Infantil &nbsp;·&nbsp; Editora Formar &nbsp;·&nbsp; Capoeira &nbsp;·&nbsp; Natureza &nbsp;·&nbsp; Adobe Firefly &nbsp;·&nbsp; Design Editorial &nbsp;·&nbsp; Ilustração &nbsp;·&nbsp; Douglas Aguilar &nbsp;·&nbsp;"
+    data-en="Entre Passos e Gingas &nbsp;·&nbsp; Children's Book &nbsp;·&nbsp; Editora Formar &nbsp;·&nbsp; Capoeira &nbsp;·&nbsp; Nature &nbsp;·&nbsp; Adobe Firefly &nbsp;·&nbsp; Editorial Design &nbsp;·&nbsp; Illustration &nbsp;·&nbsp; Douglas Aguilar &nbsp;·&nbsp; Entre Passos e Gingas &nbsp;·&nbsp; Children's Book &nbsp;·&nbsp; Editora Formar &nbsp;·&nbsp; Capoeira &nbsp;·&nbsp; Nature &nbsp;·&nbsp; Adobe Firefly &nbsp;·&nbsp; Editorial Design &nbsp;·&nbsp; Illustration &nbsp;·&nbsp; Douglas Aguilar &nbsp;·&nbsp;">
     Entre Passos e Gingas &nbsp;·&nbsp; Livro Infantil &nbsp;·&nbsp; Editora Formar &nbsp;·&nbsp; Capoeira &nbsp;·&nbsp; Natureza &nbsp;·&nbsp; Adobe Firefly &nbsp;·&nbsp; Design Editorial &nbsp;·&nbsp; Ilustração &nbsp;·&nbsp; Douglas Aguilar &nbsp;·&nbsp;
     Entre Passos e Gingas &nbsp;·&nbsp; Livro Infantil &nbsp;·&nbsp; Editora Formar &nbsp;·&nbsp; Capoeira &nbsp;·&nbsp; Natureza &nbsp;·&nbsp; Adobe Firefly &nbsp;·&nbsp; Design Editorial &nbsp;·&nbsp; Ilustração &nbsp;·&nbsp; Douglas Aguilar &nbsp;·&nbsp;
   </div>
@@ -259,19 +278,19 @@ nav {
 <div class="hero rev">
   <div class="hero-left">
     <div>
-      <div class="hero-cat">Design Editorial · Ilustração · 2023 · Editora Formar</div>
+      <div class="hero-cat" data-pt="Design Editorial · Ilustração · 2023 · Editora Formar" data-en="Editorial Design · Illustration · 2023 · Editora Formar">Design Editorial · Ilustração · 2023 · Editora Formar</div>
       <h1 class="hero-title">Entre<br><span class="a">Pas</span><span class="o">sos</span><br>e Gingas</h1>
-      <p class="hero-sub">Projecto gráfico completo — miolo e capa — de um livro infantojuvenil sobre capoeira e natureza brasileira, publicado pela Editora Formar. Ilustrações em co-criação com Adobe Firefly, curadas e compostas manualmente em cada spread.</p>
+      <p class="hero-sub" data-pt="Projecto gráfico completo — miolo e capa — de um livro infantojuvenil sobre capoeira e natureza brasileira, publicado pela Editora Formar. Ilustrações em co-criação com Adobe Firefly, curadas e compostas manualmente em cada spread." data-en="Complete graphic project — interior and cover — of a children's/YA book about capoeira and Brazilian nature, published by Editora Formar. Illustrations co-created with Adobe Firefly, curated and manually composed on each spread.">Projecto gráfico completo — miolo e capa — de um livro infantojuvenil sobre capoeira e natureza brasileira, publicado pela Editora Formar. Ilustrações em co-criação com Adobe Firefly, curadas e compostas manualmente em cada spread.</p>
     </div>
     <div class="hero-meta">
-      <div class="hero-meta-item"><label>Autor</label><span>Douglas Aguilar</span></div>
-      <div class="hero-meta-item"><label>Editora</label><span>Editora Formar</span></div>
-      <div class="hero-meta-item"><label>Ano</label><span>2023</span></div>
+      <div class="hero-meta-item"><label data-pt="Autor" data-en="Author">Autor</label><span>Douglas Aguilar</span></div>
+      <div class="hero-meta-item"><label data-pt="Editora" data-en="Publisher">Editora</label><span>Editora Formar</span></div>
+      <div class="hero-meta-item"><label data-pt="Ano" data-en="Year">Ano</label><span>2023</span></div>
       <div class="hero-meta-item"><label>ISBN</label><span>978-65-8912-193-0</span></div>
     </div>
   </div>
   <div class="hero-right">
-    <p class="hero-quote">"A capoeira é sim cultura e diversão. Só entra na roda quem ginga, meu irmão!"</p>
+    <p class="hero-quote" data-pt='"A capoeira é sim cultura e diversão. Só entra na roda quem ginga, meu irmão!"' data-en='"Capoeira is culture and fun. Only those who move with ginga enter the roda, my brother!"'>"A capoeira é sim cultura e diversão. Só entra na roda quem ginga, meu irmão!"</p>
     <div class="hero-tags">
       <span class="htag">Design Editorial</span><span class="htag">Direcção de Arte</span>
       <span class="htag">Ilustração</span><span class="htag">Adobe Firefly</span>
@@ -290,50 +309,50 @@ nav {
 
 <div class="specs rev">
   <div class="spec"><div class="spec-num">16</div>
-    <div class="spec-lbl">Páginas com projecto gráfico integral — miolo e capa</div></div>
+    <div class="spec-lbl" data-pt="Páginas com projecto gráfico integral — miolo e capa" data-en="Pages with full graphic design — interior and cover">Páginas com projecto gráfico integral — miolo e capa</div></div>
   <div class="spec"><div class="spec-num">20cm</div>
-    <div class="spec-lbl">Formato quadrado — escolhido para ampliar as ilustrações e dar peso visual</div></div>
+    <div class="spec-lbl" data-pt="Formato quadrado — escolhido para ampliar as ilustrações e dar peso visual" data-en="Square format — chosen to enlarge illustrations and add visual weight">Formato quadrado — escolhido para ampliar as ilustrações e dar peso visual</div></div>
   <div class="spec"><div class="spec-num">AI+</div>
-    <div class="spec-lbl">Ilustrações em co-criação com Adobe Firefly — transparência total nos créditos</div></div>
+    <div class="spec-lbl" data-pt="Ilustrações em co-criação com Adobe Firefly — transparência total nos créditos" data-en="Illustrations co-created with Adobe Firefly — full transparency in credits">Ilustrações em co-criação com Adobe Firefly — transparência total nos créditos</div></div>
   <div class="spec"><div class="spec-num">CIP</div>
-    <div class="spec-lbl">Catalogação na Biblioteca Nacional — publicação editorial formal</div></div>
+    <div class="spec-lbl" data-pt="Catalogação na Biblioteca Nacional — publicação editorial formal" data-en="Cataloguing at the National Library — formal editorial publication">Catalogação na Biblioteca Nacional — publicação editorial formal</div></div>
 </div>
 
 <div class="igrid c1 rev">
   <div class="icell r21">
     <img src="assets/entre_capa.png" alt="Capa">
-    <div class="ilbl">Capa — paper art tropical generativo + tipografia display manuscrita</div>
+    <div class="ilbl" data-pt="Capa — paper art tropical generativo + tipografia display manuscrita" data-en="Cover — generative tropical paper art + handwritten display typography">Capa — paper art tropical generativo + tipografia display manuscrita</div>
   </div>
 </div>
 
 <div class="tsec rev">
-  <div class="tsec-lbl">O<br>Projecto</div>
+  <div class="tsec-lbl" data-pt="O<br>Projecto" data-en="The<br>Project">O<br>Projecto</div>
   <div class="tsec-body">
-    <p>O texto de Douglas Aguilar percorre dois temas centrais: a <strong>natureza do Cerrado brasileiro</strong> — com plantas em extinção como o Jequitibá e Jeriquitim — e a <strong>capoeira como expressão cultural afro-brasileira</strong>: história, música (agogô, atabaque, berimbau, caxixi, pandeiro, reco-reco), luta e superação.</p>
-    <p>O desafio do projecto gráfico foi criar um universo visual que <strong>honrasse ambos os temas sem os hierarquizar</strong>. A capa usa paper art tropical gerada com Adobe Firefly e curada para transmitir profundidade em camadas — como a própria capoeira, que é simultaneamente dança, luta e cerimónia.</p>
+    <p data-pt="O texto de Douglas Aguilar percorre dois temas centrais: a <strong>natureza do Cerrado brasileiro</strong> — com plantas em extinção como o Jequitibá e Jeriquitim — e a <strong>capoeira como expressão cultural afro-brasileira</strong>: história, música (agogô, atabaque, berimbau, caxixi, pandeiro, reco-reco), luta e superação." data-en="Douglas Aguilar's text explores two central themes: the <strong>nature of the Brazilian Cerrado</strong> — with endangered plants such as Jequitibá and Jeriquitim — and <strong>capoeira as an Afro-Brazilian cultural expression</strong>: history, music (agogô, atabaque, berimbau, caxixi, pandeiro, reco-reco), fighting and overcoming.">O texto de Douglas Aguilar percorre dois temas centrais: a <strong>natureza do Cerrado brasileiro</strong> — com plantas em extinção como o Jequitibá e Jeriquitim — e a <strong>capoeira como expressão cultural afro-brasileira</strong>: história, música (agogô, atabaque, berimbau, caxixi, pandeiro, reco-reco), luta e superação.</p>
+    <p data-pt="O desafio do projecto gráfico foi criar um universo visual que <strong>honrasse ambos os temas sem os hierarquizar</strong>. A capa usa paper art tropical gerada com Adobe Firefly e curada para transmitir profundidade em camadas — como a própria capoeira, que é simultaneamente dança, luta e cerimónia." data-en="The graphic design challenge was to create a visual universe that <strong>honoured both themes without ranking one above the other</strong>. The cover uses tropical paper art generated with Adobe Firefly and curated to convey layered depth — like capoeira itself, which is simultaneously dance, fight and ceremony.">O desafio do projecto gráfico foi criar um universo visual que <strong>honrasse ambos os temas sem os hierarquizar</strong>. A capa usa paper art tropical gerada com Adobe Firefly e curada para transmitir profundidade em camadas — como a própria capoeira, que é simultaneamente dança, luta e cerimónia.</p>
   </div>
 </div>
 
 <div class="igrid c3 rev">
   <div class="icell r16">
     <img src="assets/entre_spread1.png" alt="Spread natureza">
-    <div class="ilbl">Spread — natureza e preservação do Cerrado</div>
+    <div class="ilbl" data-pt="Spread — natureza e preservação do Cerrado" data-en="Spread — nature and conservation of the Cerrado">Spread — natureza e preservação do Cerrado</div>
   </div>
   <div class="icell r16">
     <img src="assets/entre_spread2.png" alt="Spread capoeira">
-    <div class="ilbl">Spread — capoeira como cultura, luta e superação</div>
+    <div class="ilbl" data-pt="Spread — capoeira como cultura, luta e superação" data-en="Spread — capoeira as culture, fight and overcoming">Spread — capoeira como cultura, luta e superação</div>
   </div>
   <div class="icell r16">
     <img src="assets/entre_spread3.png" alt="Spread mestres">
-    <div class="ilbl">Spread — Mestre Bimba e Mestre Pastinha</div>
+    <div class="ilbl" data-pt="Spread — Mestre Bimba e Mestre Pastinha" data-en="Spread — Mestre Bimba and Mestre Pastinha">Spread — Mestre Bimba e Mestre Pastinha</div>
   </div>
 </div>
 
 <div class="tsec rev">
-  <div class="tsec-lbl">Siste-<br>ma</div>
+  <div class="tsec-lbl" data-pt="Siste-<br>ma" data-en="Sys-<br>tem">Siste-<br>ma</div>
   <div class="tsec-body">
-    <p>A tipografia usa <strong>fontes display em caixa alta</strong> para os versos — o poema é tratado como elemento gráfico: tamanho grande, espaçamento generoso, sem serifa. O ritmo visual da página segue o ritmo poético do texto.</p>
-    <p>As ilustrações foram <strong>criadas manualmente apartir de modelos disponiveis na web</strong> — selecção, recorte e ajuste cromático para coerência com a paleta editorial. A co-autoria com IA  para capa está explicitada nos créditos (Gabriel Mengavel Gomes Palaoro e Adobe Firefly), tornando este projecto também um <strong>exercício de transparência em design com ferramentas generativas</strong>.</p>
+    <p data-pt="A tipografia usa <strong>fontes display em caixa alta</strong> para os versos — o poema é tratado como elemento gráfico: tamanho grande, espaçamento generoso, sem serifa. O ritmo visual da página segue o ritmo poético do texto." data-en="The typography uses <strong>uppercase display typefaces</strong> for the verses — the poem is treated as a graphic element: large size, generous spacing, no serifs. The visual rhythm of the page follows the poetic rhythm of the text.">A tipografia usa <strong>fontes display em caixa alta</strong> para os versos — o poema é tratado como elemento gráfico: tamanho grande, espaçamento generoso, sem serifa. O ritmo visual da página segue o ritmo poético do texto.</p>
+    <p data-pt="As ilustrações foram <strong>criadas manualmente apartir de modelos disponiveis na web</strong> — selecção, recorte e ajuste cromático para coerência com a paleta editorial. A co-autoria com IA  para capa está explicitada nos créditos (Gabriel Mengavel Gomes Palaoro e Adobe Firefly), tornando este projecto também um <strong>exercício de transparência em design com ferramentas generativas</strong>." data-en="Illustrations were <strong>manually curated from available models on the web</strong> — selection, cropping and colour adjustment for coherence with the editorial palette. The AI co-authorship for the cover is stated in the credits (Gabriel Mengavel Gomes Palaoro and Adobe Firefly), making this project also an <strong>exercise in transparency in design with generative tools</strong>.">As ilustrações foram <strong>criadas manualmente apartir de modelos disponiveis na web</strong> — selecção, recorte e ajuste cromático para coerência com a paleta editorial. A co-autoria com IA  para capa está explicitada nos créditos (Gabriel Mengavel Gomes Palaoro e Adobe Firefly), tornando este projecto também um <strong>exercício de transparência em design com ferramentas generativas</strong>.</p>
   </div>
 </div>
 
@@ -348,9 +367,18 @@ nav {
 
 <div class="cta-row rev">
   <div class="cta-title">Entre<br>Passos<br>e Gingas</div>
-  <a href="https://bieldodesign.github.io/portifolio/images/Entre%20Passos%20e%20Gingas%20-%20Miolo.pdf" target="_blank" class="cta-btn">Ver miolo completo ↗</a>
+  <a href="https://bieldodesign.github.io/portifolio/images/Entre%20Passos%20e%20Gingas%20-%20Miolo.pdf" target="_blank" class="cta-btn" data-pt="Ver miolo completo ↗" data-en="View full interior ↗">Ver miolo completo ↗</a>
 </div>
 <script>
+let currentLang = 'pt';
+function toggleLang() {
+  currentLang = currentLang === 'pt' ? 'en' : 'pt';
+  document.documentElement.lang = currentLang;
+  document.getElementById('lang-toggle').textContent = currentLang === 'pt' ? 'EN' : 'PT';
+  document.querySelectorAll('[data-pt][data-en]').forEach(el => {
+    el.innerHTML = el.dataset[currentLang];
+  });
+}
 const obs = new IntersectionObserver(es => es.forEach(e => {
   if(e.isIntersecting) e.target.classList.add('vis');
 }), {threshold:.08});

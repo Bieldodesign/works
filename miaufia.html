@@ -67,6 +67,20 @@ nav {
   font-size:10px; text-transform:uppercase;
   letter-spacing:.14em; color:var(--muted);
 }
+.nav-right { display:flex; align-items:center; gap:16px; }
+#lang-toggle {
+  background: transparent;
+  border: 1px solid rgba(13,13,13,.35);
+  color: var(--dark);
+  font-family: var(--fb);
+  font-size: 10px;
+  text-transform: uppercase;
+  letter-spacing: .12em;
+  padding: 4px 10px;
+  cursor: pointer;
+  transition: background .15s;
+}
+#lang-toggle:hover { background: rgba(13,13,13,.08); }
 
 /* ── HERO ── */
 .hero {
@@ -244,13 +258,18 @@ nav {
 </head>
 <body>
 <nav>
-  <a href="portfolio.html" class="nav-back">← Portfolio</a>
+  <a href="portfolio.html" class="nav-back" data-pt="← Portfolio" data-en="← Portfolio">← Portfolio</a>
   <span class="nav-title">Miaufia HQ</span>
-  <span class="nav-cat">Co-autoria · HQ</span>
+  <div class="nav-right">
+    <span class="nav-cat" data-pt="Co-autoria · HQ" data-en="Co-authorship · Comic">Co-autoria · HQ</span>
+    <button id="lang-toggle" onclick="toggleLang()" aria-label="Switch language">EN</button>
+  </div>
 </nav>
 
 <div class="mstrip">
-  <div class="mtrack">
+  <div class="mtrack"
+    data-pt="Miaufia &nbsp;·&nbsp; HQ &nbsp;·&nbsp; Narrativa Gráfica &nbsp;·&nbsp; Co-autoria &nbsp;·&nbsp; Direcção de Arte &nbsp;·&nbsp; Comic Book &nbsp;·&nbsp; Character Design &nbsp;·&nbsp; Storytelling &nbsp;·&nbsp; Miaufia &nbsp;·&nbsp; HQ &nbsp;·&nbsp; Narrativa Gráfica &nbsp;·&nbsp; Co-autoria &nbsp;·&nbsp; Direcção de Arte &nbsp;·&nbsp; Comic Book &nbsp;·&nbsp; Character Design &nbsp;·&nbsp; Storytelling &nbsp;·&nbsp;"
+    data-en="Miaufia &nbsp;·&nbsp; Comic &nbsp;·&nbsp; Graphic Narrative &nbsp;·&nbsp; Co-authorship &nbsp;·&nbsp; Art Direction &nbsp;·&nbsp; Comic Book &nbsp;·&nbsp; Character Design &nbsp;·&nbsp; Storytelling &nbsp;·&nbsp; Miaufia &nbsp;·&nbsp; Comic &nbsp;·&nbsp; Graphic Narrative &nbsp;·&nbsp; Co-authorship &nbsp;·&nbsp; Art Direction &nbsp;·&nbsp; Comic Book &nbsp;·&nbsp; Character Design &nbsp;·&nbsp; Storytelling &nbsp;·&nbsp;">
     Miaufia &nbsp;·&nbsp; HQ &nbsp;·&nbsp; Narrativa Gráfica &nbsp;·&nbsp; Co-autoria &nbsp;·&nbsp; Direcção de Arte &nbsp;·&nbsp; Comic Book &nbsp;·&nbsp; Character Design &nbsp;·&nbsp; Storytelling &nbsp;·&nbsp;
     Miaufia &nbsp;·&nbsp; HQ &nbsp;·&nbsp; Narrativa Gráfica &nbsp;·&nbsp; Co-autoria &nbsp;·&nbsp; Direcção de Arte &nbsp;·&nbsp; Comic Book &nbsp;·&nbsp; Character Design &nbsp;·&nbsp; Storytelling &nbsp;·&nbsp;
   </div>
@@ -259,19 +278,19 @@ nav {
 <div class="hero rev">
   <div class="hero-left">
     <div>
-      <div class="hero-cat">Co-autoria · HQ · Banda Desenhada · 2022</div>
+      <div class="hero-cat" data-pt="Co-autoria · HQ · Banda Desenhada · 2022" data-en="Co-authorship · Comic · Graphic Novel · 2022">Co-autoria · HQ · Banda Desenhada · 2022</div>
       <h1 class="hero-title">Miau<span class="a">fia</span></h1>
-      <p class="hero-sub">HQ de 27 páginas estruturada em 3 actos, com 8 personagens originais — uma paródia noir sobre gatos, máfias e o absurdo da vida urbana. Roteiro e direcção de arte em co-autoria com Gabriel Gomes Rodrigues durante a graduação na UFES.</p>
+      <p class="hero-sub" data-pt="HQ de 27 páginas estruturada em 3 actos, com 8 personagens originais — uma paródia noir sobre gatos, máfias e o absurdo da vida urbana. Roteiro e direcção de arte em co-autoria com Gabriel Gomes Rodrigues durante a graduação na UFES." data-en="A 27-page comic structured in 3 acts, with 8 original characters — a noir parody about cats, mafias and the absurdity of urban life. Script and art direction co-authored with Gabriel Gomes Rodrigues during a Design degree at UFES.">HQ de 27 páginas estruturada em 3 actos, com 8 personagens originais — uma paródia noir sobre gatos, máfias e o absurdo da vida urbana. Roteiro e direcção de arte em co-autoria com Gabriel Gomes Rodrigues durante a graduação na UFES.</p>
     </div>
     <div class="hero-meta">
-      <div class="hero-meta-item"><label>Co-autores</label><span>2 Gabriels</span></div>
-      <div class="hero-meta-item"><label>Páginas</label><span>27</span></div>
-      <div class="hero-meta-item"><label>Actos</label><span>3</span></div>
-      <div class="hero-meta-item"><label>Contexto</label><span>UFES · 2022</span></div>
+      <div class="hero-meta-item"><label data-pt="Co-autores" data-en="Co-authors">Co-autores</label><span>2 Gabriels</span></div>
+      <div class="hero-meta-item"><label data-pt="Páginas" data-en="Pages">Páginas</label><span>27</span></div>
+      <div class="hero-meta-item"><label data-pt="Actos" data-en="Acts">Actos</label><span>3</span></div>
+      <div class="hero-meta-item"><label data-pt="Contexto" data-en="Context">Contexto</label><span>UFES · 2022</span></div>
     </div>
   </div>
   <div class="hero-right">
-    <p class="hero-quote">"Somos a Miaufia — agora você também será. Me pagará com trabalho ou com sua vida."</p>
+    <p class="hero-quote" data-pt='"Somos a Miaufia — agora você também será. Me pagará com trabalho ou com sua vida."' data-en='"We are Miaufia — now you will be too. You will pay me with work or with your life."'>"Somos a Miaufia — agora você também será. Me pagará com trabalho ou com sua vida."</p>
     <div class="hero-tags">
       <span class="htag">HQ</span>
       <span class="htag">Roteiro</span>
@@ -286,38 +305,38 @@ nav {
 <div class="igrid c2 rev">
   <div class="icell r16">
     <img src="assets/miaufia_capa.png" alt="Capa Miaufia">
-    <div class="ilbl">Capa — técnica mista, textura papel amassado</div>
+    <div class="ilbl" data-pt="Capa — técnica mista, textura papel amassado" data-en="Cover — mixed media, crumpled paper texture">Capa — técnica mista, textura papel amassado</div>
   </div>
   <div class="icell r16">
     <img src="assets/miaufia_personagens.png" alt="Personagens">
-    <div class="ilbl">Elenco principal — 8 personagens originais</div>
+    <div class="ilbl" data-pt="Elenco principal — 8 personagens originais" data-en="Main cast — 8 original characters">Elenco principal — 8 personagens originais</div>
   </div>
 </div>
 
 <div class="specs rev">
   <div class="spec">
     <div class="spec-num">+10</div>
-    <div class="spec-lbl">Personagens originais com designs e personalidades distintas</div>
+    <div class="spec-lbl" data-pt="Personagens originais com designs e personalidades distintas" data-en="Original characters with distinct designs and personalities">Personagens originais com designs e personalidades distintas</div>
   </div>
   <div class="spec">
     <div class="spec-num">3</div>
-    <div class="spec-lbl">Actos estruturados em narrativa clássica noir — conflito, escalada, resolução</div>
+    <div class="spec-lbl" data-pt="Actos estruturados em narrativa clássica noir — conflito, escalada, resolução" data-en="Acts structured in classic noir narrative — conflict, escalation, resolution">Actos estruturados em narrativa clássica noir — conflito, escalada, resolução</div>
   </div>
   <div class="spec">
     <div class="spec-num">27</div>
-    <div class="spec-lbl">Páginas com composição de painéis, balões e timing narrativo</div>
+    <div class="spec-lbl" data-pt="Páginas com composição de painéis, balões e timing narrativo" data-en="Pages with panel composition, speech bubbles and narrative timing">Páginas com composição de painéis, balões e timing narrativo</div>
   </div>
   <div class="spec">
     <div class="spec-num">2</div>
-    <div class="spec-lbl">Co-autores — roteiro e arte em colaboração contínua</div>
+    <div class="spec-lbl" data-pt="Co-autores — roteiro e arte em colaboração contínua" data-en="Co-authors — script and art in continuous collaboration">Co-autores — roteiro e arte em colaboração contínua</div>
   </div>
 </div>
 
 <div class="tsec rev">
-  <div class="tsec-lbl">A<br>História</div>
+  <div class="tsec-lbl" data-pt="A<br>História" data-en="The<br>Story">A<br>História</div>
   <div class="tsec-body">
-    <p>Milo é um gato doméstico que, por culpa da irresponsabilidade do seu dono Gabriel, se vê sem teto pela primeira vez. Nas ruas, é recrutado à força para a <strong>Miaufia</strong> — uma organização criminal felina liderada pelo implacável Sr. Jotinha. O que se segue são 3 actos de missões absurdas, traições e uma batalha final contra a Nyakuza, a facção rival.</p>
-    <p>A narrativa usa <strong>referências ao cinema noir italiano e brasileiro</strong> de forma paródica — os diálogos estão carregados de gírias regionais, estereótipos de máfia e humor situacional. O protagonista Milo funciona como um <em>"outsider inocente"</em> num mundo de regras que nunca pediu para entrar.</p>
+    <p data-pt="Milo é um gato doméstico que, por culpa da irresponsabilidade do seu dono Gabriel, se vê sem teto pela primeira vez. Nas ruas, é recrutado à força para a <strong>Miaufia</strong> — uma organização criminal felina liderada pelo implacável Sr. Jotinha. O que se segue são 3 actos de missões absurdas, traições e uma batalha final contra a Nyakuza, a facção rival." data-en="Milo is a domestic cat who, due to his owner Gabriel's irresponsibility, finds himself homeless for the first time. On the streets, he is forcibly recruited into the <strong>Miaufia</strong> — a feline criminal organisation led by the ruthless Mr. Jotinha. What follows are 3 acts of absurd missions, betrayals and a final battle against the Nyakuza, the rival faction.">Milo é um gato doméstico que, por culpa da irresponsabilidade do seu dono Gabriel, se vê sem teto pela primeira vez. Nas ruas, é recrutado à força para a <strong>Miaufia</strong> — uma organização criminal felina liderada pelo implacável Sr. Jotinha. O que se segue são 3 actos de missões absurdas, traições e uma batalha final contra a Nyakuza, a facção rival.</p>
+    <p data-pt="A narrativa usa <strong>referências ao cinema noir italiano e brasileiro</strong> de forma paródica — os diálogos estão carregados de gírias regionais, estereótipos de máfia e humor situacional. O protagonista Milo funciona como um <em>&quot;outsider inocente&quot;</em> num mundo de regras que nunca pediu para entrar." data-en="The narrative uses <strong>references to Italian and Brazilian noir cinema</strong> in a parodic fashion — dialogues are loaded with regional slang, mafia stereotypes and situational humour. The protagonist Milo functions as an <em>&quot;innocent outsider&quot;</em> in a world of rules he never asked to be part of.">A narrativa usa <strong>referências ao cinema noir italiano e brasileiro</strong> de forma paródica — os diálogos estão carregados de gírias regionais, estereótipos de máfia e humor situacional. O protagonista Milo funciona como um <em>"outsider inocente"</em> num mundo de regras que nunca pediu para entrar.</p>
   </div>
 </div>
 
@@ -325,24 +344,24 @@ nav {
 <div class="igrid c3 rev">
   <div class="icell r16">
     <img src="assets/miaufia_ato1.png" alt="Ato 1">
-    <div class="ilbl">Ato 1 — "Quem não tem cão, aposta como gato"</div>
+    <div class="ilbl" data-pt='Ato 1 — "Quem não tem cão, aposta como gato"' data-en='Act 1 — "Those without a dog, bet like a cat"'>Ato 1 — "Quem não tem cão, aposta como gato"</div>
   </div>
   <div class="icell r16">
     <img src="assets/miaufia_ato2.png" alt="Ato 2">
-    <div class="ilbl">Ato 2 — "A revolução dos Milos"</div>
+    <div class="ilbl" data-pt='Ato 2 — "A revolução dos Milos"' data-en='Act 2 — "The Milos revolution"'>Ato 2 — "A revolução dos Milos"</div>
   </div>
   <div class="icell r16">
     <img src="assets/miaufia_ato3.png" alt="Ato 3">
-    <div class="ilbl">Ato 3 — "E quando os gatos estão, de quem é a festa?"</div>
+    <div class="ilbl" data-pt='Ato 3 — "E quando os gatos estão, de quem é a festa?"' data-en='Act 3 — "And when the cats are in, whose party is it?"'>Ato 3 — "E quando os gatos estão, de quem é a festa?"</div>
   </div>
 </div>
 
 <div class="tsec rev">
-  <div class="tsec-lbl">Arte<br>&amp; Design</div>
+  <div class="tsec-lbl" data-pt="Arte<br>&amp; Design" data-en="Art<br>&amp; Design">Arte<br>&amp; Design</div>
   <div class="tsec-body">
-    <p>O estilo visual aposta num <strong>traço vectorial flat</strong> com sombras em tons de cinza — evitando cor para manter a coerência noir. Os personagens têm designs geométricos exagerados que codificam a sua personalidade: Jotinha é uma massa escura e pesada, Milo é leve e linear, a Sushi é angulosa e ameaçadora.</p>
-    <p>A composição de painéis usa <strong>variação de escala intencional</strong> — close-ups extremos para tensão dramática, spreads abertos para acção em grupo. As onomatopeias (MIAU!, CABRUM, RAASG!) são tratadas como elementos tipográficos integrados no design da página, não como texto sobreposto.</p>
-    <p>A última sequência inclui uma <strong>quebra de convenção</strong> — os personagens são confrontados com fotografias reais dos tipos de gato que inspiraram cada design, criando um momento de meta-humor visual.</p>
+    <p data-pt="O estilo visual aposta num <strong>traço vectorial flat</strong> com sombras em tons de cinza — evitando cor para manter a coerência noir. Os personagens têm designs geométricos exagerados que codificam a sua personalidade: Jotinha é uma massa escura e pesada, Milo é leve e linear, a Sushi é angulosa e ameaçadora." data-en="The visual style opts for a <strong>flat vector line</strong> with grey-tone shadows — avoiding colour to maintain noir coherence. The characters have exaggerated geometric designs that encode their personality: Jotinha is a dark and heavy mass, Milo is light and linear, Sushi is angular and threatening.">O estilo visual aposta num <strong>traço vectorial flat</strong> com sombras em tons de cinza — evitando cor para manter a coerência noir. Os personagens têm designs geométricos exagerados que codificam a sua personalidade: Jotinha é uma massa escura e pesada, Milo é leve e linear, a Sushi é angulosa e ameaçadora.</p>
+    <p data-pt="A composição de painéis usa <strong>variação de escala intencional</strong> — close-ups extremos para tensão dramática, spreads abertos para acção em grupo. As onomatopeias (MIAU!, CABRUM, RAASG!) são tratadas como elementos tipográficos integrados no design da página, não como texto sobreposto." data-en="Panel composition uses <strong>intentional scale variation</strong> — extreme close-ups for dramatic tension, open spreads for group action. The onomatopoeia (MIAU!, CABRUM, RAASG!) are treated as typographic elements integrated into the page design, not as overlaid text.">A composição de painéis usa <strong>variação de escala intencional</strong> — close-ups extremos para tensão dramática, spreads abertos para acção em grupo. As onomatopeias (MIAU!, CABRUM, RAASG!) são tratadas como elementos tipográficos integrados no design da página, não como texto sobreposto.</p>
+    <p data-pt="A última sequência inclui uma <strong>quebra de convenção</strong> — os personagens são confrontados com fotografias reais dos tipos de gato que inspiraram cada design, criando um momento de meta-humor visual." data-en="The final sequence includes a <strong>convention break</strong> — the characters are confronted with real photographs of the cat breeds that inspired each design, creating a moment of visual meta-humour.">A última sequência inclui uma <strong>quebra de convenção</strong> — os personagens são confrontados com fotografias reais dos tipos de gato que inspiraram cada design, criando um momento de meta-humor visual.</p>
   </div>
 </div>
 
@@ -351,17 +370,28 @@ nav {
     Mia<span style="color:var(--yellow);">ufia</span><br>
     <span style="font-size:.55em;color:rgba(245,240,232,.35);">Fim?</span>
   </div>
-  <p style="margin-top:32px;font-size:13px;color:rgba(245,240,232,.5);max-width:500px;line-height:1.75;">
+  <p style="margin-top:32px;font-size:13px;color:rgba(245,240,232,.5);max-width:500px;line-height:1.75;"
+    data-pt='A última página termina com "FIM?" — a continuação ficou em aberto. A Miaufia ainda existe.'
+    data-en='The last page ends with "FIM?" (THE END?) — the continuation was left open. Miaufia still exists.'>
     A última página termina com "FIM?" — a continuação ficou em aberto. A Miaufia ainda existe.
   </p>
 </div>
 
 <div class="cta-row rev">
   <div class="cta-title">Miaufia<br>HQ</div>
-  <a href="https://bieldodesign.github.io/portifolio/" target="_blank" class="cta-btn">Ver no portfólio ↗</a>
+  <a href="https://bieldodesign.github.io/portifolio/" target="_blank" class="cta-btn" data-pt="Ver no portfólio ↗" data-en="View in portfolio ↗">Ver no portfólio ↗</a>
 </div>
 
 <script>
+let currentLang = 'pt';
+function toggleLang() {
+  currentLang = currentLang === 'pt' ? 'en' : 'pt';
+  document.documentElement.lang = currentLang;
+  document.getElementById('lang-toggle').textContent = currentLang === 'pt' ? 'EN' : 'PT';
+  document.querySelectorAll('[data-pt][data-en]').forEach(el => {
+    el.innerHTML = el.dataset[currentLang];
+  });
+}
 const obs = new IntersectionObserver(es => es.forEach(e => {
   if(e.isIntersecting) e.target.classList.add('vis');
 }), {threshold:.08});

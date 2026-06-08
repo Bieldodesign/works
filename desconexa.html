@@ -67,6 +67,20 @@ nav {
   font-size:10px; text-transform:uppercase;
   letter-spacing:.14em; color:var(--muted);
 }
+.nav-right { display:flex; align-items:center; gap:16px; }
+#lang-toggle {
+  background: transparent;
+  border: 1px solid rgba(13,13,13,.35);
+  color: var(--dark);
+  font-family: var(--fb);
+  font-size: 10px;
+  text-transform: uppercase;
+  letter-spacing: .12em;
+  padding: 4px 10px;
+  cursor: pointer;
+  transition: background .15s;
+}
+#lang-toggle:hover { background: rgba(13,13,13,.08); }
 
 /* ── HERO ── */
 .hero {
@@ -261,13 +275,18 @@ nav {
 </head>
 <body>
 <nav>
-  <a href="portfolio.html" class="nav-back">← Portfolio</a>
+  <a href="portfolio.html" class="nav-back" data-pt="← Portfolio" data-en="← Portfolio">← Portfolio</a>
   <span class="nav-title">Desconexa</span>
-  <span class="nav-cat">Type Design · OTF</span>
+  <div class="nav-right">
+    <span class="nav-cat" data-pt="Type Design · OTF" data-en="Type Design · OTF">Type Design · OTF</span>
+    <button id="lang-toggle" onclick="toggleLang()" aria-label="Switch language">EN</button>
+  </div>
 </nav>
 
 <div class="mstrip">
-  <div class="mtrack">
+  <div class="mtrack"
+    data-pt="Desconexa &nbsp;·&nbsp; Type Design &nbsp;·&nbsp; Display Typeface &nbsp;·&nbsp; OTF &nbsp;·&nbsp; v2.000 &nbsp;·&nbsp; UFES &nbsp;·&nbsp; Gabriel Mengável &nbsp;·&nbsp; Latin Extended &nbsp;·&nbsp; Medium Weight &nbsp;·&nbsp; Desconexa &nbsp;·&nbsp; Type Design &nbsp;·&nbsp; Display Typeface &nbsp;·&nbsp; OTF &nbsp;·&nbsp; v2.000 &nbsp;·&nbsp; UFES &nbsp;·&nbsp; Gabriel Mengável &nbsp;·&nbsp; Latin Extended &nbsp;·&nbsp; Medium Weight &nbsp;·&nbsp;"
+    data-en="Desconexa &nbsp;·&nbsp; Type Design &nbsp;·&nbsp; Display Typeface &nbsp;·&nbsp; OTF &nbsp;·&nbsp; v2.000 &nbsp;·&nbsp; UFES &nbsp;·&nbsp; Gabriel Mengável &nbsp;·&nbsp; Latin Extended &nbsp;·&nbsp; Medium Weight &nbsp;·&nbsp; Desconexa &nbsp;·&nbsp; Type Design &nbsp;·&nbsp; Display Typeface &nbsp;·&nbsp; OTF &nbsp;·&nbsp; v2.000 &nbsp;·&nbsp; UFES &nbsp;·&nbsp; Gabriel Mengável &nbsp;·&nbsp; Latin Extended &nbsp;·&nbsp; Medium Weight &nbsp;·&nbsp;">
     Desconexa &nbsp;·&nbsp; Type Design &nbsp;·&nbsp; Display Typeface &nbsp;·&nbsp; OTF &nbsp;·&nbsp; v2.000 &nbsp;·&nbsp; UFES &nbsp;·&nbsp; Gabriel Mengável &nbsp;·&nbsp; Latin Extended &nbsp;·&nbsp; Medium Weight &nbsp;·&nbsp;
     Desconexa &nbsp;·&nbsp; Type Design &nbsp;·&nbsp; Display Typeface &nbsp;·&nbsp; OTF &nbsp;·&nbsp; v2.000 &nbsp;·&nbsp; UFES &nbsp;·&nbsp; Gabriel Mengável &nbsp;·&nbsp; Latin Extended &nbsp;·&nbsp; Medium Weight &nbsp;·&nbsp;
   </div>
@@ -276,15 +295,15 @@ nav {
 <div class="hero rev">
   <div class="hero-left">
     <div>
-      <div class="hero-cat">Type Design · Typeface · 2022 · UFES</div>
+      <div class="hero-cat" data-pt="Type Design · Typeface · 2022 · UFES" data-en="Type Design · Typeface · 2022 · UFES">Type Design · Typeface · 2022 · UFES</div>
       <h1 class="hero-title">Des<span class="a">co</span><br>nexa</h1>
-      <p class="hero-sub">Fonte display criada durante a graduação em Design na UFES. Família Medium com cobertura completa do alfabeto latino, números e pontuação. Versão 2.000. Actualmente em uso como fonte principal deste portfólio.</p>
+      <p class="hero-sub" data-pt="Fonte display criada durante a graduação em Design na UFES. Família Medium com cobertura completa do alfabeto latino, números e pontuação. Versão 2.000. Actualmente em uso como fonte principal deste portfólio." data-en="Display typeface created during a Design degree at UFES. Medium family with full coverage of the Latin alphabet, numbers and punctuation. Version 2.000. Currently in use as the primary typeface of this portfolio.">Fonte display criada durante a graduação em Design na UFES. Família Medium com cobertura completa do alfabeto latino, números e pontuação. Versão 2.000. Actualmente em uso como fonte principal deste portfólio.</p>
     </div>
     <div class="hero-meta">
-      <div class="hero-meta-item"><label>Formato</label><span>OTF</span></div>
-      <div class="hero-meta-item"><label>Versão</label><span>2.000</span></div>
+      <div class="hero-meta-item"><label data-pt="Formato" data-en="Format">Formato</label><span>OTF</span></div>
+      <div class="hero-meta-item"><label data-pt="Versão" data-en="Version">Versão</label><span>2.000</span></div>
       <div class="hero-meta-item"><label>Weight</label><span>Medium</span></div>
-      <div class="hero-meta-item"><label>Glifos</label><span>95+</span></div>
+      <div class="hero-meta-item"><label data-pt="Glifos" data-en="Glyphs">Glifos</label><span>95+</span></div>
     </div>
   </div>
   <div class="hero-right">
@@ -316,27 +335,27 @@ nav {
 <div class="specs rev">
   <div class="spec">
     <div class="spec-num">95</div>
-    <div class="spec-lbl">Glifos — cobertura completa ASCII + acentos portugueses e brasileiros</div>
+    <div class="spec-lbl" data-pt="Glifos — cobertura completa ASCII + acentos portugueses e brasileiros" data-en="Glyphs — full ASCII coverage + Portuguese and Brazilian accents">Glifos — cobertura completa ASCII + acentos portugueses e brasileiros</div>
   </div>
   <div class="spec">
     <div class="spec-num">OTF</div>
-    <div class="spec-lbl">OpenType com tabelas kern, liga e ordn activas para composição refinada</div>
+    <div class="spec-lbl" data-pt="OpenType com tabelas kern, liga e ordn activas para composição refinada" data-en="OpenType with kern, liga and ordn tables active for refined typesetting">OpenType com tabelas kern, liga e ordn activas para composição refinada</div>
   </div>
   <div class="spec">
     <div class="spec-num">v2</div>
-    <div class="spec-lbl">Segunda iteração — kern e pares de letras completamente revistos</div>
+    <div class="spec-lbl" data-pt="Segunda iteração — kern e pares de letras completamente revistos" data-en="Second iteration — kern and letter pairs completely revised">Segunda iteração — kern e pares de letras completamente revistos</div>
   </div>
   <div class="spec">
     <div class="spec-num">∞</div>
-    <div class="spec-lbl">Em uso activo neste portfólio como fonte de display em todos os títulos</div>
+    <div class="spec-lbl" data-pt="Em uso activo neste portfólio como fonte de display em todos os títulos" data-en="Actively used in this portfolio as the display typeface for all headings">Em uso activo neste portfólio como fonte de display em todos os títulos</div>
   </div>
 </div>
 
 <div class="tsec rev">
-  <div class="tsec-lbl">Génese</div>
+  <div class="tsec-lbl" data-pt="Génese" data-en="Genesis">Génese</div>
   <div class="tsec-body">
-    <p>A Desconexa nasceu como um <strong>exercício de identidade tipográfica própria</strong> — a necessidade de ter uma fonte que representasse a voz do designer, não a de uma foundry. O processo começou com formas à mão, digitalizadas e refinadas em software vectorial.</p>
-    <p>O nome reflecte a <strong>natureza discontínua das formas</strong>: os contornos quebram deliberadamente os padrões de continuidade das fontes geométricas, criando tensão visual sem perder legibilidade em corpos grandes. É uma fonte para ser <em>vista</em> antes de ser lida.</p>
+    <p data-pt="A Desconexa nasceu como um <strong>exercício de identidade tipográfica própria</strong> — a necessidade de ter uma fonte que representasse a voz do designer, não a de uma foundry. O processo começou com formas à mão, digitalizadas e refinadas em software vectorial." data-en="Desconexa was born as an <strong>exercise in personal typographic identity</strong> — the need for a typeface that represented the designer's voice, not a foundry's. The process began with hand-drawn forms, digitised and refined in vector software.">A Desconexa nasceu como um <strong>exercício de identidade tipográfica própria</strong> — a necessidade de ter uma fonte que representasse a voz do designer, não a de uma foundry. O processo começou com formas à mão, digitalizadas e refinadas em software vectorial.</p>
+    <p data-pt="O nome reflecte a <strong>natureza discontínua das formas</strong>: os contornos quebram deliberadamente os padrões de continuidade das fontes geométricas, criando tensão visual sem perder legibilidade em corpos grandes. É uma fonte para ser <em>vista</em> antes de ser lida." data-en="The name reflects the <strong>discontinuous nature of the forms</strong>: the outlines deliberately break the continuity patterns of geometric typefaces, creating visual tension without losing legibility at large sizes. It is a typeface to be <em>seen</em> before being read.">O nome reflecte a <strong>natureza discontínua das formas</strong>: os contornos quebram deliberadamente os padrões de continuidade das fontes geométricas, criando tensão visual sem perder legibilidade em corpos grandes. É uma fonte para ser <em>vista</em> antes de ser lida.</p>
   </div>
 </div>
 
@@ -355,19 +374,28 @@ nav {
 </div>
 
 <div class="tsec rev">
-  <div class="tsec-lbl">Em<br>Uso</div>
+  <div class="tsec-lbl" data-pt="Em<br>Uso" data-en="In<br>Use">Em<br>Uso</div>
   <div class="tsec-body">
-    <p>A decisão de usar a Desconexa como fonte principal deste portfólio foi intencional: <strong>o portfólio é o maior case study da própria fonte</strong>. Cada título, cada heading e cada card de projecto usa a Desconexa — tornando-a inseparável da identidade deste designer.</p>
-    <p>A fonte foi <strong>incorporada directamente no HTML do portfólio em formato base64</strong>, garantindo que funciona sem dependência de servidores externos ou licenças de terceiros.</p>
+    <p data-pt="A decisão de usar a Desconexa como fonte principal deste portfólio foi intencional: <strong>o portfólio é o maior case study da própria fonte</strong>. Cada título, cada heading e cada card de projecto usa a Desconexa — tornando-a inseparável da identidade deste designer." data-en="The decision to use Desconexa as the primary typeface of this portfolio was intentional: <strong>the portfolio is the typeface's biggest case study</strong>. Every heading, every title and every project card uses Desconexa — making it inseparable from this designer's identity.">A decisão de usar a Desconexa como fonte principal deste portfólio foi intencional: <strong>o portfólio é o maior case study da própria fonte</strong>. Cada título, cada heading e cada card de projecto usa a Desconexa — tornando-a inseparável da identidade deste designer.</p>
+    <p data-pt="A fonte foi <strong>incorporada directamente no HTML do portfólio em formato base64</strong>, garantindo que funciona sem dependência de servidores externos ou licenças de terceiros." data-en="The typeface was <strong>embedded directly in the portfolio HTML as base64</strong>, ensuring it works without dependency on external servers or third-party licences.">A fonte foi <strong>incorporada directamente no HTML do portfólio em formato base64</strong>, garantindo que funciona sem dependência de servidores externos ou licenças de terceiros.</p>
   </div>
 </div>
 
 <div class="cta-row rev">
   <div class="cta-title">Desconexa<br>Medium</div>
-  <span class="cta-btn cta-disabled">Fonte proprietária — em uso neste portfólio</span>
+  <span class="cta-btn cta-disabled" data-pt="Fonte proprietária — em uso neste portfólio" data-en="Proprietary typeface — in use in this portfolio">Fonte proprietária — em uso neste portfólio</span>
 </div>
 
 <script>
+let currentLang = 'pt';
+function toggleLang() {
+  currentLang = currentLang === 'pt' ? 'en' : 'pt';
+  document.documentElement.lang = currentLang;
+  document.getElementById('lang-toggle').textContent = currentLang === 'pt' ? 'EN' : 'PT';
+  document.querySelectorAll('[data-pt][data-en]').forEach(el => {
+    el.innerHTML = el.dataset[currentLang];
+  });
+}
 const obs = new IntersectionObserver(es => es.forEach(e => {
   if(e.isIntersecting) e.target.classList.add('vis');
 }), {threshold:.08});

@@ -68,6 +68,20 @@ nav {
   font-size:10px; text-transform:uppercase;
   letter-spacing:.14em; color:var(--muted);
 }
+.nav-right { display:flex; align-items:center; gap:16px; }
+#lang-toggle {
+  background: transparent;
+  border: 1px solid rgba(13,13,13,.35);
+  color: var(--dark);
+  font-family: var(--fb);
+  font-size: 10px;
+  text-transform: uppercase;
+  letter-spacing: .12em;
+  padding: 4px 10px;
+  cursor: pointer;
+  transition: background .15s;
+}
+#lang-toggle:hover { background: rgba(13,13,13,.08); }
 
 /* ── HERO ── */
 .hero {
@@ -254,13 +268,18 @@ nav {
 </head>
 <body>
 <nav>
-  <a href="portfolio.html" class="nav-back">← Portfolio</a>
+  <a href="portfolio.html" class="nav-back" data-pt="← Portfolio" data-en="← Portfolio">← Portfolio</a>
   <span class="nav-title">Poster Pierce</span>
-  <span class="nav-cat">Poster Design · Lambe-lambe</span>
+  <div class="nav-right">
+    <span class="nav-cat" data-pt="Poster Design · Lambe-lambe" data-en="Poster Design · Street Paste">Poster Design · Lambe-lambe</span>
+    <button id="lang-toggle" onclick="toggleLang()" aria-label="Switch language">EN</button>
+  </div>
 </nav>
 
 <div class="mstrip">
-  <div class="mtrack">
+  <div class="mtrack"
+    data-pt="Poster Pierce &nbsp;·&nbsp; Lambe-lambe &nbsp;·&nbsp; FACAMASAL &nbsp;·&nbsp; Colagem &nbsp;·&nbsp; Tipografia &nbsp;·&nbsp; Comunicação Urbana &nbsp;·&nbsp; UFES &nbsp;·&nbsp; Amber &nbsp;·&nbsp; Fotomontagem &nbsp;·&nbsp; Poster Pierce &nbsp;·&nbsp; Lambe-lambe &nbsp;·&nbsp; FACAMASAL &nbsp;·&nbsp; Colagem &nbsp;·&nbsp; Tipografia &nbsp;·&nbsp; Comunicação Urbana &nbsp;·&nbsp; UFES &nbsp;·&nbsp; Amber &nbsp;·&nbsp; Fotomontagem &nbsp;·&nbsp;"
+    data-en="Poster Pierce &nbsp;·&nbsp; Street Paste &nbsp;·&nbsp; FACAMASAL &nbsp;·&nbsp; Collage &nbsp;·&nbsp; Typography &nbsp;·&nbsp; Urban Communication &nbsp;·&nbsp; UFES &nbsp;·&nbsp; Amber &nbsp;·&nbsp; Photomontage &nbsp;·&nbsp; Poster Pierce &nbsp;·&nbsp; Street Paste &nbsp;·&nbsp; FACAMASAL &nbsp;·&nbsp; Collage &nbsp;·&nbsp; Typography &nbsp;·&nbsp; Urban Communication &nbsp;·&nbsp; UFES &nbsp;·&nbsp; Amber &nbsp;·&nbsp; Photomontage &nbsp;·&nbsp;">
     Poster Pierce &nbsp;·&nbsp; Lambe-lambe &nbsp;·&nbsp; FACAMASAL &nbsp;·&nbsp; Colagem &nbsp;·&nbsp; Tipografia &nbsp;·&nbsp; Comunicação Urbana &nbsp;·&nbsp; UFES &nbsp;·&nbsp; Amber &nbsp;·&nbsp; Fotomontagem &nbsp;·&nbsp;
     Poster Pierce &nbsp;·&nbsp; Lambe-lambe &nbsp;·&nbsp; FACAMASAL &nbsp;·&nbsp; Colagem &nbsp;·&nbsp; Tipografia &nbsp;·&nbsp; Comunicação Urbana &nbsp;·&nbsp; UFES &nbsp;·&nbsp; Amber &nbsp;·&nbsp; Fotomontagem &nbsp;·&nbsp;
   </div>
@@ -269,19 +288,19 @@ nav {
 <div class="hero rev">
   <div class="hero-left">
     <div>
-      <div class="hero-cat">Poster Design · Lambe-lambe · 2022 · UFES</div>
+      <div class="hero-cat" data-pt="Poster Design · Lambe-lambe · 2022 · UFES" data-en="Poster Design · Street Paste · 2022 · UFES">Poster Design · Lambe-lambe · 2022 · UFES</div>
       <h1 class="hero-title">Poster<br><span class="o">Pierce</span></h1>
-      <p class="hero-sub">Lambe-lambe e poster para exposição académica — fotomontagem com retrato histórico do poeta Fernando Pessoa sobre fundo ocre texturado, tipografia geométrica invertida e a palavra "FACAMASAL" como elemento central de estranhamento semiótico.</p>
+      <p class="hero-sub" data-pt='Lambe-lambe e poster para exposição académica — fotomontagem com retrato histórico do poeta Fernando Pessoa sobre fundo ocre texturado, tipografia geométrica invertida e a palavra "FACAMASAL" como elemento central de estranhamento semiótico.' data-en='Street paste and poster for an academic exhibition — photomontage with a historical portrait of the poet Fernando Pessoa on a textured ochre background, inverted geometric typography and the word "FACAMASAL" as the central element of semiotic estrangement.'>Lambe-lambe e poster para exposição académica — fotomontagem com retrato histórico do poeta Fernando Pessoa sobre fundo ocre texturado, tipografia geométrica invertida e a palavra "FACAMASAL" como elemento central de estranhamento semiótico.</p>
     </div>
     <div class="hero-meta">
-      <div class="hero-meta-item"><label>Formato</label><span>Lambe-lambe / A0</span></div>
-      <div class="hero-meta-item"><label>Técnica</label><span>Fotomontagem + tipo</span></div>
-      <div class="hero-meta-item"><label>Ano</label><span>2022</span></div>
-      <div class="hero-meta-item"><label>Contexto</label><span>UFES · Exposição</span></div>
+      <div class="hero-meta-item"><label data-pt="Formato" data-en="Format">Formato</label><span>Lambe-lambe / A0</span></div>
+      <div class="hero-meta-item"><label data-pt="Técnica" data-en="Technique">Técnica</label><span data-pt="Fotomontagem + tipo" data-en="Photomontage + type">Fotomontagem + tipo</span></div>
+      <div class="hero-meta-item"><label data-pt="Ano" data-en="Year">Ano</label><span>2022</span></div>
+      <div class="hero-meta-item"><label data-pt="Contexto" data-en="Context">Contexto</label><span data-pt="UFES · Exposição" data-en="UFES · Exhibition">UFES · Exposição</span></div>
     </div>
   </div>
   <div class="hero-right">
-    <p class="hero-quote">"FACAMASAL" — palavra-valise que só existe neste poster. Uma composição que desafia a leitura antes de permitir a contemplação.</p>
+    <p class="hero-quote" data-pt='"FACAMASAL" — palavra-valise que só existe neste poster. Uma composição que desafia a leitura antes de permitir a contemplação.' data-en='"FACAMASAL" — a portmanteau word that only exists in this poster. A composition that challenges reading before allowing contemplation.'>"FACAMASAL" — palavra-valise que só existe neste poster. Uma composição que desafia a leitura antes de permitir a contemplação.</p>
     <div class="hero-tags">
       <span class="htag">Lambe-lambe</span>
       <span class="htag">Fotomontagem</span>
@@ -300,35 +319,35 @@ nav {
 <div class="specs rev">
   <div class="spec">
     <div class="spec-num" style="font-size:36px;letter-spacing:-.02em;">F^C<br>^M^S<br>^L</div>
-    <div class="spec-lbl">Lógica ilógica</div>
+    <div class="spec-lbl" data-pt="Lógica ilógica" data-en="Illogical logic">Lógica ilógica</div>
   </div>
   <div class="spec">
     <div class="spec-num">Ɛ!</div>
-    <div class="spec-lbl">Tipografia invertida — os glifos estão espelhados, forçando o olhar a descodificar antes de ler</div>
+    <div class="spec-lbl" data-pt="Tipografia invertida — os glifos estão espelhados, forçando o olhar a descodificar antes de ler" data-en="Inverted typography — glyphs are mirrored, forcing the eye to decode before reading">Tipografia invertida — os glifos estão espelhados, forçando o olhar a descodificar antes de ler</div>
   </div>
   <div class="spec">
     <div class="spec-num">Ocre</div>
-    <div class="spec-lbl">Fundo texturado que simula o papel amassado do lambe-lambe real aplicado em parede</div>
+    <div class="spec-lbl" data-pt="Fundo texturado que simula o papel amassado do lambe-lambe real aplicado em parede" data-en="Textured background simulating the crumpled paper of a real street paste applied to a wall">Fundo texturado que simula o papel amassado do lambe-lambe real aplicado em parede</div>
   </div>
   <div class="spec">
     <div class="spec-num">19c.</div>
-    <div class="spec-lbl">Retrato histórico séc. XIX em colagem — figura anónima recontextualizada pela composição tipográfica</div>
+    <div class="spec-lbl" data-pt="Retrato histórico séc. XIX em colagem — figura anónima recontextualizada pela composição tipográfica" data-en="Historical 19th-century portrait in collage — anonymous figure recontextualised by typographic composition">Retrato histórico séc. XIX em colagem — figura anónima recontextualizada pela composição tipográfica</div>
   </div>
 </div>
 
 <div class="tsec rev">
-  <div class="tsec-lbl">Leitura<br>Visual</div>
+  <div class="tsec-lbl" data-pt="Leitura<br>Visual" data-en="Visual<br>Reading">Leitura<br>Visual</div>
   <div class="tsec-body">
-    <p>O poster usa uma estratégia de <strong>dupla resistência à leitura</strong>: a tipografia está espelhada (os glifos de E e C estão invertidos), forçando o olhar a parar e tentar decifrar antes de avançar; e a palavra "FACAMASAL" não existe — é um neologismo inventado que funciona como <strong>elemento de estranhamento semiótico</strong> à menos que o leitor entenda da lógica e semiótica de Pierce.</p>
-    <p>A fotomontagem coloca uma figura masculina do século XIX como protagonista silencioso — sem contexto, sem nome, apenas postura confiante num fundo que o absorve. A textura do fundo ocre <strong>imita o papel de lambe-lambe envelhecido</strong>, integrando o objecto digital numa tradição de comunicação urbana antes mesmo de ser impresso.</p>
+    <p data-pt='O poster usa uma estratégia de <strong>dupla resistência à leitura</strong>: a tipografia está espelhada (os glifos de E e C estão invertidos), forçando o olhar a parar e tentar decifrar antes de avançar; e a palavra "FACAMASAL" não existe — é um neologismo inventado que funciona como <strong>elemento de estranhamento semiótico</strong> à menos que o leitor entenda da lógica e semiótica de Pierce.' data-en='The poster uses a strategy of <strong>double reading resistance</strong>: the typography is mirrored (the E and C glyphs are inverted), forcing the eye to stop and try to decode before moving forward; and the word "FACAMASAL" does not exist — it is an invented neologism that works as a <strong>semiotic estrangement element</strong> unless the reader understands the logic and semiotics of Pierce.'>O poster usa uma estratégia de <strong>dupla resistência à leitura</strong>: a tipografia está espelhada (os glifos de E e C estão invertidos), forçando o olhar a parar e tentar decifrar antes de avançar; e a palavra "FACAMASAL" não existe — é um neologismo inventado que funciona como <strong>elemento de estranhamento semiótico</strong> à menos que o leitor entenda da lógica e semiótica de Pierce.</p>
+    <p data-pt="A fotomontagem coloca uma figura masculina do século XIX como protagonista silencioso — sem contexto, sem nome, apenas postura confiante num fundo que o absorve. A textura do fundo ocre <strong>imita o papel de lambe-lambe envelhecido</strong>, integrando o objecto digital numa tradição de comunicação urbana antes mesmo de ser impresso." data-en="The photomontage places a 19th-century male figure as a silent protagonist — no context, no name, just a confident posture on a background that absorbs him. The ochre background texture <strong>imitates aged street paste paper</strong>, integrating the digital object into a tradition of urban communication even before it is printed.">A fotomontagem coloca uma figura masculina do século XIX como protagonista silencioso — sem contexto, sem nome, apenas postura confiante num fundo que o absorve. A textura do fundo ocre <strong>imita o papel de lambe-lambe envelhecido</strong>, integrando o objecto digital numa tradição de comunicação urbana antes mesmo de ser impresso.</p>
   </div>
 </div>
 
 <div class="tsec rev">
-  <div class="tsec-lbl">Lam<br>be-<br>lambe</div>
+  <div class="tsec-lbl" data-pt="Lam<br>be-<br>lambe" data-en="Street<br>Paste">Lam<br>be-<br>lambe</div>
   <div class="tsec-body">
-    <p>O lambe-lambe é uma técnica de comunicação urbana brasileira — <strong>cartazes impressos em papel jornal ou offset que são colados húmidos directamente em paredes</strong>, muros e superfícies urbanas. Ao secar, o papel adere e cria a textura rugosa característica.</p>
-    <p>Originalmente usada para publicidade de circos e teatros no início do século XX, a técnica foi recuperada por artistas e activistas como <strong>linguagem de arte urbana e comunicação política</strong>. Este poster académico dialoga com essa tradição ao incorporar a textura de papel amassado directamente no design digital.</p>
+    <p data-pt="O lambe-lambe é uma técnica de comunicação urbana brasileira — <strong>cartazes impressos em papel jornal ou offset que são colados húmidos directamente em paredes</strong>, muros e superfícies urbanas. Ao secar, o papel adere e cria a textura rugosa característica." data-en="Lambe-lambe is a Brazilian urban communication technique — <strong>posters printed on newsprint or offset paper that are pasted wet directly onto walls</strong>, fences and urban surfaces. As it dries, the paper adheres and creates the characteristic rough texture.">O lambe-lambe é uma técnica de comunicação urbana brasileira — <strong>cartazes impressos em papel jornal ou offset que são colados húmidos directamente em paredes</strong>, muros e superfícies urbanas. Ao secar, o papel adere e cria a textura rugosa característica.</p>
+    <p data-pt="Originalmente usada para publicidade de circos e teatros no início do século XX, a técnica foi recuperada por artistas e activistas como <strong>linguagem de arte urbana e comunicação política</strong>. Este poster académico dialoga com essa tradição ao incorporar a textura de papel amassado directamente no design digital." data-en="Originally used for circus and theatre advertising at the start of the 20th century, the technique was recovered by artists and activists as a <strong>language of urban art and political communication</strong>. This academic poster dialogues with that tradition by incorporating crumpled paper texture directly into the digital design.">Originalmente usada para publicidade de circos e teatros no início do século XX, a técnica foi recuperada por artistas e activistas como <strong>linguagem de arte urbana e comunicação política</strong>. Este poster académico dialoga com essa tradição ao incorporar a textura de papel amassado directamente no design digital.</p>
   </div>
 </div>
 
@@ -336,17 +355,28 @@ nav {
   <div style="font-family:var(--fd);font-size:clamp(48px,8vw,100px);color:var(--warm);line-height:.9;letter-spacing:-.02em;transform:scaleX(-1);display:inline-block;">
     F^C^M^S^L
   </div>
-  <p style="margin-top:24px;font-size:11px;color:rgba(245,240,232,.4);text-transform:uppercase;letter-spacing:.12em;">
+  <p style="margin-top:24px;font-size:11px;color:rgba(245,240,232,.4);text-transform:uppercase;letter-spacing:.12em;"
+    data-pt="— Poster Pierce · Gabriel Mengável · UFES · 2022"
+    data-en="— Poster Pierce · Gabriel Mengável · UFES · 2022">
     — Poster Pierce · Gabriel Mengável · UFES · 2022
   </p>
 </div>
 
 <div class="cta-row rev">
   <div class="cta-title">Poster<br>Pierce</div>
-  <a href="assets/pierce.png" target="_blank" class="cta-btn">Ver imagem full-res ↗</a>
+  <a href="assets/pierce.png" target="_blank" class="cta-btn" data-pt="Ver imagem full-res ↗" data-en="View full-res image ↗">Ver imagem full-res ↗</a>
 </div>
 
 <script>
+let currentLang = 'pt';
+function toggleLang() {
+  currentLang = currentLang === 'pt' ? 'en' : 'pt';
+  document.documentElement.lang = currentLang;
+  document.getElementById('lang-toggle').textContent = currentLang === 'pt' ? 'EN' : 'PT';
+  document.querySelectorAll('[data-pt][data-en]').forEach(el => {
+    el.innerHTML = el.dataset[currentLang];
+  });
+}
 const obs = new IntersectionObserver(es => es.forEach(e => {
   if(e.isIntersecting) e.target.classList.add('vis');
 }), {threshold:.08});

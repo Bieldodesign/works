@@ -68,6 +68,20 @@ nav {
   font-size:10px; text-transform:uppercase;
   letter-spacing:.14em; color:var(--muted);
 }
+.nav-right { display:flex; align-items:center; gap:16px; }
+#lang-toggle {
+  background: transparent;
+  border: 1px solid rgba(13,13,13,.35);
+  color: var(--dark);
+  font-family: var(--fb);
+  font-size: 10px;
+  text-transform: uppercase;
+  letter-spacing: .12em;
+  padding: 4px 10px;
+  cursor: pointer;
+  transition: background .15s;
+}
+#lang-toggle:hover { background: rgba(13,13,13,.08); }
 
 /* ── HERO ── */
 .hero {
@@ -246,13 +260,18 @@ nav {
 </head>
 <body>
 <nav>
-  <a href="portfolio.html" class="nav-back">← Portfolio</a>
+  <a href="portfolio.html" class="nav-back" data-pt="← Portfolio" data-en="← Portfolio">← Portfolio</a>
   <span class="nav-title">Projeto Bromélias</span>
-  <span class="nav-cat">Design Editorial · 10 Anos</span>
+  <div class="nav-right">
+    <span class="nav-cat" data-pt="Design Editorial · 10 Anos" data-en="Editorial Design · 10 Years">Design Editorial · 10 Anos</span>
+    <button id="lang-toggle" onclick="toggleLang()" aria-label="Switch language">EN</button>
+  </div>
 </nav>
 
 <div class="mstrip">
-  <div class="mtrack">
+  <div class="mtrack"
+    data-pt="Projeto Bromélias &nbsp;·&nbsp; Relatório 10 Anos &nbsp;·&nbsp; Instituto Marcus Daniel &nbsp;·&nbsp; Design Editorial &nbsp;·&nbsp; Curadoria Visual &nbsp;·&nbsp; Produção Gráfica &nbsp;·&nbsp; Serra, ES &nbsp;·&nbsp; Projeto Bromélias &nbsp;·&nbsp; Relatório 10 Anos &nbsp;·&nbsp; Instituto Marcus Daniel &nbsp;·&nbsp; Design Editorial &nbsp;·&nbsp; Curadoria Visual &nbsp;·&nbsp; Produção Gráfica &nbsp;·&nbsp; Serra, ES &nbsp;·&nbsp;"
+    data-en="Projeto Bromélias &nbsp;·&nbsp; 10-Year Report &nbsp;·&nbsp; Instituto Marcus Daniel &nbsp;·&nbsp; Editorial Design &nbsp;·&nbsp; Visual Curation &nbsp;·&nbsp; Graphic Production &nbsp;·&nbsp; Serra, ES &nbsp;·&nbsp; Projeto Bromélias &nbsp;·&nbsp; 10-Year Report &nbsp;·&nbsp; Instituto Marcus Daniel &nbsp;·&nbsp; Editorial Design &nbsp;·&nbsp; Visual Curation &nbsp;·&nbsp; Graphic Production &nbsp;·&nbsp; Serra, ES &nbsp;·&nbsp;">
     Projeto Bromélias &nbsp;·&nbsp; Relatório 10 Anos &nbsp;·&nbsp; Instituto Marcus Daniel &nbsp;·&nbsp; Design Editorial &nbsp;·&nbsp; Curadoria Visual &nbsp;·&nbsp; Produção Gráfica &nbsp;·&nbsp; Serra, ES &nbsp;·&nbsp;
     Projeto Bromélias &nbsp;·&nbsp; Relatório 10 Anos &nbsp;·&nbsp; Instituto Marcus Daniel &nbsp;·&nbsp; Design Editorial &nbsp;·&nbsp; Curadoria Visual &nbsp;·&nbsp; Produção Gráfica &nbsp;·&nbsp; Serra, ES &nbsp;·&nbsp;
   </div>
@@ -261,19 +280,19 @@ nav {
 <div class="hero rev">
   <div class="hero-left">
     <div>
-      <div class="hero-cat">Design Editorial · Publicação Institucional · 2022 · Serra, Brasil</div>
+      <div class="hero-cat" data-pt="Design Editorial · Publicação Institucional · 2022 · Serra, Brasil" data-en="Editorial Design · Institutional Publication · 2022 · Serra, Brazil">Design Editorial · Publicação Institucional · 2022 · Serra, Brasil</div>
       <h1 class="hero-title">Pro<span class="a">je</span><br>to Bro<br><span class="o">mélias</span></h1>
-      <p class="hero-sub">Portfólio e relatório comemorativo de 10 anos do Projeto Bromélias — publicação editorial com design gráfico integral, curadoria fotográfica e produção completa para o Instituto Marcos Daniel. Desenvolvido durante estágio curricular na UFES.</p>
+      <p class="hero-sub" data-pt="Portfólio e relatório comemorativo de 10 anos do Projeto Bromélias — publicação editorial com design gráfico integral, curadoria fotográfica e produção completa para o Instituto Marcos Daniel. Desenvolvido durante estágio curricular na UFES." data-en="Portfolio and commemorative 10-year report of Projeto Bromélias — editorial publication with full graphic design, photographic curation and complete production for Instituto Marcos Daniel. Developed during a curricular internship at UFES.">Portfólio e relatório comemorativo de 10 anos do Projeto Bromélias — publicação editorial com design gráfico integral, curadoria fotográfica e produção completa para o Instituto Marcos Daniel. Desenvolvido durante estágio curricular na UFES.</p>
     </div>
     <div class="hero-meta">
-      <div class="hero-meta-item"><label>Cliente</label><span>Instituto Marcos Daniel</span></div>
-      <div class="hero-meta-item"><label>Ano</label><span>2022</span></div>
-      <div class="hero-meta-item"><label>Páginas</label><span>70+</span></div>
-      <div class="hero-meta-item"><label>Contexto</label><span>Estágio UFES</span></div>
+      <div class="hero-meta-item"><label data-pt="Cliente" data-en="Client">Cliente</label><span>Instituto Marcos Daniel</span></div>
+      <div class="hero-meta-item"><label data-pt="Ano" data-en="Year">Ano</label><span>2022</span></div>
+      <div class="hero-meta-item"><label data-pt="Páginas" data-en="Pages">Páginas</label><span>70+</span></div>
+      <div class="hero-meta-item"><label data-pt="Contexto" data-en="Context">Contexto</label><span data-pt="Estágio UFES" data-en="Internship UFES">Estágio UFES</span></div>
     </div>
   </div>
   <div class="hero-right">
-    <p class="hero-quote">"Pesquisa e educação em prol da conservação das bromélias — 10 anos de impacto documentados."</p>
+    <p class="hero-quote" data-pt='"Pesquisa e educação em prol da conservação das bromélias — 10 anos de impacto documentados."' data-en='"Research and education in service of bromeliad conservation — 10 years of documented impact."'>"Pesquisa e educação em prol da conservação das bromélias — 10 anos de impacto documentados."</p>
     <div class="hero-tags">
       <span class="htag">Design Editorial</span>
       <span class="htag">Curadoria Visual</span>
@@ -288,26 +307,26 @@ nav {
 <div class="igrid c1 rev">
   <div class="icell r21">
     <img src="assets/brom_01.png" alt="Capa Projeto Bromélias">
-    <div class="ilbl">Capa — logótipo "Projeto Bromélias" sobre fotografia de bromélia rosa com formigas · Relatório 10 anos</div>
+    <div class="ilbl" data-pt='Capa — logótipo "Projeto Bromélias" sobre fotografia de bromélia rosa com formigas · Relatório 10 anos' data-en='Cover — "Projeto Bromélias" logotype over pink bromeliad photograph with ants · 10-Year Report'>Capa — logótipo "Projeto Bromélias" sobre fotografia de bromélia rosa com formigas · Relatório 10 anos</div>
   </div>
 </div>
 
 <div class="specs rev">
   <div class="spec"><div class="spec-num">10</div>
-    <div class="spec-lbl">Anos de actividade do Projeto Bromélias documentados nesta publicação</div></div>
+    <div class="spec-lbl" data-pt="Anos de actividade do Projeto Bromélias documentados nesta publicação" data-en="Years of Projeto Bromélias activity documented in this publication">Anos de actividade do Projeto Bromélias documentados nesta publicação</div></div>
   <div class="spec"><div class="spec-num">70+</div>
-    <div class="spec-lbl">Páginas com design gráfico integral — capa, miolo, separadores e créditos</div></div>
+    <div class="spec-lbl" data-pt="Páginas com design gráfico integral — capa, miolo, separadores e créditos" data-en="Pages with full graphic design — cover, interior, dividers and credits">Páginas com design gráfico integral — capa, miolo, separadores e créditos</div></div>
   <div class="spec"><div class="spec-num">ONG</div>
-    <div class="spec-lbl">Instituto Marcos Daniel — pesquisa e conservação de bromélias no ES</div></div>
+    <div class="spec-lbl" data-pt="Instituto Marcos Daniel — pesquisa e conservação de bromélias no ES" data-en="Instituto Marcos Daniel — bromeliad research and conservation in ES">Instituto Marcos Daniel — pesquisa e conservação de bromélias no ES</div></div>
   <div class="spec"><div class="spec-num">UFES</div>
-    <div class="spec-lbl">Desenvolvido como estágio curricular em Design na Universidade Federal do ES</div></div>
+    <div class="spec-lbl" data-pt="Desenvolvido como estágio curricular em Design na Universidade Federal do ES" data-en="Developed as a curricular internship in Design at the Federal University of ES">Desenvolvido como estágio curricular em Design na Universidade Federal do ES</div></div>
 </div>
 
 <div class="tsec rev">
-  <div class="tsec-lbl">O<br>Projeto</div>
+  <div class="tsec-lbl" data-pt="O<br>Projeto" data-en="The<br>Project">O<br>Projeto</div>
   <div class="tsec-body">
-    <p>O Projeto Bromélias é uma iniciativa do Instituto Marcos Daniel com foco em <strong>pesquisa científica e educação ambiental</strong> centradas na conservação das bromélias — plantas-chave nos ecossistemas da Mata Atlântica e Cerrado. A publicação comemorativa dos 10 anos funciona simultaneamente como portfólio de actividades e relatório de impacto.</p>
-    <p>O desafio editorial foi <strong>dar coerência visual a uma década de actividades diversas</strong> — fotografias de campo, artigos científicos, depoimentos de investigadores e dados de biodiversidade — num único objecto gráfico que comunicasse rigor científico com acessibilidade pública.</p>
+    <p data-pt="O Projeto Bromélias é uma iniciativa do Instituto Marcos Daniel com foco em <strong>pesquisa científica e educação ambiental</strong> centradas na conservação das bromélias — plantas-chave nos ecossistemas da Mata Atlântica e Cerrado. A publicação comemorativa dos 10 anos funciona simultaneamente como portfólio de actividades e relatório de impacto." data-en="Projeto Bromélias is an initiative of Instituto Marcos Daniel focused on <strong>scientific research and environmental education</strong> centred on bromeliad conservation — key plants in the Atlantic Forest and Cerrado ecosystems. The 10-year commemorative publication works simultaneously as an activity portfolio and impact report.">O Projeto Bromélias é uma iniciativa do Instituto Marcos Daniel com foco em <strong>pesquisa científica e educação ambiental</strong> centradas na conservação das bromélias — plantas-chave nos ecossistemas da Mata Atlântica e Cerrado. A publicação comemorativa dos 10 anos funciona simultaneamente como portfólio de actividades e relatório de impacto.</p>
+    <p data-pt="O desafio editorial foi <strong>dar coerência visual a uma década de actividades diversas</strong> — fotografias de campo, artigos científicos, depoimentos de investigadores e dados de biodiversidade — num único objecto gráfico que comunicasse rigor científico com acessibilidade pública." data-en="The editorial challenge was to <strong>give visual coherence to a decade of diverse activities</strong> — field photographs, scientific papers, researcher testimonials and biodiversity data — in a single graphic object that communicated scientific rigour with public accessibility.">O desafio editorial foi <strong>dar coerência visual a uma década de actividades diversas</strong> — fotografias de campo, artigos científicos, depoimentos de investigadores e dados de biodiversidade — num único objecto gráfico que comunicasse rigor científico com acessibilidade pública.</p>
   </div>
 </div>
 
@@ -315,34 +334,34 @@ nav {
 <div class="igrid c3 rev">
   <div class="icell r1">
     <img src="assets/brom_02.png" alt="Interior 2">
-    <div class="ilbl">Spread "Quem são as Bromélias?" — introdução científica com fotografia de bromélia vermelha e azul</div>
+    <div class="ilbl" data-pt='Spread "Quem são as Bromélias?" — introdução científica com fotografia de bromélia vermelha e azul' data-en='Spread "What are Bromeliads?" — scientific introduction with red and blue bromeliad photograph'>Spread "Quem são as Bromélias?" — introdução científica com fotografia de bromélia vermelha e azul</div>
   </div>
   <div class="icell r1">
     <img src="assets/brom_03.png" alt="Missão">
-    <div class="ilbl">Infográfico "Promotoras da Biodiversidade" — fauna associada às bromélias: anfíbios, aves, répteis, mamíferos</div>
+    <div class="ilbl" data-pt='Infográfico "Promotoras da Biodiversidade" — fauna associada às bromélias: anfíbios, aves, répteis, mamíferos' data-en='Infographic "Biodiversity Promoters" — fauna associated with bromeliads: amphibians, birds, reptiles, mammals'>Infográfico "Promotoras da Biodiversidade" — fauna associada às bromélias: anfíbios, aves, répteis, mamíferos</div>
   </div>
   <div class="icell r1">
     <img src="assets/brom_04.png" alt="Interior 4">
-    <div class="ilbl">Infográfico "Ameaças às Bromélias" — desmatamento, extração ilegal, poluição e aquecimento</div>
+    <div class="ilbl" data-pt='Infográfico "Ameaças às Bromélias" — desmatamento, extração ilegal, poluição e aquecimento' data-en='Infographic "Threats to Bromeliads" — deforestation, illegal extraction, pollution and warming'>Infográfico "Ameaças às Bromélias" — desmatamento, extração ilegal, poluição e aquecimento</div>
   </div>
 </div>
 
 <div class="igrid c2 rev">
   <div class="icell r16">
     <img src="assets/brom_05.png" alt="Interior 5">
-    <div class="ilbl">Logótipo "Projeto Bromélias" — versão verde sobre fundo desfocado · sapo estilizado inscrito em flor</div>
+    <div class="ilbl" data-pt='Logótipo "Projeto Bromélias" — versão verde sobre fundo desfocado · sapo estilizado inscrito em flor' data-en='"Projeto Bromélias" logotype — green version on blurred background · stylised frog inscribed in a flower'>Logótipo "Projeto Bromélias" — versão verde sobre fundo desfocado · sapo estilizado inscrito em flor</div>
   </div>
   <div class="icell r16">
     <img src="assets/brom_06.png" alt="Interior 6">
-    <div class="ilbl">Spread "Taxonomia" — espécies novas de anfíbios da Mata Atlântica com fotografias científicas e equipa</div>
+    <div class="ilbl" data-pt='Spread "Taxonomia" — espécies novas de anfíbios da Mata Atlântica com fotografias científicas e equipa' data-en='Spread "Taxonomy" — new amphibian species from the Atlantic Forest with scientific photographs and team'>Spread "Taxonomia" — espécies novas de anfíbios da Mata Atlântica com fotografias científicas e equipa</div>
   </div>
 </div>
 
 <div class="tsec rev">
-  <div class="tsec-lbl">Siste<br>ma</div>
+  <div class="tsec-lbl" data-pt="Siste<br>ma" data-en="Sys<br>tem">Siste<br>ma</div>
   <div class="tsec-body">
-    <p>O sistema visual usa <strong>fotografia de campo em full-bleed</strong> como elemento dominante — as bromélias são naturalmente fotogénicas e a decisão de deixar as imagens respirar foi central. A tipografia é sóbria e sem serifa, com hierarquia clara entre títulos de secção (bold, caixa alta) e corpo científico (regular, corpo menor).</p>
-    <p>A identidade da publicação é ancorada no <strong>logótipo circular do Projeto Bromélias</strong> — um sapo estilizado inscrito numa flor — que aparece na capa e como marca de água em separadores. As fotografias foram <strong>curadas por critérios visuais e científicos</strong> em conjunto com a equipa do instituto.</p>
+    <p data-pt="O sistema visual usa <strong>fotografia de campo em full-bleed</strong> como elemento dominante — as bromélias são naturalmente fotogénicas e a decisão de deixar as imagens respirar foi central. A tipografia é sóbria e sem serifa, com hierarquia clara entre títulos de secção (bold, caixa alta) e corpo científico (regular, corpo menor)." data-en="The visual system uses <strong>full-bleed field photography</strong> as the dominant element — bromeliads are naturally photogenic and the decision to let images breathe was central. Typography is restrained and sans-serif, with a clear hierarchy between section titles (bold, uppercase) and scientific body text (regular, smaller size).">O sistema visual usa <strong>fotografia de campo em full-bleed</strong> como elemento dominante — as bromélias são naturalmente fotogénicas e a decisão de deixar as imagens respirar foi central. A tipografia é sóbria e sem serifa, com hierarquia clara entre títulos de secção (bold, caixa alta) e corpo científico (regular, corpo menor).</p>
+    <p data-pt="A identidade da publicação é ancorada no <strong>logótipo circular do Projeto Bromélias</strong> — um sapo estilizado inscrito numa flor — que aparece na capa e como marca de água em separadores. As fotografias foram <strong>curadas por critérios visuais e científicos</strong> em conjunto com a equipa do instituto." data-en="The publication's identity is anchored in the <strong>circular Projeto Bromélias logotype</strong> — a stylised frog inscribed in a flower — which appears on the cover and as a watermark on dividers. Photographs were <strong>curated by visual and scientific criteria</strong> together with the institute's team.">A identidade da publicação é ancorada no <strong>logótipo circular do Projeto Bromélias</strong> — um sapo estilizado inscrito numa flor — que aparece na capa e como marca de água em separadores. As fotografias foram <strong>curadas por critérios visuais e científicos</strong> em conjunto com a equipa do instituto.</p>
   </div>
 </div>
 
@@ -350,31 +369,44 @@ nav {
 <div class="igrid c2 rev">
   <div class="icell r16">
     <img src="assets/brom_64.png" alt="Equipa">
-    <div class="ilbl">Créditos — Editorial e Material Gráfico por Gabriel Mengável Gomes Palaoro · redes sociais e contacto do projeto</div>
+    <div class="ilbl" data-pt="Créditos — Editorial e Material Gráfico por Gabriel Mengável Gomes Palaoro · redes sociais e contacto do projeto" data-en="Credits — Editorial and Graphic Material by Gabriel Mengável Gomes Palaoro · social media and project contact">Créditos — Editorial e Material Gráfico por Gabriel Mengável Gomes Palaoro · redes sociais e contacto do projeto</div>
   </div>
   <div class="icell r16">
     <img src="assets/brom_65.png" alt="Equipa 2">
-    <div class="ilbl">Separador "Políticas Públicas" — fotografia de rã vermelha sobre folha verde</div>
+    <div class="ilbl" data-pt='Separador "Políticas Públicas" — fotografia de rã vermelha sobre folha verde' data-en='"Public Policies" divider — photograph of a red frog on a green leaf'>Separador "Políticas Públicas" — fotografia de rã vermelha sobre folha verde</div>
   </div>
 </div>
 
 <div class="dark-band rev" style="border-bottom:var(--border);">
-  <div style="font-family:var(--fd);font-size:clamp(36px,5vw,72px);color:var(--warm);line-height:.9;text-transform:uppercase;letter-spacing:-.02em;margin-bottom:24px;">
+  <div style="font-family:var(--fd);font-size:clamp(36px,5vw,72px);color:var(--warm);line-height:.9;text-transform:uppercase;letter-spacing:-.02em;margin-bottom:24px;"
+    data-pt="<span style='color:#5DB85D;'>Pesquisa</span> e Educação<br>em prol da<br><span style='color:#5DB85D;'>Conservação</span>"
+    data-en="<span style='color:#5DB85D;'>Research</span> and Education<br>in service of<br><span style='color:#5DB85D;'>Conservation</span>">
     <span style="color:#5DB85D;">Pesquisa</span> e Educação<br>
     em prol da<br>
     <span style="color:#5DB85D;">Conservação</span>
   </div>
-  <p style="font-size:11px;color:rgba(245,240,232,.4);text-transform:uppercase;letter-spacing:.12em;margin-top:16px;">
+  <p style="font-size:11px;color:rgba(245,240,232,.4);text-transform:uppercase;letter-spacing:.12em;margin-top:16px;"
+    data-pt="— Missão do Projeto Bromélias · Instituto Marcos Daniel · Serra, ES"
+    data-en="— Mission of Projeto Bromélias · Instituto Marcos Daniel · Serra, ES">
     — Missão do Projeto Bromélias · Instituto Marcos Daniel · Serra, ES
   </p>
 </div>
 
 <div class="cta-row rev">
   <div class="cta-title">Projeto<br>Bromelias</div>
-  <a href="https://drive.google.com/file/u/3/d/114WJ8A0S1X3nYyWLUoM4u8aUZkciPCfx/view" target="_blank" class="cta-btn">Ver publicação completa ↗</a>
+  <a href="https://drive.google.com/file/u/3/d/114WJ8A0S1X3nYyWLUoM4u8aUZkciPCfx/view" target="_blank" class="cta-btn" data-pt="Ver publicação completa ↗" data-en="View full publication ↗">Ver publicação completa ↗</a>
 </div>
 
 <script>
+let currentLang = 'pt';
+function toggleLang() {
+  currentLang = currentLang === 'pt' ? 'en' : 'pt';
+  document.documentElement.lang = currentLang;
+  document.getElementById('lang-toggle').textContent = currentLang === 'pt' ? 'EN' : 'PT';
+  document.querySelectorAll('[data-pt][data-en]').forEach(el => {
+    el.innerHTML = el.dataset[currentLang];
+  });
+}
 const obs = new IntersectionObserver(es => es.forEach(e => {
   if(e.isIntersecting) e.target.classList.add('vis');
 }), {threshold:.08});

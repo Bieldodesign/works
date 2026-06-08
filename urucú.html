@@ -66,6 +66,20 @@ nav {
   font-size:10px; text-transform:uppercase;
   letter-spacing:.14em; color:var(--muted);
 }
+.nav-right { display:flex; align-items:center; gap:16px; }
+#lang-toggle {
+  background: transparent;
+  border: 1px solid rgba(13,13,13,.35);
+  color: var(--dark);
+  font-family: var(--fb);
+  font-size: 10px;
+  text-transform: uppercase;
+  letter-spacing: .12em;
+  padding: 4px 10px;
+  cursor: pointer;
+  transition: background .15s;
+}
+#lang-toggle:hover { background: rgba(13,13,13,.08); }
 
 .hero {
   display:grid; grid-template-columns:1fr 1fr;
@@ -226,13 +240,18 @@ nav {
 <body>
 
 <nav>
-  <a href="portfolio.html" class="nav-back">← Portfolio</a>
+  <a href="portfolio.html" class="nav-back" data-pt="← Portfolio" data-en="← Portfolio">← Portfolio</a>
   <span class="nav-title">Uruçú App</span>
-  <span class="nav-cat">Mobile App · UX Research</span>
+  <div class="nav-right">
+    <span class="nav-cat" data-pt="Mobile App · UX Research" data-en="Mobile App · UX Research">Mobile App · UX Research</span>
+    <button id="lang-toggle" onclick="toggleLang()" aria-label="Switch language">EN</button>
+  </div>
 </nav>
 
 <div class="mstrip">
-  <div class="mtrack">
+  <div class="mtrack"
+    data-pt="Uruçú App &nbsp;·&nbsp; Rede Social Interna &nbsp;·&nbsp; Inovação Colaborativa &nbsp;·&nbsp; Mobile UX &nbsp;·&nbsp; Visual System &nbsp;·&nbsp; iOS · Android &nbsp;·&nbsp; UX Research &nbsp;·&nbsp; Projecto Académico &nbsp;·&nbsp; Figma &nbsp;·&nbsp; Uruçú App &nbsp;·&nbsp; Rede Social Interna &nbsp;·&nbsp; Inovação Colaborativa &nbsp;·&nbsp; Mobile UX &nbsp;·&nbsp; Visual System &nbsp;·&nbsp; iOS · Android &nbsp;·&nbsp; UX Research &nbsp;·&nbsp; Projecto Académico &nbsp;·&nbsp; Figma &nbsp;·&nbsp;"
+    data-en="Uruçú App &nbsp;·&nbsp; Internal Social Network &nbsp;·&nbsp; Collaborative Innovation &nbsp;·&nbsp; Mobile UX &nbsp;·&nbsp; Visual System &nbsp;·&nbsp; iOS · Android &nbsp;·&nbsp; UX Research &nbsp;·&nbsp; Academic Project &nbsp;·&nbsp; Figma &nbsp;·&nbsp; Uruçú App &nbsp;·&nbsp; Internal Social Network &nbsp;·&nbsp; Collaborative Innovation &nbsp;·&nbsp; Mobile UX &nbsp;·&nbsp; Visual System &nbsp;·&nbsp; iOS · Android &nbsp;·&nbsp; UX Research &nbsp;·&nbsp; Academic Project &nbsp;·&nbsp; Figma &nbsp;·&nbsp;">
     Uruçú App &nbsp;·&nbsp; Rede Social Interna &nbsp;·&nbsp; Inovação Colaborativa &nbsp;·&nbsp; Mobile UX &nbsp;·&nbsp; Visual System &nbsp;·&nbsp; iOS · Android &nbsp;·&nbsp; UX Research &nbsp;·&nbsp; Projecto Académico &nbsp;·&nbsp; Figma &nbsp;·&nbsp;
     Uruçú App &nbsp;·&nbsp; Rede Social Interna &nbsp;·&nbsp; Inovação Colaborativa &nbsp;·&nbsp; Mobile UX &nbsp;·&nbsp; Visual System &nbsp;·&nbsp; iOS · Android &nbsp;·&nbsp; UX Research &nbsp;·&nbsp; Projecto Académico &nbsp;·&nbsp; Figma &nbsp;·&nbsp;
   </div>
@@ -241,19 +260,19 @@ nav {
 <div class="hero rev">
   <div class="hero-left">
     <div>
-      <div class="hero-cat">Mobile App · Rede Social Interna · UX Research · Projecto Académico</div>
+      <div class="hero-cat" data-pt="Mobile App · Rede Social Interna · UX Research · Projecto Académico" data-en="Mobile App · Internal Social Network · UX Research · Academic Project">Mobile App · Rede Social Interna · UX Research · Projecto Académico</div>
       <h1 class="hero-title">Uru<span class="a">çú</span><br><span class="o">App</span></h1>
-      <p class="hero-sub">Rede social interna para fomentar inovação colaborativa entre colaboradores de uma empresa. O nome Uruçú constrói identidade e pertença — do discovery ao sistema visual, com foco em engajamento e cultura de inovação organizacional.</p>
+      <p class="hero-sub" data-pt="Rede social interna para fomentar inovação colaborativa entre colaboradores de uma empresa. O nome Uruçú constrói identidade e pertença — do discovery ao sistema visual, com foco em engajamento e cultura de inovação organizacional." data-en="Internal social network to foster collaborative innovation among a company's employees. The name Uruçú builds identity and belonging — from discovery to visual system, with focus on engagement and organisational innovation culture.">Rede social interna para fomentar inovação colaborativa entre colaboradores de uma empresa. O nome Uruçú constrói identidade e pertença — do discovery ao sistema visual, com foco em engajamento e cultura de inovação organizacional.</p>
     </div>
     <div class="hero-meta">
-      <div class="hero-meta-item"><label>Contexto</label><span>Proj. Académico</span></div>
-      <div class="hero-meta-item"><label>Plataforma</label><span>iOS · Android</span></div>
+      <div class="hero-meta-item"><label data-pt="Contexto" data-en="Context">Contexto</label><span data-pt="Proj. Académico" data-en="Academic Project">Proj. Académico</span></div>
+      <div class="hero-meta-item"><label data-pt="Plataforma" data-en="Platform">Plataforma</label><span>iOS · Android</span></div>
       <div class="hero-meta-item"><label>Tools</label><span>Figma</span></div>
-      <div class="hero-meta-item"><label>Disciplinas</label><span>UX · UI · Research</span></div>
+      <div class="hero-meta-item"><label data-pt="Disciplinas" data-en="Disciplines">Disciplinas</label><span>UX · UI · Research</span></div>
     </div>
   </div>
   <div class="hero-right" >
-    <p class="hero-quote">"Do campo à mesa — uma experiência que traduz o artesanal em digital sem perder autenticidade."</p>
+    <p class="hero-quote" data-pt='"Do campo à mesa — uma experiência que traduz o artesanal em digital sem perder autenticidade."' data-en='"From field to table — an experience that translates the artisanal into digital without losing authenticity."'>"Do campo à mesa — uma experiência que traduz o artesanal em digital sem perder autenticidade."</p>
     <div class="hero-tags">
       <span class="htag">UX Research</span>
       <span class="htag">UI Design</span>
@@ -267,80 +286,93 @@ nav {
 <div class="igrid c1 rev">
   <div class="icell r21">
     <img src="assets/urucu_tags.png" alt="Uruçú App — ecrã principal">
-    <div class="ilbl">Uruçú — feed de ideias e desafios de inovação em aberto</div>
+    <div class="ilbl" data-pt="Uruçú — feed de ideias e desafios de inovação em aberto" data-en="Uruçú — ideas feed and open innovation challenges">Uruçú — feed de ideias e desafios de inovação em aberto</div>
   </div>
 </div>
 
 <div class="specs rev">
   <div class="spec"><div class="spec-num">5</div>
-    <div class="spec-lbl">Fases do processo — discovery, definição, ideação, prototipagem e testes</div></div>
+    <div class="spec-lbl" data-pt="Fases do processo — discovery, definição, ideação, prototipagem e testes" data-en="Process phases — discovery, definition, ideation, prototyping and testing">Fases do processo — discovery, definição, ideação, prototipagem e testes</div></div>
   <div class="spec"><div class="spec-num">3</div>
-    <div class="spec-lbl">Rondas de testes com utilizadores para validação dos fluxos principais</div></div>
+    <div class="spec-lbl" data-pt="Rondas de testes com utilizadores para validação dos fluxos principais" data-en="Rounds of user testing to validate main flows">Rondas de testes com utilizadores para validação dos fluxos principais</div></div>
   <div class="spec"><div class="spec-num">iOS</div>
-    <div class="spec-lbl">Plataforma principal com adaptação para Android — guidelines respeitados</div></div>
+    <div class="spec-lbl" data-pt="Plataforma principal com adaptação para Android — guidelines respeitados" data-en="Main platform with Android adaptation — guidelines respected">Plataforma principal com adaptação para Android — guidelines respeitados</div></div>
   <div class="spec"><div class="spec-num">Marca</div>
-    <div class="spec-lbl">Nome e identidade criados de raiz para gerar pertença e cultura interna</div></div>
+    <div class="spec-lbl" data-pt="Nome e identidade criados de raiz para gerar pertença e cultura interna" data-en="Name and identity created from scratch to generate belonging and internal culture">Nome e identidade criados de raiz para gerar pertença e cultura interna</div></div>
 </div>
 
 <div class="tsec rev">
-  <div class="tsec-lbl">O<br>Projecto</div>
+  <div class="tsec-lbl" data-pt="O<br>Projecto" data-en="The<br>Project">O<br>Projecto</div>
   <div class="tsec-body">
-    <p>A Uruçú é uma rede social interna desenhada para <strong>fomentar a inovação colaborativa dentro de uma organização</strong>. O conceito parte da ideia de que boas soluções surgem de qualquer nível da empresa — e que falta um espaço seguro, acessível e motivador para isso acontecer. A plataforma permite que colaboradores proponham ideias, colaborem em desafios lançados pela empresa e reconheçam contribuições dos colegas.</p>
-    <p>O nome <strong>Uruçú</strong> não descreve o produto — constrói uma história. A abelha Uruçu é nativa do Brasil, trabalha em colectivo e produz sem aguilhão: um símbolo de <strong>colaboração, cuidado e inovação orgânica</strong>. A identidade visual parte daí para criar pertença e diferenciação interna, distanciando-se da frieza de ferramentas corporativas típicas.</p>
+    <p data-pt="A Uruçú é uma rede social interna desenhada para <strong>fomentar a inovação colaborativa dentro de uma organização</strong>. O conceito parte da ideia de que boas soluções surgem de qualquer nível da empresa — e que falta um espaço seguro, acessível e motivador para isso acontecer. A plataforma permite que colaboradores proponham ideias, colaborem em desafios lançados pela empresa e reconheçam contribuições dos colegas." data-en="Uruçú is an internal social network designed to <strong>foster collaborative innovation within an organisation</strong>. The concept starts from the idea that good solutions can emerge from any level of the company — and that a safe, accessible and motivating space for this is missing. The platform allows employees to propose ideas, collaborate on company-launched challenges and recognise colleagues' contributions.">A Uruçú é uma rede social interna desenhada para <strong>fomentar a inovação colaborativa dentro de uma organização</strong>. O conceito parte da ideia de que boas soluções surgem de qualquer nível da empresa — e que falta um espaço seguro, acessível e motivador para isso acontecer. A plataforma permite que colaboradores proponham ideias, colaborem em desafios lançados pela empresa e reconheçam contribuições dos colegas.</p>
+    <p data-pt="O nome <strong>Uruçú</strong> não descreve o produto — constrói uma história. A abelha Uruçu é nativa do Brasil, trabalha em colectivo e produz sem aguilhão: um símbolo de <strong>colaboração, cuidado e inovação orgânica</strong>. A identidade visual parte daí para criar pertença e diferenciação interna, distanciando-se da frieza de ferramentas corporativas típicas." data-en="The name <strong>Uruçú</strong> does not describe the product — it builds a story. The Uruçu bee is native to Brazil, works collectively and produces without a stinger: a symbol of <strong>collaboration, care and organic innovation</strong>. The visual identity draws from this to create belonging and internal differentiation, distancing itself from the coldness of typical corporate tools.">O nome <strong>Uruçú</strong> não descreve o produto — constrói uma história. A abelha Uruçu é nativa do Brasil, trabalha em colectivo e produz sem aguilhão: um símbolo de <strong>colaboração, cuidado e inovação orgânica</strong>. A identidade visual parte daí para criar pertença e diferenciação interna, distanciando-se da frieza de ferramentas corporativas típicas.</p>
   </div>
 </div>
 
 <div class="igrid c2 rev">
   <div class="icell r16">
     <img src="assets/urucu_TL.png" alt="Onboarding">
-    <div class="ilbl">Time line</div>
+    <div class="ilbl" data-pt="Time line" data-en="Timeline">Time line</div>
   </div>
   <div class="icell r16">
     <img src="assets/urucu_orgs.png" alt="Feed de ideias">
-    <div class="ilbl">Feed de organizações</div>
+    <div class="ilbl" data-pt="Feed de organizações" data-en="Organisations feed">Feed de organizações</div>
   </div>
 </div>
 
 <div class="tsec rev">
-  <div class="tsec-lbl">Siste<br>ma</div>
+  <div class="tsec-lbl" data-pt="Siste<br>ma" data-en="Sys<br>tem">Siste<br>ma</div>
   <div class="tsec-body">
-    <p>O sistema visual <strong>deliberadamente evita a linguagem visual corporativa</strong> — sem cinzentos, sem tabelas densas, sem sensação de intranet. A paleta é calorosa e viva, os componentes têm arredondamentos generosos e a tipografia é acessível. O objectivo é que a app pareça um espaço de colaboração, não uma ferramenta de reporte.</p>
-    <p>Os <strong>componentes foram desenhados em Figma com auto-layout e variantes completas</strong>. O sistema de gamificação — pontos, badges e reconhecimento entre pares — foi desenhado para encorajar participação contínua sem criar pressão de performance. A iconografia usa referências subtis à abelha e ao colectivo.</p>
+    <p data-pt="O sistema visual <strong>deliberadamente evita a linguagem visual corporativa</strong> — sem cinzentos, sem tabelas densas, sem sensação de intranet. A paleta é calorosa e viva, os componentes têm arredondamentos generosos e a tipografia é acessível. O objectivo é que a app pareça um espaço de colaboração, não uma ferramenta de reporte." data-en="The visual system <strong>deliberately avoids corporate visual language</strong> — no greys, no dense tables, no intranet feeling. The palette is warm and vivid, components have generous roundings and typography is accessible. The goal is for the app to feel like a collaboration space, not a reporting tool.">O sistema visual <strong>deliberadamente evita a linguagem visual corporativa</strong> — sem cinzentos, sem tabelas densas, sem sensação de intranet. A paleta é calorosa e viva, os componentes têm arredondamentos generosos e a tipografia é acessível. O objectivo é que a app pareça um espaço de colaboração, não uma ferramenta de reporte.</p>
+    <p data-pt="Os <strong>componentes foram desenhados em Figma com auto-layout e variantes completas</strong>. O sistema de gamificação — pontos, badges e reconhecimento entre pares — foi desenhado para encorajar participação contínua sem criar pressão de performance. A iconografia usa referências subtis à abelha e ao colectivo." data-en="<strong>Components were designed in Figma with auto-layout and full variants</strong>. The gamification system — points, badges and peer recognition — was designed to encourage continuous participation without creating performance pressure. The iconography uses subtle references to the bee and the collective.">Os <strong>componentes foram desenhados em Figma com auto-layout e variantes completas</strong>. O sistema de gamificação — pontos, badges e reconhecimento entre pares — foi desenhado para encorajar participação contínua sem criar pressão de performance. A iconografia usa referências subtis à abelha e ao colectivo.</p>
   </div>
 </div>
 
 <div class="igrid c3 rev">
   <div class="icell r1">
     <img src="assets/urucu_loja.png" alt="Submissão de ideia">
-    <div class="ilbl">Loja — forma de premiar o coaborador pela ideia</div>
+    <div class="ilbl" data-pt="Loja — forma de premiar o coaborador pela ideia" data-en="Store — a way to reward the collaborator for their idea">Loja — forma de premiar o coaborador pela ideia</div>
   </div>
   <div class="icell r1">
     <img src="assets/urucu_todo.png" alt="Desafio activo">
-    <div class="ilbl">Desafio activo — briefing, prazo e ideias submetidas pela equipa</div>
+    <div class="ilbl" data-pt="Desafio activo — briefing, prazo e ideias submetidas pela equipa" data-en="Active challenge — briefing, deadline and ideas submitted by the team">Desafio activo — briefing, prazo e ideias submetidas pela equipa</div>
   </div>
   <div class="icell r1">
     <img src="assets/urucu_login.png" alt="Perfil">
-    <div class="ilbl">Login — primeiro encontro com a pp</div>
+    <div class="ilbl" data-pt="Login — primeiro encontro com a pp" data-en="Login — first encounter with the app">Login — primeiro encontro com a pp</div>
   </div>
 </div>
 
 <div class="dark-band rev" style="border-bottom:var(--border);">
-  <div style="font-family:var(--fd);font-size:clamp(36px,5vw,72px);color:var(--warm);line-height:.9;text-transform:uppercase;letter-spacing:-.02em;margin-bottom:24px;">
+  <div style="font-family:var(--fd);font-size:clamp(36px,5vw,72px);color:var(--warm);line-height:.9;text-transform:uppercase;letter-spacing:-.02em;margin-bottom:24px;"
+    data-pt="<span style='color:var(--yellow);'>Inovação</span><br>vem de<br><span style='color:var(--yellow);'>dentro</span>"
+    data-en="<span style='color:var(--yellow);'>Innovation</span><br>comes from<br><span style='color:var(--yellow);'>within</span>">
     <span style="color:var(--yellow);">Inovação</span><br>
     vem de<br>
     <span style="color:var(--yellow);">dentro</span>
   </div>
-  <p style="font-size:11px;color:rgba(245,240,232,.4);text-transform:uppercase;letter-spacing:.12em;margin-top:16px;">
+  <p style="font-size:11px;color:rgba(245,240,232,.4);text-transform:uppercase;letter-spacing:.12em;margin-top:16px;"
+    data-pt="— Uruçú · Rede Social Interna · Inovação Colaborativa · Mobile App"
+    data-en="— Uruçú · Internal Social Network · Collaborative Innovation · Mobile App">
     — Uruçú · Rede Social Interna · Inovação Colaborativa · Mobile App
   </p>
 </div>
 
 <div class="cta-row rev">
   <div class="cta-title">Uruçú<br>App</div>
-  <a href="https://www.figma.com/community/file/1268341838919470640" target="_blank" class="cta-btn">Ver case study completo ↗</a>
+  <a href="https://www.figma.com/community/file/1268341838919470640" target="_blank" class="cta-btn" data-pt="Ver case study completo ↗" data-en="View full case study ↗">Ver case study completo ↗</a>
 </div>
 
 <script>
+let currentLang = 'pt';
+function toggleLang() {
+  currentLang = currentLang === 'pt' ? 'en' : 'pt';
+  document.documentElement.lang = currentLang;
+  document.getElementById('lang-toggle').textContent = currentLang === 'pt' ? 'EN' : 'PT';
+  document.querySelectorAll('[data-pt][data-en]').forEach(el => {
+    el.innerHTML = el.dataset[currentLang];
+  });
+}
 const obs = new IntersectionObserver(es => es.forEach(e => {
   if(e.isIntersecting) e.target.classList.add('vis');
 }), {threshold:.08});

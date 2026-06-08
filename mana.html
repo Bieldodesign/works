@@ -67,6 +67,20 @@ nav {
   font-size:10px; text-transform:uppercase;
   letter-spacing:.14em; color:var(--muted);
 }
+.nav-right { display:flex; align-items:center; gap:16px; }
+#lang-toggle {
+  background: transparent;
+  border: 1px solid rgba(13,13,13,.35);
+  color: var(--dark);
+  font-family: var(--fb);
+  font-size: 10px;
+  text-transform: uppercase;
+  letter-spacing: .12em;
+  padding: 4px 10px;
+  cursor: pointer;
+  transition: background .15s;
+}
+#lang-toggle:hover { background: rgba(13,13,13,.08); }
 
 /* ── HERO ── */
 .hero {
@@ -244,13 +258,18 @@ nav {
 </head>
 <body>
 <nav>
-  <a href="portfolio.html" class="nav-back">← Portfolio</a>
+  <a href="portfolio.html" class="nav-back" data-pt="← Portfolio" data-en="← Portfolio">← Portfolio</a>
   <span class="nav-title">Capotaria Maná</span>
-  <span class="nav-cat">Branding · Identidade Visual</span>
+  <div class="nav-right">
+    <span class="nav-cat" data-pt="Branding · Identidade Visual" data-en="Branding · Visual Identity">Branding · Identidade Visual</span>
+    <button id="lang-toggle" onclick="toggleLang()" aria-label="Switch language">EN</button>
+  </div>
 </nav>
 
 <div class="mstrip">
-  <div class="mtrack">
+  <div class="mtrack"
+    data-pt="Capotaria Maná &nbsp;·&nbsp; Redesign &nbsp;·&nbsp; Identidade Visual &nbsp;·&nbsp; Branding &nbsp;·&nbsp; Social Media &nbsp;·&nbsp; Sinalização &nbsp;·&nbsp; Kombi &nbsp;·&nbsp; Estética Automotiva &nbsp;·&nbsp; Capotaria Maná &nbsp;·&nbsp; Redesign &nbsp;·&nbsp; Identidade Visual &nbsp;·&nbsp; Branding &nbsp;·&nbsp; Social Media &nbsp;·&nbsp; Sinalização &nbsp;·&nbsp; Kombi &nbsp;·&nbsp; Estética Automotiva &nbsp;·&nbsp;"
+    data-en="Capotaria Maná &nbsp;·&nbsp; Redesign &nbsp;·&nbsp; Visual Identity &nbsp;·&nbsp; Branding &nbsp;·&nbsp; Social Media &nbsp;·&nbsp; Signage &nbsp;·&nbsp; Kombi &nbsp;·&nbsp; Automotive Aesthetics &nbsp;·&nbsp; Capotaria Maná &nbsp;·&nbsp; Redesign &nbsp;·&nbsp; Visual Identity &nbsp;·&nbsp; Branding &nbsp;·&nbsp; Social Media &nbsp;·&nbsp; Signage &nbsp;·&nbsp; Kombi &nbsp;·&nbsp; Automotive Aesthetics &nbsp;·&nbsp;">
     Capotaria Maná &nbsp;·&nbsp; Redesign &nbsp;·&nbsp; Identidade Visual &nbsp;·&nbsp; Branding &nbsp;·&nbsp; Social Media &nbsp;·&nbsp; Sinalização &nbsp;·&nbsp; Kombi &nbsp;·&nbsp; Estética Automotiva &nbsp;·&nbsp;
     Capotaria Maná &nbsp;·&nbsp; Redesign &nbsp;·&nbsp; Identidade Visual &nbsp;·&nbsp; Branding &nbsp;·&nbsp; Social Media &nbsp;·&nbsp; Sinalização &nbsp;·&nbsp; Kombi &nbsp;·&nbsp; Estética Automotiva &nbsp;·&nbsp;
   </div>
@@ -259,19 +278,19 @@ nav {
 <div class="hero rev">
   <div class="hero-left">
     <div>
-      <div class="hero-cat">Branding · Identidade Visual · 2023 · Vitória, Brasil</div>
+      <div class="hero-cat" data-pt="Branding · Identidade Visual · 2023 · Vitória, Brasil" data-en="Branding · Visual Identity · 2023 · Vitória, Brazil">Branding · Identidade Visual · 2023 · Vitória, Brasil</div>
       <h1 class="hero-title">Capo<span class="a">ta</span><br>ria<br><span class="o">Maná</span></h1>
-      <p class="hero-sub">Redesign completo da identidade visual de uma empresa familiar de estética automotiva com mais de 10 anos de história em Andorinhas, Grande Vitória. O desafio: modernizar sem apagar a memória da marca — e a Kombi tinha que ficar.</p>
+      <p class="hero-sub" data-pt="Redesign completo da identidade visual de uma empresa familiar de estética automotiva com mais de 10 anos de história em Andorinhas, Grande Vitória. O desafio: modernizar sem apagar a memória da marca — e a Kombi tinha que ficar." data-en="Complete visual identity redesign for a family-owned automotive aesthetics business with over 10 years of history in Andorinhas, Greater Vitória. The challenge: modernise without erasing the brand's memory — and the Kombi had to stay.">Redesign completo da identidade visual de uma empresa familiar de estética automotiva com mais de 10 anos de história em Andorinhas, Grande Vitória. O desafio: modernizar sem apagar a memória da marca — e a Kombi tinha que ficar.</p>
     </div>
     <div class="hero-meta">
-      <div class="hero-meta-item"><label>Cliente</label><span>Capotaria Maná</span></div>
-      <div class="hero-meta-item"><label>Ano</label><span>2023</span></div>
+      <div class="hero-meta-item"><label data-pt="Cliente" data-en="Client">Cliente</label><span>Capotaria Maná</span></div>
+      <div class="hero-meta-item"><label data-pt="Ano" data-en="Year">Ano</label><span>2023</span></div>
       <div class="hero-meta-item"><label>Co-design</label><span>Hugo Bello</span></div>
-      <div class="hero-meta-item"><label>Orientação</label><span>Juliana Lisboa</span></div>
+      <div class="hero-meta-item"><label data-pt="Orientação" data-en="Guidance">Orientação</label><span>Juliana Lisboa</span></div>
     </div>
   </div>
   <div class="hero-right">
-    <p class="hero-quote">"A Kombi tinha que fazer parte da identidade assim como faz parte da história da marca."</p>
+    <p class="hero-quote" data-pt='"A Kombi tinha que fazer parte da identidade assim como faz parte da história da marca."' data-en='"The Kombi had to be part of the identity just as it is part of the brand&apos;s history."'>"A Kombi tinha que fazer parte da identidade assim como faz parte da história da marca."</p>
     <div class="hero-tags">
       <span class="htag">Branding</span><span class="htag">Identidade Visual</span>
       <span class="htag">Social Media</span><span class="htag">Sinalização</span>
@@ -290,81 +309,90 @@ nav {
 
 <div class="specs rev">
   <div class="spec"><div class="spec-num">4</div>
-    <div class="spec-lbl">Variações de logótipo — vertical, horizontal, selo (3 cores) e P&amp;B</div></div>
+    <div class="spec-lbl" data-pt="Variações de logótipo — vertical, horizontal, selo (3 cores) e P&amp;B" data-en="Logo variations — vertical, horizontal, seal (3 colours) and B&amp;W">Variações de logótipo — vertical, horizontal, selo (3 cores) e P&amp;B</div></div>
   <div class="spec"><div class="spec-num">10+</div>
-    <div class="spec-lbl">Anos de história da marca preservados e integrados no redesign</div></div>
+    <div class="spec-lbl" data-pt="Anos de história da marca preservados e integrados no redesign" data-en="Years of brand history preserved and integrated in the redesign">Anos de história da marca preservados e integrados no redesign</div></div>
   <div class="spec"><div class="spec-num">6</div>
-    <div class="spec-lbl">Tipos de aplicação — fachada, camisetas, cartão, boné, bandeira, fundo para fotos</div></div>
+    <div class="spec-lbl" data-pt="Tipos de aplicação — fachada, camisetas, cartão, boné, bandeira, fundo para fotos" data-en="Application types — storefront, t-shirts, card, cap, banner, photo background">Tipos de aplicação — fachada, camisetas, cartão, boné, bandeira, fundo para fotos</div></div>
   <div class="spec"><div class="spec-num">IBM</div>
-    <div class="spec-lbl">Plex Sans — tipografia institucional para clareza e modernidade</div></div>
+    <div class="spec-lbl" data-pt="Plex Sans — tipografia institucional para clareza e modernidade" data-en="Plex Sans — institutional typeface for clarity and modernity">Plex Sans — tipografia institucional para clareza e modernidade</div></div>
 </div>
 
 <div class="tsec rev">
-  <div class="tsec-lbl">O<br>Desafio</div>
+  <div class="tsec-lbl" data-pt="O<br>Desafio" data-en="The<br>Challenge">O<br>Desafio</div>
   <div class="tsec-body">
-    <p>A Capotaria Maná não é uma empresa nova — ela tem uma <strong>história bela e singular</strong>. Reconhecida no ramo de capotaria e estética automotiva em Andorinhas e na Grande Vitória, a marca original não comunicava essa excelência: identidade fragmentada entre múltiplas versões de logótipo, sem coerência cromática nem sistema aplicável.</p>
-    <p>A questão central era: <strong>como integrar as marcas existentes e manter uma linha de continuidade com a história que constitui a Maná?</strong> A resposta veio da própria história — a Kombi, veículo que marcou o início do negócio, tornando-se o símbolo central.</p>
+    <p data-pt="A Capotaria Maná não é uma empresa nova — ela tem uma <strong>história bela e singular</strong>. Reconhecida no ramo de capotaria e estética automotiva em Andorinhas e na Grande Vitória, a marca original não comunicava essa excelência: identidade fragmentada entre múltiplas versões de logótipo, sem coerência cromática nem sistema aplicável." data-en="Capotaria Maná is not a new business — it has a <strong>rich and singular history</strong>. Recognised in the automotive upholstery and aesthetics sector in Andorinhas and Greater Vitória, the original brand did not communicate that excellence: identity fragmented across multiple logo versions, with no colour coherence or applicable system.">A Capotaria Maná não é uma empresa nova — ela tem uma <strong>história bela e singular</strong>. Reconhecida no ramo de capotaria e estética automotiva em Andorinhas e na Grande Vitória, a marca original não comunicava essa excelência: identidade fragmentada entre múltiplas versões de logótipo, sem coerência cromática nem sistema aplicável.</p>
+    <p data-pt="A questão central era: <strong>como integrar as marcas existentes e manter uma linha de continuidade com a história que constitui a Maná?</strong> A resposta veio da própria história — a Kombi, veículo que marcou o início do negócio, tornando-se o símbolo central." data-en="The central question was: <strong>how to integrate existing marks and maintain continuity with the history that makes Maná who it is?</strong> The answer came from that history — the Kombi van, the vehicle that marked the beginning of the business, became the central symbol.">A questão central era: <strong>como integrar as marcas existentes e manter uma linha de continuidade com a história que constitui a Maná?</strong> A resposta veio da própria história — a Kombi, veículo que marcou o início do negócio, tornando-se o símbolo central.</p>
   </div>
 </div>
 
 <div class="igrid c2 rev">
   <div class="icell r16">
     <img src="assets/mana_old.png" alt="Antes">
-    <div class="ilbl">Identidade anterior — múltiplas versões inconsistentes</div>
+    <div class="ilbl" data-pt="Identidade anterior — múltiplas versões inconsistentes" data-en="Previous identity — multiple inconsistent versions">Identidade anterior — múltiplas versões inconsistentes</div>
   </div>
   <div class="icell r16">
     <img src="assets/mana_id.png" alt="Novo logótipo">
-    <div class="ilbl">Nova identidade — logótipo principal horizontal</div>
+    <div class="ilbl" data-pt="Nova identidade — logótipo principal horizontal" data-en="New identity — main horizontal logotype">Nova identidade — logótipo principal horizontal</div>
   </div>
 </div>
 
 <div class="tsec rev">
-  <div class="tsec-lbl">Cons<br>trução</div>
+  <div class="tsec-lbl" data-pt="Cons<br>trução" data-en="Con<br>struc<br>tion">Cons<br>trução</div>
   <div class="tsec-body">
-    <p>O processo iniciou com <strong>esboços à mão</strong> — a Kombi foi desenhada, desconstruída em círculos e rectângulos, testada em vistas frontal e lateral. O ícone final é uma Kombi estilizada com proporções geométricas, combinada com a tipografia arredondada "MANÁ" que complementa a personalidade da marca sem a endurecer.</p>
-    <p>O <strong>selo circular</strong> — inspirado num rabisco do cliente — tornou-se uma variação autónoma para bordado (boné) e materiais pequenos. As três cores principais dividem funções: verde como base institucional, laranja-vermelho como energia e cor da Kombi, amarelo como acento comunicativo.</p>
+    <p data-pt="O processo iniciou com <strong>esboços à mão</strong> — a Kombi foi desenhada, desconstruída em círculos e rectângulos, testada em vistas frontal e lateral. O ícone final é uma Kombi estilizada com proporções geométricas, combinada com a tipografia arredondada &quot;MANÁ&quot; que complementa a personalidade da marca sem a endurecer." data-en="The process began with <strong>hand sketches</strong> — the Kombi was drawn, deconstructed into circles and rectangles, tested in front and side views. The final icon is a stylised Kombi with geometric proportions, combined with the rounded &quot;MANÁ&quot; typography that complements the brand's personality without hardening it.">O processo iniciou com <strong>esboços à mão</strong> — a Kombi foi desenhada, desconstruída em círculos e rectângulos, testada em vistas frontal e lateral. O ícone final é uma Kombi estilizada com proporções geométricas, combinada com a tipografia arredondada "MANÁ" que complementa a personalidade da marca sem a endurecer.</p>
+    <p data-pt="O <strong>selo circular</strong> — inspirado num rabisco do cliente — tornou-se uma variação autónoma para bordado (boné) e materiais pequenos. As três cores principais dividem funções: verde como base institucional, laranja-vermelho como energia e cor da Kombi, amarelo como acento comunicativo." data-en="The <strong>circular seal</strong> — inspired by a client sketch — became an autonomous variation for embroidery (cap) and small materials. The three main colours divide functions: green as institutional base, orange-red as energy and Kombi colour, yellow as communicative accent.">O <strong>selo circular</strong> — inspirado num rabisco do cliente — tornou-se uma variação autónoma para bordado (boné) e materiais pequenos. As três cores principais dividem funções: verde como base institucional, laranja-vermelho como energia e cor da Kombi, amarelo como acento comunicativo.</p>
   </div>
 </div>
 
 <div class="igrid c3 rev">
   <div class="icell r1">
     <img src="assets/mana_cartao_frente.png" alt="Cartão frente">
-    <div class="ilbl">Cartão de visitas — frente</div>
+    <div class="ilbl" data-pt="Cartão de visitas — frente" data-en="Business card — front">Cartão de visitas — frente</div>
   </div>
   <div class="icell r1">
     <img src="assets/mana_fachada.png" alt="Fachada">
-    <div class="ilbl">Fachada da loja — mockup aplicado</div>
+    <div class="ilbl" data-pt="Fachada da loja — mockup aplicado" data-en="Storefront — applied mockup">Fachada da loja — mockup aplicado</div>
   </div>
   <div class="icell r1">
     <img src="assets/mana_cartão_tras.png" alt="Cartão verso">
-    <div class="ilbl">cartão de visitas - verso</div>
+    <div class="ilbl" data-pt="cartão de visitas - verso" data-en="Business card — back">cartão de visitas - verso</div>
   </div>
 </div>
 
 <div class="tsec rev">
-  <div class="tsec-lbl">Apli<br>cações</div>
+  <div class="tsec-lbl" data-pt="Apli<br>cações" data-en="Appli<br>ca<br>tions">Apli<br>cações</div>
   <div class="tsec-body">
-    <p>O sistema foi aplicado em <strong>6 categorias</strong>: sinalização de fachada, papelaria (cartão de visitas com verso individual por colaborador), uniformes (camisetas e boné bordado), materiais de comunicação (bandeira outdoor e fundo para fotos em xadrez de marca), presença digital (Instagram, WhatsApp Business, PicPay) e posts educativos para redes sociais sobre cuidados de capotaria.</p>
-    <p>Os posts de social media seguem uma <strong>linguagem editorial própria</strong> — tipografia bold em caixas de cor, imagens de produto com composição limpa e copy directo em português coloquial, aproximando a marca do cliente sem perder profissionalismo.</p>
+    <p data-pt="O sistema foi aplicado em <strong>6 categorias</strong>: sinalização de fachada, papelaria (cartão de visitas com verso individual por colaborador), uniformes (camisetas e boné bordado), materiais de comunicação (bandeira outdoor e fundo para fotos em xadrez de marca), presença digital (Instagram, WhatsApp Business, PicPay) e posts educativos para redes sociais sobre cuidados de capotaria." data-en="The system was applied across <strong>6 categories</strong>: storefront signage, stationery (business cards with individual back per collaborator), uniforms (t-shirts and embroidered cap), communication materials (outdoor banner and brand-check photo background), digital presence (Instagram, WhatsApp Business, PicPay) and educational social media posts on automotive care.">O sistema foi aplicado em <strong>6 categorias</strong>: sinalização de fachada, papelaria (cartão de visitas com verso individual por colaborador), uniformes (camisetas e boné bordado), materiais de comunicação (bandeira outdoor e fundo para fotos em xadrez de marca), presença digital (Instagram, WhatsApp Business, PicPay) e posts educativos para redes sociais sobre cuidados de capotaria.</p>
+    <p data-pt="Os posts de social media seguem uma <strong>linguagem editorial própria</strong> — tipografia bold em caixas de cor, imagens de produto com composição limpa e copy directo em português coloquial, aproximando a marca do cliente sem perder profissionalismo." data-en="Social media posts follow a <strong>distinct editorial language</strong> — bold typography in colour boxes, product images with clean composition and direct copy in colloquial Portuguese, bringing the brand closer to the customer without losing professionalism.">Os posts de social media seguem uma <strong>linguagem editorial própria</strong> — tipografia bold em caixas de cor, imagens de produto com composição limpa e copy directo em português coloquial, aproximando a marca do cliente sem perder profissionalismo.</p>
   </div>
 </div>
 
 <div class="igrid c2 rev">
   <div class="icell r16">
     <img src="assets/mana_insta.png" alt="Instagram">
-    <div class="ilbl">Instagram — perfil e destaques com ícones da marca</div>
+    <div class="ilbl" data-pt="Instagram — perfil e destaques com ícones da marca" data-en="Instagram — profile and highlights with brand icons">Instagram — perfil e destaques com ícones da marca</div>
   </div>
   <div class="icell r16">
     <img src="assets/mana_farda.png" alt="Uniforme da marca">
-    <div class="ilbl">Camisetas - Uniforme da empresa com 3 variações de cor</div>
+    <div class="ilbl" data-pt="Camisetas - Uniforme da empresa com 3 variações de cor" data-en="T-shirts — company uniform with 3 colour variations">Camisetas - Uniforme da empresa com 3 variações de cor</div>
   </div>
 </div>
 
 <div class="cta-row rev">
   <div class="cta-title">Capotaria<br>Maná</div>
-  <a href="https://drive.google.com/file/d/1m0Sf7iGLb1TnJ1VRHfrGCMmxfGGPCfsK/view" target="_blank" class="cta-btn">Ver apresentação completa ↗</a>
+  <a href="https://drive.google.com/file/d/1m0Sf7iGLb1TnJ1VRHfrGCMmxfGGPCfsK/view" target="_blank" class="cta-btn" data-pt="Ver apresentação completa ↗" data-en="View full presentation ↗">Ver apresentação completa ↗</a>
 </div>
 <script>
+let currentLang = 'pt';
+function toggleLang() {
+  currentLang = currentLang === 'pt' ? 'en' : 'pt';
+  document.documentElement.lang = currentLang;
+  document.getElementById('lang-toggle').textContent = currentLang === 'pt' ? 'EN' : 'PT';
+  document.querySelectorAll('[data-pt][data-en]').forEach(el => {
+    el.innerHTML = el.dataset[currentLang];
+  });
+}
 const obs = new IntersectionObserver(es => es.forEach(e => {
   if(e.isIntersecting) e.target.classList.add('vis');
 }), {threshold:.08});
