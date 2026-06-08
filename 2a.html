@@ -62,10 +62,24 @@ nav {
   font-family:var(--fd); font-size:17px;
   text-transform:uppercase; letter-spacing:-.01em; color:var(--warm);
 }
+.nav-right { display:flex; align-items:center; gap:16px; }
 .nav-cat {
   font-size:10px; text-transform:uppercase;
   letter-spacing:.14em; color:rgba(245,240,232,.6);
 }
+#lang-toggle {
+  background: transparent;
+  border: 1px solid rgba(245,240,232,.5);
+  color: var(--warm);
+  font-family: var(--fb);
+  font-size: 10px;
+  text-transform: uppercase;
+  letter-spacing: .12em;
+  padding: 4px 10px;
+  cursor: pointer;
+  transition: background .15s;
+}
+#lang-toggle:hover { background: rgba(245,240,232,.15); }
 
 .hero {
   display:grid; grid-template-columns:1fr 1fr;
@@ -229,13 +243,18 @@ nav {
 <body>
 
 <nav>
-  <a href="portfolio.html" class="nav-back">← Portfolio</a>
+  <a href="portfolio.html" class="nav-back" data-pt="← Portfolio" data-en="← Portfolio">← Portfolio</a>
   <span class="nav-title">2A Consulting SI</span>
-  <span class="nav-cat">Web App · B2B · FlutterFlow</span>
+  <div class="nav-right">
+    <span class="nav-cat" data-pt="Web App · B2B · FlutterFlow" data-en="Web App · B2B · FlutterFlow">Web App · B2B · FlutterFlow</span>
+    <button id="lang-toggle" onclick="toggleLang()" aria-label="Switch language">EN</button>
+  </div>
 </nav>
 
 <div class="mstrip">
-  <div class="mtrack">
+  <div class="mtrack"
+    data-pt="2A Consulting SI &nbsp;·&nbsp; Gestão de Projectos &nbsp;·&nbsp; Web App B2B &nbsp;·&nbsp; FlutterFlow &nbsp;·&nbsp; Mestrado UTAD &nbsp;·&nbsp; 4 Perfis de Utilizador &nbsp;·&nbsp; UX · IA · Low-code &nbsp;·&nbsp; 2A Consulting SI &nbsp;·&nbsp; Gestão de Projectos &nbsp;·&nbsp; Web App B2B &nbsp;·&nbsp; FlutterFlow &nbsp;·&nbsp; Mestrado UTAD &nbsp;·&nbsp; 4 Perfis de Utilizador &nbsp;·&nbsp; UX · IA · Low-code &nbsp;·&nbsp;"
+    data-en="2A Consulting SI &nbsp;·&nbsp; Project Management &nbsp;·&nbsp; B2B Web App &nbsp;·&nbsp; FlutterFlow &nbsp;·&nbsp; MSc UTAD &nbsp;·&nbsp; 4 User Profiles &nbsp;·&nbsp; UX · IA · Low-code &nbsp;·&nbsp; 2A Consulting SI &nbsp;·&nbsp; Project Management &nbsp;·&nbsp; B2B Web App &nbsp;·&nbsp; FlutterFlow &nbsp;·&nbsp; MSc UTAD &nbsp;·&nbsp; 4 User Profiles &nbsp;·&nbsp; UX · IA · Low-code &nbsp;·&nbsp;">
     2A Consulting SI &nbsp;·&nbsp; Gestão de Projectos &nbsp;·&nbsp; Web App B2B &nbsp;·&nbsp; FlutterFlow &nbsp;·&nbsp; Mestrado UTAD &nbsp;·&nbsp; 4 Perfis de Utilizador &nbsp;·&nbsp; UX · IA · Low-code &nbsp;·&nbsp;
     2A Consulting SI &nbsp;·&nbsp; Gestão de Projectos &nbsp;·&nbsp; Web App B2B &nbsp;·&nbsp; FlutterFlow &nbsp;·&nbsp; Mestrado UTAD &nbsp;·&nbsp; 4 Perfis de Utilizador &nbsp;·&nbsp; UX · IA · Low-code &nbsp;·&nbsp;
   </div>
@@ -244,19 +263,19 @@ nav {
 <div class="hero rev">
   <div class="hero-left">
     <div>
-      <div class="hero-cat">Web App · B2B · FlutterFlow · Mestrado UTAD · Em Desenvolvimento</div>
+      <div class="hero-cat" data-pt="Web App · B2B · FlutterFlow · Mestrado UTAD · Em Desenvolvimento" data-en="Web App · B2B · FlutterFlow · MSc UTAD · In Development">Web App · B2B · FlutterFlow · Mestrado UTAD · Em Desenvolvimento</div>
       <h1 class="hero-title">2A<br>Con<span class="a">sul</span><br><span class="o">ting</span></h1>
-      <p class="hero-sub">Plataforma de gestão de projectos para empresa de consultoria IT. Sistema com 4 perfis de utilizador distintos — Admin, GP, TM e DEV — com gestão de clientes, projectos, tarefas e indicadores de execução. Desenvolvida com FlutterFlow no contexto do mestrado.</p>
+      <p class="hero-sub" data-pt="Plataforma de gestão de projectos para empresa de consultoria IT. Sistema com 4 perfis de utilizador distintos — Admin, GP, TM e DEV — com gestão de clientes, projectos, tarefas e indicadores de execução. Desenvolvida com FlutterFlow no contexto do mestrado." data-en="Project management platform for an IT consulting firm. System with 4 distinct user profiles — Admin, PM, TM and DEV — covering client management, projects, tasks and execution metrics. Built with FlutterFlow as part of the MSc programme.">Plataforma de gestão de projectos para empresa de consultoria IT. Sistema com 4 perfis de utilizador distintos — Admin, GP, TM e DEV — com gestão de clientes, projectos, tarefas e indicadores de execução. Desenvolvida com FlutterFlow no contexto do mestrado.</p>
     </div>
     <div class="hero-meta">
-      <div class="hero-meta-item"><label>Contexto</label><span>Mestrado UTAD</span></div>
-      <div class="hero-meta-item"><label>Plataforma</label><span>Web Responsiva</span></div>
+      <div class="hero-meta-item"><label data-pt="Contexto" data-en="Context">Contexto</label><span data-pt="Mestrado UTAD" data-en="MSc UTAD">Mestrado UTAD</span></div>
+      <div class="hero-meta-item"><label data-pt="Plataforma" data-en="Platform">Plataforma</label><span data-pt="Web Responsiva" data-en="Responsive Web">Web Responsiva</span></div>
       <div class="hero-meta-item"><label>Tools</label><span>Figma · FlutterFlow</span></div>
-      <div class="hero-meta-item"><label>Disciplinas</label><span>UX · IA · Low-code</span></div>
+      <div class="hero-meta-item"><label data-pt="Disciplinas" data-en="Disciplines">Disciplinas</label><span>UX · IA · Low-code</span></div>
     </div>
   </div>
   <div class="hero-right">
-    <p class="hero-quote">"Quatro perfis, uma plataforma — hierarquia de permissões que acompanha a estrutura real de uma consultoria IT."</p>
+    <p class="hero-quote" data-pt='"Quatro perfis, uma plataforma — hierarquia de permissões que acompanha a estrutura real de uma consultoria IT."' data-en='"Four profiles, one platform — permission hierarchy that mirrors the real structure of an IT consultancy."'>"Quatro perfis, uma plataforma — hierarquia de permissões que acompanha a estrutura real de uma consultoria IT."</p>
     <div class="hero-tags">
       <span class="htag">UX Design</span>
       <span class="htag">Information Architecture</span>
@@ -269,59 +288,74 @@ nav {
 
 <div class="igrid c2 rev">
   <div class="icell r16">
-    <img src="assets/Login.png" alt="Login — 2A Consulting SI">
-    <div class="ilbl">Ecrã de login — autenticação com perfil e credenciais</div>
+    <img src="assets/2a_home.png" alt="home screen 2a">
+    <div class="ilbl" data-pt="Ecrã principal de trabalho - gestão de equipas" data-en="Main work screen — team management">Ecrã principal de trabalho - gestão de equipas</div>
   </div>
   <div class="icell r16">
-    <img src="assets/Cadastro.png" alt="Cadastro — 2A Consulting SI">
-    <div class="ilbl">Ecrã de cadastro — registo de novo utilizador com atribuição de perfil</div>
+    <img src="assets/2a_loginscreen.png" alt="login — 2A Consulting SI">
+    <div class="ilbl" data-pt="Ecrã de Login — entrada de utilizador com perfil atribuido" data-en="Login screen — user entry with assigned profile">Ecrã de Login — entrada de utilizador com perfil atribuido</div>
   </div>
 </div>
 
 <div class="specs rev">
   <div class="spec"><div class="spec-num">4</div>
-    <div class="spec-lbl">Perfis de utilizador — Admin, Gestor de Projecto, Team Member e Developer</div></div>
+    <div class="spec-lbl" data-pt="Perfis de utilizador — Admin, Gestor de Projecto, Team Manager e Developer" data-en="User profiles — Admin, Project Manager, Team Manager and Developer">Perfis de utilizador — Admin, Gestor de Projecto, Team Manager e Developer</div></div>
   <div class="spec"><div class="spec-num">B2B</div>
-    <div class="spec-lbl">Contexto de uso — software de gestão interno para empresa de consultoria IT</div></div>
+    <div class="spec-lbl" data-pt="Contexto de uso — software de gestão interno para empresa de consultoria TI" data-en="Use context — internal management software for an IT consulting firm">Contexto de uso — software de gestão interno para empresa de consultoria TI</div></div>
   <div class="spec"><div class="spec-num">FF</div>
-    <div class="spec-lbl">FlutterFlow como plataforma de desenvolvimento low-code com backend integrado</div></div>
+    <div class="spec-lbl" data-pt="FlutterFlow como plataforma de desenvolvimento low-code com backend integrado" data-en="FlutterFlow as a low-code development platform with integrated backend">FlutterFlow como plataforma de desenvolvimento low-code com backend integrado</div></div>
   <div class="spec"><div class="spec-num">MSc</div>
-    <div class="spec-lbl">Desenvolvida no contexto do Mestrado em Multimédia na UTAD</div></div>
+    <div class="spec-lbl" data-pt="Desenvolvida no contexto do Mestrado em Multimédia na UTAD" data-en="Developed within the MSc in Multimedia programme at UTAD">Desenvolvida no contexto do Mestrado em Multimédia na UTAD</div></div>
 </div>
 
 <div class="tsec rev">
-  <div class="tsec-lbl">O<br>Projecto</div>
+  <div class="tsec-lbl" data-pt="O<br>Projeto" data-en="The<br>Project">O<br>Projeto</div>
   <div class="tsec-body">
-    <p>A 2A Consulting é uma empresa fictícia de consultoria IT usada como caso de estudo no contexto do mestrado. O desafio foi <strong>desenhar uma plataforma de gestão de projectos que reflectisse a hierarquia organizacional real</strong> de uma consultoria — com permissões, fluxos e vistas distintas para cada perfil de utilizador.</p>
-    <p>O processo partiu de <strong>análise de sistemas existentes</strong> (Jira, Linear, Monday) e de entrevistas com profissionais de IT para compreender os pontos de fricção na gestão de projectos em consultoria. A arquitectura de informação foi o trabalho central — definir o que cada perfil vê, pode editar e precisa de monitorizar.</p>
+    <p data-pt="A 2A Consulting é uma empresa fictícia de consultoria IT usada como caso de estudo no contexto do mestrado. O desafio foi <strong>desenhar uma plataforma de gestão de projectos que reflectisse a hierarquia organizacional real</strong> de uma consultoria — com permissões, fluxos e vistas distintas para cada perfil de utilizador." data-en="2A Consulting is a fictional IT consulting firm used as a case study within the MSc programme. The challenge was to <strong>design a project management platform that reflected the real organisational hierarchy</strong> of a consultancy — with distinct permissions, flows and views for each user profile.">A 2A Consulting é uma empresa fictícia de consultoria IT usada como caso de estudo no contexto do mestrado. O desafio foi <strong>desenhar uma plataforma de gestão de projectos que reflectisse a hierarquia organizacional real</strong> de uma consultoria — com permissões, fluxos e vistas distintas para cada perfil de utilizador.</p>
+    <p data-pt="O processo partiu de <strong>análise de sistemas existentes</strong> (Jira, Linear, Monday) e de entrevistas com profissionais de IT para compreender os pontos de fricção na gestão de projectos em consultoria. A arquitectura de informação foi o trabalho central — definir o que cada perfil vê, pode editar e precisa de monitorizar." data-en="The process started with <strong>analysis of existing systems</strong> (Jira, Linear, Monday) and interviews with IT professionals to understand friction points in consultancy project management. Information architecture was the core work — defining what each profile sees, can edit and needs to monitor.">O processo partiu de <strong>análise de sistemas existentes</strong> (Jira, Linear, Monday) e de entrevistas com profissionais de IT para compreender os pontos de fricção na gestão de projectos em consultoria. A arquitectura de informação foi o trabalho central — definir o que cada perfil vê, pode editar e precisa de monitorizar.</p>
   </div>
 </div>
 
 <div class="tsec rev">
-  <div class="tsec-lbl">Arqui<br>tec<br>tura</div>
+  <div class="tsec-lbl" data-pt="Arqui<br>tec<br>tura" data-en="Archi<br>tec<br>ture">Arqui<br>tec<br>tura</div>
   <div class="tsec-body">
-    <p>A arquitectura do sistema foi desenhada em <strong>três camadas: gestão de organização (Admin), gestão de projecto (GP) e execução (TM/DEV)</strong>. Cada camada tem acesso apenas ao que é relevante para o seu papel — sem ruído de informação que não lhe pertence.</p>
-    <p>Os <strong>fluxos de aprovação</strong> foram cuidadosamente mapeados: criação de projecto requer Admin, atribuição de tarefas é responsabilidade do GP, e o Developer apenas regista progresso e tempo. Esta separação elimina ambiguidade operacional e espelha a estrutura de accountability real de uma consultoria.</p>
+    <p data-pt="A arquitectura do sistema foi desenhada em <strong>três camadas: gestão de organização (Admin), gestão de projecto (GP) e execução (TM/DEV)</strong>. Cada camada tem acesso apenas ao que é relevante para o seu papel — sem ruído de informação que não lhe pertence." data-en="The system architecture was designed in <strong>three layers: organisation management (Admin), project management (PM) and execution (TM/DEV)</strong>. Each layer only accesses what is relevant to its role — no information noise that doesn't belong.">A arquitectura do sistema foi desenhada em <strong>três camadas: gestão de organização (Admin), gestão de projecto (GP) e execução (TM/DEV)</strong>. Cada camada tem acesso apenas ao que é relevante para o seu papel — sem ruído de informação que não lhe pertence.</p>
+    <p data-pt="Os <strong>fluxos de aprovação</strong> foram cuidadosamente mapeados: criação de projecto requer Admin, atribuição de tarefas é responsabilidade do GP, e o Developer apenas regista progresso e tempo. Esta separação elimina ambiguidade operacional e espelha a estrutura de accountability real de uma consultoria." data-en="<strong>Approval flows</strong> were carefully mapped: project creation requires Admin, task assignment is the PM's responsibility, and the Developer only logs progress and time. This separation eliminates operational ambiguity and mirrors the real accountability structure of a consultancy.">Os <strong>fluxos de aprovação</strong> foram cuidadosamente mapeados: criação de projecto requer Admin, atribuição de tarefas é responsabilidade do GP, e o Developer apenas regista progresso e tempo. Esta separação elimina ambiguidade operacional e espelha a estrutura de accountability real de uma consultoria.</p>
   </div>
 </div>
 
 <div class="dark-band rev" style="border-bottom:var(--border);">
-  <div style="font-family:var(--fd);font-size:clamp(36px,5vw,72px);color:var(--warm);line-height:.9;text-transform:uppercase;letter-spacing:-.02em;margin-bottom:24px;">
+  <div style="font-family:var(--fd);font-size:clamp(36px,5vw,72px);color:var(--warm);line-height:.9;text-transform:uppercase;letter-spacing:-.02em;margin-bottom:24px;"
+    data-pt="<span style='color:var(--coral);'>Quatro</span><br>perfis, uma<br><span style='color:var(--coral);'>plataforma</span>"
+    data-en="<span style='color:var(--coral);'>Four</span><br>profiles, one<br><span style='color:var(--coral);'>platform</span>">
     <span style="color:var(--coral);">Quatro</span><br>
     perfis, uma<br>
     <span style="color:var(--coral);">plataforma</span>
   </div>
-  <p style="font-size:11px;color:rgba(245,240,232,.4);text-transform:uppercase;letter-spacing:.12em;margin-top:16px;">
+  <p style="font-size:11px;color:rgba(245,240,232,.4);text-transform:uppercase;letter-spacing:.12em;margin-top:16px;"
+    data-pt="— 2A Consulting SI · Gestão de Projectos · Web App · Mestrado UTAD"
+    data-en="— 2A Consulting SI · Project Management · Web App · MSc UTAD">
     — 2A Consulting SI · Gestão de Projectos · Web App · Mestrado UTAD
   </p>
 </div>
 
 <div class="cta-row rev">
   <div class="cta-title">2A<br>Consulting</div>
-  <span class="cta-btn cta-disabled">Em desenvolvimento →</span>
+  <span class="cta-btn cta-disabled" data-pt="Em desenvolvimento →" data-en="In development →">Em desenvolvimento →</span>
 </div>
 
 <script>
+let currentLang = 'pt';
+
+function toggleLang() {
+  currentLang = currentLang === 'pt' ? 'en' : 'pt';
+  document.documentElement.lang = currentLang;
+  document.getElementById('lang-toggle').textContent = currentLang === 'pt' ? 'EN' : 'PT';
+  document.querySelectorAll('[data-pt][data-en]').forEach(el => {
+    el.innerHTML = el.dataset[currentLang];
+  });
+}
+
 const obs = new IntersectionObserver(es => es.forEach(e => {
   if(e.isIntersecting) e.target.classList.add('vis');
 }), {threshold:.08});
