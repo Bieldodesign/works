@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt">
 <head>
 <meta charset="UTF-8">
 <link rel="icon" type="image/png" href="assets/favicon.png">
@@ -830,6 +830,157 @@ footer {
   letter-spacing: 0.12em;
 }
 
+/* UEQ SECTION */
+#ueq {
+  background: var(--yellow);
+  border-top: var(--border);
+}
+.ueq-header {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  border-bottom: var(--border);
+  min-height: 200px;
+}
+.ueq-header-left {
+  padding: 56px 60px;
+  border-right: var(--border);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.ueq-header-right {
+  padding: 56px 60px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+.ueq-eyebrow {
+  font-size: 10px;
+  text-transform: uppercase;
+  letter-spacing: .2em;
+  color: rgba(13,13,13,.5);
+  margin-bottom: 20px;
+}
+.ueq-title {
+  font-family: var(--font-display);
+  font-size: clamp(40px, 6vw, 80px);
+  text-transform: uppercase;
+  line-height: .88;
+  letter-spacing: -.03em;
+  color: var(--dark);
+}
+.ueq-title .accent { color: var(--coral); }
+.ueq-desc {
+  font-size: 13px;
+  line-height: 1.75;
+  color: rgba(13,13,13,.65);
+  max-width: 420px;
+}
+.ueq-meta {
+  display: flex;
+  gap: 32px;
+  margin-top: 32px;
+  padding-top: 24px;
+  border-top: 1px solid rgba(13,13,13,.15);
+}
+.ueq-meta-item label {
+  display: block;
+  font-size: 9px;
+  text-transform: uppercase;
+  letter-spacing: .14em;
+  color: rgba(13,13,13,.45);
+  margin-bottom: 4px;
+}
+.ueq-meta-item span {
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: .06em;
+  color: var(--dark);
+}
+.ueq-strip {
+  background: var(--dark);
+  border-bottom: var(--border);
+  overflow: hidden;
+  white-space: nowrap;
+  padding: 10px 0;
+}
+.ueq-strip-track {
+  display: inline-block;
+  animation: marquee 26s linear infinite;
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: .14em;
+  color: var(--yellow);
+}
+.ueq-embed-wrap {
+  border-bottom: var(--border);
+  background: var(--warm);
+  position: relative;
+  min-height: 900px;
+  display: flex;
+  flex-direction: column;
+}
+.ueq-embed-wrap iframe {
+  width: 100%;
+  flex: 1;
+  min-height: 900px;
+  border: none;
+  display: block;
+}
+.ueq-placeholder {
+  flex: 1;
+  min-height: 900px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  padding: 80px 60px;
+  text-align: center;
+  border: 2px dashed rgba(13,13,13,.2);
+  margin: 40px;
+  background: repeating-linear-gradient(
+    45deg,
+    transparent,
+    transparent 10px,
+    rgba(13,13,13,.02) 10px,
+    rgba(13,13,13,.02) 20px
+  );
+}
+.ueq-placeholder-icon {
+  font-family: var(--font-display);
+  font-size: 72px;
+  color: var(--coral);
+  line-height: 1;
+}
+.ueq-placeholder-title {
+  font-family: var(--font-display);
+  font-size: 24px;
+  text-transform: uppercase;
+  letter-spacing: -.01em;
+}
+.ueq-placeholder-text {
+  font-size: 12px;
+  line-height: 1.8;
+  color: var(--muted);
+  max-width: 480px;
+}
+.ueq-placeholder-text code {
+  background: var(--dark);
+  color: var(--yellow);
+  padding: 2px 8px;
+  font-family: var(--font-mono);
+  font-size: 11px;
+}
+
+@media (max-width: 900px) {
+  .ueq-header { grid-template-columns: 1fr; }
+  .ueq-header-left { border-right: none; border-bottom: var(--border); padding: 40px 24px; }
+  .ueq-header-right { padding: 40px 24px; }
+  .ueq-placeholder { margin: 20px; padding: 40px 24px; }
+}
+
 /* SCROLL ANIMATIONS */
 .reveal {
   opacity: 0;
@@ -1355,6 +1506,38 @@ body.cursor-hover #cursor-label { opacity: 1; }
   .contact-title { font-size: 64px; }
 }
 </style>
+
+<!-- Schema.org JSON-LD -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": "Gabriel Palaoro",
+  "alternateName": "Gabriel Mengável",
+  "url": "https://bieldodesign.github.io/works/",
+  "image": "https://bieldodesign.github.io/works/assets/og-cover.jpg",
+  "jobTitle": "UX & Product Designer",
+  "description": "UX & Product Designer especializado em HCI e ergonomia digital. Mestrando em Multimédia na UTAD, formado pela UFES.",
+  "alumniOf": [
+    {
+      "@type": "CollegeOrUniversity",
+      "name": "Universidade de Trás-os-Montes e Alto Douro",
+      "alternateName": "UTAD"
+    },
+    {
+      "@type": "CollegeOrUniversity",
+      "name": "Universidade Federal do Espírito Santo",
+      "alternateName": "UFES"
+    }
+  ],
+  "knowsAbout": ["UX Design", "HCI", "Ergonomia Digital", "Product Design", "Design Editorial"],
+  "sameAs": [
+    "https://www.linkedin.com/in/bieldodesign/",
+    "https://github.com/Bieldodesign",
+    "https://www.figma.com/@bieldodesign"
+  ]
+}
+</script>
 </head>
 <body>
 
@@ -1366,6 +1549,7 @@ body.cursor-hover #cursor-label { opacity: 1; }
     <li><a href="#work" data-pt="Work" data-en="Work">Work</a></li>
     <li><a href="#gallery" data-pt="Craft" data-en="Craft">Craft</a></li>
     <li><a href="#contact" data-pt="Contacto" data-en="Contact">Contacto</a></li>
+    <li><a href="#ueq" data-pt="Avaliação" data-en="Evaluate">Avaliação</a></li>
   </ul>
   <button id="lang-toggle" onclick="toggleLang()" aria-label="Switch language">
     <span id="lang-label">EN</span>
@@ -1732,6 +1916,39 @@ body.cursor-hover #cursor-label { opacity: 1; }
   </div>
 </section>
 
+<!-- UEQ-S SECTION -->
+<section id="ueq">
+
+  <div class="ueq-header reveal">
+    <div class="ueq-header-left">
+      <div>
+        <div class="ueq-eyebrow">UEQ-S · Avaliação · Mestrado UTAD</div>
+        <h2 class="ueq-title">Avalia<br>a tua<br><span class="accent">Expe</span><br>riência</h2>
+      </div>
+      <div class="ueq-meta">
+        <div class="ueq-meta-item"><label>Duração</label><span>&lt; 3 min</span></div>
+        <div class="ueq-meta-item"><label>Instrumento</label><span>UEQ-S</span></div>
+        <div class="ueq-meta-item"><label>Fins</label><span>Académicos</span></div>
+      </div>
+    </div>
+    <div class="ueq-header-right">
+      <p class="ueq-desc">Este questionário avalia a tua experiência ao navegar no portfólio. Não há respostas certas ou erradas — interessa apenas a tua perceção genuína. Os dados são usados exclusivamente para fins académicos no âmbito do Mestrado em Multimédia da UTAD.</p>
+    </div>
+  </div>
+
+  <div class="ueq-strip">
+    <div class="ueq-strip-track">
+      UEQ-S &nbsp;·&nbsp; User Experience Questionnaire &nbsp;·&nbsp; Avaliação de Portfólio &nbsp;·&nbsp; Mestrado UTAD &nbsp;·&nbsp; Menos de 3 minutos &nbsp;·&nbsp; Versão Portuguesa &nbsp;·&nbsp;
+      UEQ-S &nbsp;·&nbsp; User Experience Questionnaire &nbsp;·&nbsp; Avaliação de Portfólio &nbsp;·&nbsp; Mestrado UTAD &nbsp;·&nbsp; Menos de 3 minutos &nbsp;·&nbsp; Versão Portuguesa &nbsp;·&nbsp;
+    </div>
+  </div>
+
+  <div class="ueq-embed-wrap reveal">
+    <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSfawwEzZr77xwz1n9qDU4D1itSAdoPAIetvP5RRdcyF9aVjaQ/viewform?embedded=true" width="640" height="1608" frameborder="0" marginheight="0" marginwidth="0">Carregando…</iframe>
+  </div>
+
+</section>
+
 <footer>
   <span data-pt="Gabriel Mengável Gomes Palaoro — Vila Real, Portugal · Brasil — 2026" data-en="Gabriel Mengável Gomes Palaoro — Vila Real, Portugal · Brazil — 2026">Gabriel Mengável Gomes Palaoro — Vila Real, Portugal · Brasil — 2026</span>
   <span data-pt="Typeface Desconexa por Gabriel Mengável · UTAD · UFES" data-en="Desconexa typeface by Gabriel Mengável · UTAD · UFES">Typeface Desconexa por Gabriel Mengável · UTAD · UFES</span>
@@ -1753,6 +1970,7 @@ let currentLang = 'pt';
 
 function toggleLang() {
   currentLang = currentLang === 'pt' ? 'en' : 'pt';
+  document.documentElement.lang = currentLang; // sync <html lang> for SEO + a11y
   const label = document.getElementById('lang-label');
   label.textContent = currentLang === 'pt' ? 'EN' : 'PT';
 
