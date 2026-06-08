@@ -1784,7 +1784,7 @@ body.cursor-hover #cursor-label { opacity: 1; }
           <div class="meta-item-value">UX · UI · Research</div>
         </div>
       </div>
-      <span data-href="https://www.figma.com/community/file/1268341838919470640" class="case-link" data-pt="Ver case study →" data-en="View case study →">Ver case study →</span>
+      <span data-href="urucú.html" class="case-link" data-pt="Ver case study →" data-en="View case study →">Ver case study →</span>
     </div>
   </a>
 
@@ -1856,7 +1856,7 @@ body.cursor-hover #cursor-label { opacity: 1; }
           <div class="meta-item-value">HCI · Ergonomia · UX</div>
         </div>
       </div>
-      <span data-href="https://www.figma.com/proto/ZhPeI3JnitRsGyehLN78l8" class="case-link" data-pt="Ver protótipo →" data-en="View prototype →">Ver protótipo →</span>
+      <span data-href="motorbike.html" class="case-link" data-pt="Ver case study →" data-en="View case study →">Ver case study →</span>
     </div>
   </a>
 
@@ -1892,7 +1892,7 @@ body.cursor-hover #cursor-label { opacity: 1; }
           <div class="meta-item-value">Web · Editorial · UX</div>
         </div>
       </div>
-      <span data-href="https://www.figma.com/proto/rhGaxp0paxsCO0KrmW91r4/Meu-Futuro-Melhor" class="case-link" data-pt="Ver protótipo →" data-en="View prototype →">Ver protótipo →</span>
+      <span data-href="mfm.html" class="case-link" data-pt="Ver case study →" data-en="View case study →">Ver case study →</span>
     </div>
   </a>
 </section>
@@ -2212,12 +2212,12 @@ document.querySelectorAll('.gallery-item[data-preview]').forEach(item => {
   requestAnimationFrame(animPreview);
 })();
 
-/* case-link spans: open external URL without navigating the card */
+/* case-link spans: navigate to page without triggering the parent card link */
 document.querySelectorAll('.case-link[data-href]').forEach(el => {
   el.addEventListener('click', e => {
     e.stopPropagation();
     e.preventDefault();
-    window.open(el.dataset.href, '_blank', 'noopener');
+    window.location.href = el.dataset.href;
   });
 });
 </script>
