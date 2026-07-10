@@ -1,0 +1,174 @@
+/* =========================================================================
+   Case Study — Mobile Overrides
+   Breakpoint: max-width 640px (mobile standard)
+   Autor: injectado 2026-07-10 no âmbito do painel Job Search
+   Cobre: 2a, bromelias, desconexa, entre, mana, mfm, miaufia, motorbike,
+          pierce, urucú
+   Estratégia: shared stylesheet, carregar DEPOIS do <style> inline
+              (cascade ordem final vence sem !important)
+   ========================================================================= */
+
+@media (max-width: 640px) {
+
+  /* --- Global body / grid overlay ---------------------------------------- */
+  body {
+    font-size: 15px;
+    line-height: 1.55;
+    cursor: auto;                 /* crosshair é anti-touch */
+  }
+  body::before {
+    background-size: 24px 24px;   /* grelha mais densa em mobile */
+  }
+
+  /* --- Nav sticky --------------------------------------------------------- */
+  nav {
+    padding: 0 18px;
+    height: 48px;
+    gap: 8px;
+  }
+  .nav-back {
+    font-size: 10px;
+    letter-spacing: .1em;
+    gap: 6px;
+  }
+  .nav-title {
+    font-size: 13px;
+    max-width: 140px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  .nav-cat { display: none; }     /* poupa espaço, mantém em ≥641px */
+  .nav-right { gap: 10px; }
+  #lang-toggle {
+    padding: 3px 8px;
+    font-size: 9px;
+  }
+
+  /* --- Hero split (2 col → 1 col empilhada) ------------------------------- */
+  .hero {
+    grid-template-columns: 1fr;
+    min-height: 0;
+  }
+  .hero-left {
+    padding: 40px 22px 32px;
+    border-right: none;
+    border-bottom: var(--border);
+  }
+  .hero-right {
+    padding: 32px 22px 40px;
+  }
+  .hero-cat {
+    margin-bottom: 16px;
+    font-size: 9px;
+    letter-spacing: .18em;
+  }
+  .hero-title {
+    /* clamp existente já vai para 52px min; força um pouco mais compacto */
+    font-size: clamp(40px, 12vw, 64px);
+    letter-spacing: -.02em;
+  }
+  .hero-sub {
+    margin-top: 20px;
+    font-size: 13px;
+    line-height: 1.65;
+    max-width: none;
+  }
+  .hero-meta {
+    margin-top: 24px;
+    padding-top: 20px;
+    gap: 14px 24px;
+  }
+  .hero-meta-item label { font-size: 9px; }
+  .hero-meta-item span  { font-size: 11px; }
+  .hero-quote {
+    font-size: 16px;
+    margin-bottom: 22px;
+    max-width: none;
+  }
+  .hero-tags { gap: 6px; }
+  .htag { font-size: 9px; padding: 4px 9px; }
+
+  /* --- Specs (4 col → 2 col) ---------------------------------------------- */
+  .specs {
+    grid-template-columns: 1fr 1fr;
+  }
+  .spec {
+    padding: 22px 18px;
+    border-right: none;
+    border-bottom: var(--border);
+  }
+  /* remove border-right no 4º item que ficaria dobrada */
+  .spec:nth-child(2n) { border-right: none; }
+  .spec:nth-child(odd) { border-right: var(--border); }
+  /* últimos 2 items: sem border-bottom para não duplicar com .specs border-bottom */
+  .spec:nth-last-child(-n+2) { border-bottom: none; }
+  .spec-num {
+    font-size: 40px;
+    margin-bottom: 6px;
+  }
+  .spec-lbl {
+    font-size: 10px;
+    letter-spacing: .08em;
+  }
+
+  /* --- Text section (label lateral → label acima) ------------------------- */
+  .tsec {
+    grid-template-columns: 1fr;
+  }
+  .tsec-lbl {
+    padding: 28px 22px 16px;
+    border-right: none;
+    border-bottom: 1px solid rgba(13,13,13,.12);
+    font-size: 24px;
+    letter-spacing: -.01em;
+  }
+  /* alguns tsec-lbl usam <br> hard-coded para partir palavras verticalmente;
+     em mobile, deixamos fluir horizontalmente */
+  .tsec-lbl br { display: none; }
+  .tsec-body {
+    padding: 24px 22px 36px;
+    font-size: 14px;
+    line-height: 1.7;
+    max-width: none;
+  }
+  .tsec-body p + p { margin-top: 12px; }
+
+  /* --- Image grids (c2 / c3 → 1 col empilhada) --------------------------- */
+  .igrid.c2,
+  .igrid.c3 {
+    grid-template-columns: 1fr;
+  }
+  .icell {
+    border-right: none;
+    border-bottom: var(--border);
+  }
+  .icell:last-child { border-bottom: none; }
+  .ilbl {
+    font-size: 10px;
+    padding: 8px 12px;
+    letter-spacing: .06em;
+  }
+
+  /* --- Case-específico: safety net contra overflow horizontal ------------- */
+  html, body { overflow-x: hidden; }
+  img, video { max-width: 100%; height: auto; }
+}
+
+/* =========================================================================
+   Breakpoint intermédio 641-900px opcional (tablet portrait / large phones)
+   Ajustes mínimos para transição suave — só aplicado onde faz diferença.
+   ========================================================================= */
+
+@media (min-width: 641px) and (max-width: 900px) {
+  .specs { grid-template-columns: repeat(2, 1fr); }
+  .spec { padding: 32px 28px; }
+  .spec:nth-child(2n) { border-right: none; }
+  .spec:nth-child(odd) { border-right: var(--border); }
+  .spec:nth-last-child(-n+2) { border-bottom: none; }
+  .spec:not(:nth-last-child(-n+2)) { border-bottom: var(--border); }
+  .tsec { grid-template-columns: 180px 1fr; }
+  .tsec-lbl { padding: 40px 24px; font-size: 28px; }
+  .tsec-body { padding: 40px 32px; max-width: none; }
+  .hero-left, .hero-right { padding: 56px 40px; }
+}
