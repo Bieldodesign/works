@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="pt">
+<html lang="en">
 <head>
 <meta charset="UTF-8">
 <link rel="icon" type="image/png" href="assets/ico.png">
@@ -389,14 +389,23 @@ nav {
 </div>
 
 <script>
-let currentLang = 'pt';
+let currentLang = 'en';
+function applyLang() {
+  document.documentElement.lang = currentLang;
+  var lt = document.getElementById('lang-toggle');
+  if (lt) lt.textContent = currentLang === 'pt' ? 'EN' : 'PT';
+  document.querySelectorAll('[data-pt][data-en]').forEach(el => {
+    if (el.dataset[currentLang]) el.innerHTML = el.dataset[currentLang];
+  });
+}
 function toggleLang() {
   currentLang = currentLang === 'pt' ? 'en' : 'pt';
-  document.documentElement.lang = currentLang;
-  document.getElementById('lang-toggle').textContent = currentLang === 'pt' ? 'EN' : 'PT';
-  document.querySelectorAll('[data-pt][data-en]').forEach(el => {
-    el.innerHTML = el.dataset[currentLang];
-  });
+  applyLang();
+}
+if (document.readyState === 'loading') {
+  document.addEventListener('DOMContentLoaded', applyLang);
+} else {
+  applyLang();
 }
 const obs = new IntersectionObserver(es => es.forEach(e => {
   if(e.isIntersecting) e.target.classList.add('vis');

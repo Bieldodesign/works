@@ -22,27 +22,30 @@
 
   /* --- Nav sticky --------------------------------------------------------- */
   nav {
-    padding: 0 18px;
+    padding: 0 16px;
     height: 48px;
-    gap: 8px;
+    gap: 12px;
   }
   .nav-back {
     font-size: 10px;
     letter-spacing: .1em;
     gap: 6px;
+    flex: 0 0 auto;
   }
   .nav-title {
     font-size: 13px;
-    max-width: 140px;
+    flex: 1 1 auto;         /* preenche o espaço em vez de deixar gap */
+    min-width: 0;            /* permite shrink correcto */
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
+    text-align: left;
   }
   .nav-cat { display: none; }     /* poupa espaço, mantém em ≥641px */
-  .nav-right { gap: 10px; }
+  .nav-right { gap: 10px; flex: 0 0 auto; }
   #lang-toggle {
-    padding: 3px 8px;
-    font-size: 9px;
+    padding: 4px 10px;
+    font-size: 10px;
   }
 
   /* --- Hero split (2 col → 1 col empilhada) ------------------------------- */

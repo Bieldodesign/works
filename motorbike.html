@@ -1,10 +1,11 @@
 <!DOCTYPE html>
-<html lang="pt">
+<html lang="en">
 <head>
 <meta charset="UTF-8">
 <link rel="icon" type="image/png" href="assets/ico.png">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Motorbike Dashboard — Gabriel Mengável</title>
+<title>A-MoVeR Dashboard · Motocicleta Eléctrica — Gabriel Palaoro</title>
+<meta name="description" content="Dashboard para motocicleta eléctrica urbana no projecto A-MoVeR (Media XLab, UTAD). 4 iterações de design validadas com 52 utilizadores — SUS 83.9. HCI, ergonomia, embedded UI.">
 <style>
 
 @font-face {
@@ -262,12 +263,12 @@ nav {
 <div class="hero rev">
   <div class="hero-left">
     <div>
-      <div class="hero-cat" data-pt="Dashboard · HCI · Ergonomia · Embedded UI · Mestrado UTAD" data-en="Dashboard · HCI · Ergonomics · Embedded UI · MSc UTAD">Dashboard · HCI · Ergonomia · Embedded UI · Mestrado UTAD</div>
+      <div class="hero-cat" data-pt="Dashboard · A-MoVeR · Media XLab · HCI · Ergonomia · Embedded UI" data-en="Dashboard · A-MoVeR · Media XLab · HCI · Ergonomics · Embedded UI">Dashboard · A-MoVeR · Media XLab · HCI · Ergonomia · Embedded UI</div>
       <h1 class="hero-title">Motor<br><span class="a">bike</span><br><span class="o">Dash</span></h1>
-      <p class="hero-sub" data-pt="Dashboard digital para painel de motocicleta — projecto de investigação em HCI e ergonomia. Foco em hierarquia de informação crítica, legibilidade em condições de movimento e usabilidade contextual para uso com capacete e luvas." data-en="Digital dashboard for a motorcycle instrument panel — a research project in HCI and ergonomics. Focus on critical information hierarchy, legibility in motion conditions and contextual usability for use with helmet and gloves.">Dashboard digital para painel de motocicleta — projecto de investigação em HCI e ergonomia. Foco em hierarquia de informação crítica, legibilidade em condições de movimento e usabilidade contextual para uso com capacete e luvas.</p>
+      <p class="hero-sub" data-pt="Dashboard digital para uma motocicleta eléctrica urbana. O desafio: dar ao condutor toda a informação crítica — velocidade, autonomia, alertas — em menos de 2 segundos, com capacete e luvas, a 120 km/h. Concebido em 4 iterações (V1→V4) e validado com 52 utilizadores (SUS 83.9)." data-en="Digital dashboard for an urban electric motorcycle. The challenge: deliver every critical piece of information — speed, range, alerts — in under 2 seconds, with helmet and gloves, at 120 km/h. Built across 4 iterations (V1→V4) and validated with 52 users (SUS 83.9).">Dashboard digital para uma motocicleta eléctrica urbana. O desafio: dar ao condutor toda a informação crítica — velocidade, autonomia, alertas — em menos de 2 segundos, com capacete e luvas, a 120 km/h. Concebido em 4 iterações (V1→V4) e validado com 52 utilizadores (SUS 83.9).</p>
     </div>
     <div class="hero-meta">
-      <div class="hero-meta-item"><label data-pt="Contexto" data-en="Context">Contexto</label><span data-pt="Mestrado UTAD" data-en="MSc UTAD">Mestrado UTAD</span></div>
+      <div class="hero-meta-item"><label data-pt="Contexto" data-en="Context">Contexto</label><span data-pt="A-MoVeR · Media XLab" data-en="A-MoVeR · Media XLab">A-MoVeR · Media XLab</span></div>
       <div class="hero-meta-item"><label data-pt="Plataforma" data-en="Platform">Plataforma</label><span>Embedded UI</span></div>
       <div class="hero-meta-item"><label>Tools</label><span>Figma</span></div>
       <div class="hero-meta-item"><label data-pt="Disciplinas" data-en="Disciplines">Disciplinas</label><span data-pt="HCI · Ergonomia · UX" data-en="HCI · Ergonomics · UX">HCI · Ergonomia · UX</span></div>
@@ -295,10 +296,10 @@ nav {
 <div class="specs rev">
   <div class="spec"><div class="spec-num">2s</div>
     <div class="spec-lbl" data-pt="Tempo máximo de leitura aceitável para informação secundária em movimento" data-en="Maximum acceptable reading time for secondary information in motion">Tempo máximo de leitura aceitável para informação secundária em movimento</div></div>
-  <div class="spec"><div class="spec-num">HCI</div>
-    <div class="spec-lbl" data-pt="Human-Computer Interaction como quadro teórico central da investigação" data-en="Human-Computer Interaction as the central theoretical framework of the research">Human-Computer Interaction como quadro teórico central da investigação</div></div>
-  <div class="spec"><div class="spec-num">50+</div>
-    <div class="spec-lbl" data-pt="Testes com usuários (5-second test + SUS)" data-en="User tests (5-second test + SUS)">Testes com usuários (5-second test + SUS)</div></div>
+  <div class="spec"><div class="spec-num">4</div>
+    <div class="spec-lbl" data-pt="Iterações de design (V1→V4) baseadas em research e feedback de condutores" data-en="Design iterations (V1→V4) based on research and rider feedback">Iterações de design (V1→V4) baseadas em research e feedback de condutores</div></div>
+  <div class="spec"><div class="spec-num">83.9</div>
+    <div class="spec-lbl" data-pt="Score SUS com 52 utilizadores — escala Bangor classifica como &quot;Good&quot;" data-en="SUS score with 52 users — Bangor scale classifies as &quot;Good&quot;">Score SUS com 52 utilizadores — escala Bangor classifica como "Good"</div></div>
   <div class="spec"><div class="spec-num">1</div>
     <div class="spec-lbl" data-pt="desenho de uma interface que desempenhe bem em todas as situações e utilizadores" data-en="Interface designed to perform well in all situations and for all users">desenho de uma interface que desempenhe bem em todas as situações e utilizadores&nbsp;</div></div>
 </div>
@@ -307,42 +308,64 @@ nav {
   <div class="tsec-lbl" data-pt="O<br>Projecto" data-en="The<br>Project">O<br>Projecto</div>
   <div class="tsec-body">
     <p data-pt="O dashboard de motocicleta é um dos contextos de uso mais exigentes em HCI — o utilizador está em movimento a velocidade elevada, usa equipamento que limita a motricidade fina (luvas) e não pode desviar a atenção do ambiente de condução por mais de alguns segundos. <strong>O design tem de ser correcto à primeira leitura.</strong>" data-en="The motorcycle dashboard is one of the most demanding use contexts in HCI — the user is moving at high speed, wearing equipment that limits fine motor control (gloves) and cannot divert attention from the riding environment for more than a few seconds. <strong>The design must be correct on the first read.</strong>">O dashboard de motocicleta é um dos contextos de uso mais exigentes em HCI — o utilizador está em movimento a velocidade elevada, usa equipamento que limita a motricidade fina (luvas) e não pode desviar a atenção do ambiente de condução por mais de alguns segundos. <strong>O design tem de ser correcto à primeira leitura.</strong></p>
-    <p data-pt="O projecto partiu de uma revisão de literatura em <strong>ergonomia cognitiva e interfaces de veículos</strong>, seguida de análise de dashboards existentes (analógicos e digitais). O foco foi identificar a hierarquia de informação crítica — o que o condutor precisa de saber imediatamente, o que pode ser consultado, e o que nunca deve distrair." data-en="The project started from a literature review in <strong>cognitive ergonomics and vehicle interfaces</strong>, followed by analysis of existing dashboards (analogue and digital). The focus was to identify the critical information hierarchy — what the rider needs to know immediately, what can be consulted, and what should never distract.">O projecto partiu de uma revisão de literatura em <strong>ergonomia cognitiva e interfaces de veículos</strong>, seguida de análise de dashboards existentes (analógicos e digitais). O foco foi identificar a hierarquia de informação crítica — o que o condutor precisa de saber imediatamente, o que pode ser consultado, e o que nunca deve distrair.</p>
+    <p data-pt="O ponto de partida foi mapear o que os condutores precisam de ver — através de <strong>benchmark de dashboards existentes</strong> (analógicos e digitais) e do que sabemos sobre atenção dividida em contextos de condução. Ficou claro que a hierarquia se divide em três camadas: o que tem de ser lido imediatamente, o que pode ser consultado, e o que nunca deve tirar atenção da estrada." data-en="The starting point was to map what riders actually need to see — through <strong>benchmarking existing dashboards</strong> (analogue and digital) and what we know about divided attention in riding contexts. It became clear that the hierarchy splits into three layers: what must be read immediately, what can be consulted, and what should never pull attention from the road.">O ponto de partida foi mapear o que os condutores precisam de ver — através de <strong>benchmark de dashboards existentes</strong> (analógicos e digitais) e do que sabemos sobre atenção dividida em contextos de condução. Ficou claro que a hierarquia se divide em três camadas: o que tem de ser lido imediatamente, o que pode ser consultado, e o que nunca deve tirar atenção da estrada.</p>
   </div>
 </div>
 
 
-  <div class="igrid c2 rev">
+<div class="tsec rev">
+  <div class="tsec-lbl" data-pt="V1<br>→<br>V4" data-en="V1<br>→<br>V4">V1<br>→<br>V4</div>
+  <div class="tsec-body">
+    <p data-pt="Quatro iterações completas, cada uma testada com utilizadores e refinada antes da seguinte. As três primeiras foram rejeitadas por razões diferentes — e é nas rejeições que se aprende o que a hierarquia precisa mesmo de proteger." data-en="Four complete iterations, each tested with users and refined before the next. The first three were rejected for different reasons — and it's in the rejections that you learn what the hierarchy actually needs to protect.">Quatro iterações completas, cada uma testada com utilizadores e refinada antes da seguinte. As três primeiras foram rejeitadas por razões diferentes — e é nas rejeições que se aprende o que a hierarquia precisa mesmo de proteger.</p>
+  </div>
+</div>
+
+<div class="igrid c2 rev">
   <div class="icell r16">
-    <img src="assets/moto_alt1.png" alt="Modo diurno">
-    <div class="ilbl" data-pt="Alternativa de design — reprovada por pesquisa" data-en="Design alternative — rejected by research">Alternativa de design — reprovada por pesquisa</div>
+    <img src="assets/amover_v1_brutalist.png" alt="V1 — Exploração brutalist">
+    <div class="ilbl" data-pt="<strong>V1 · Exploração brutalist.</strong> Reprovada — cor saturada e escala tipográfica competem em vez de estabelecerem hierarquia. Cada elemento pede atenção igual; num contexto de leitura de 2s, isto é falha crítica." data-en="<strong>V1 · Brutalist exploration.</strong> Rejected — saturated colour and typographic scale compete instead of establishing hierarchy. Every element demands equal attention; in a 2-second reading context, this is a critical failure."><strong>V1 · Exploração brutalist.</strong> Reprovada — cor saturada e escala tipográfica competem em vez de estabelecerem hierarquia. Cada elemento pede atenção igual; num contexto de leitura de 2s, isto é falha crítica.</div>
   </div>
   <div class="icell r16">
-    <img src="assets/moto_alt2.png" alt="Modo nocturno">
-    <div class="ilbl" data-pt="Alternativa de design — reprovada já na execução" data-en="Design alternative — rejected during execution">Alternativa de design — reprovada já na execução</div>
+    <img src="assets/amover_v2_gps.png" alt="V2 — GPS central">
+    <div class="ilbl" data-pt="<strong>V2 · GPS central.</strong> Reprovada — a velocidade perdeu dominância visual. Em condução, a informação primária tem de ganhar sempre a competição pelo eixo central; o mapa é apoio contextual." data-en="<strong>V2 · GPS-centred.</strong> Rejected — speed lost visual dominance. In riding, primary information must always win the competition for the central axis; the map is contextual support."><strong>V2 · GPS central.</strong> Reprovada — a velocidade perdeu dominância visual. Em condução, a informação primária tem de ganhar sempre a competição pelo eixo central; o mapa é apoio contextual.</div>
+  </div>
+</div>
+
+<div class="igrid c2 rev">
+  <div class="icell r16">
+    <img src="assets/amover_v3_warnings.png" alt="V3 — Sistema de alertas">
+    <div class="ilbl" data-pt="<strong>V3 · Sistema de alertas com glifos.</strong> Reprovada — as formas de estrela eram semanticamente ambíguas. Sem cor de suporte, os condutores não distinguiam estados. Confirmou a necessidade de dupla-codificação (forma + cor) exigida pela ISO 2575." data-en="<strong>V3 · Alert system with glyphs.</strong> Rejected — the star shapes were semantically ambiguous. Without supporting colour, riders couldn't distinguish states. Confirmed the need for dual coding (shape + colour) required by ISO 2575."><strong>V3 · Sistema de alertas com glifos.</strong> Reprovada — as formas de estrela eram semanticamente ambíguas. Sem cor de suporte, os condutores não distinguiam estados. Confirmou a necessidade de dupla-codificação (forma + cor) exigida pela ISO 2575.</div>
+  </div>
+  <div class="icell r16">
+    <img src="assets/moto_hero.png" alt="V4 — Versão final validada">
+    <div class="ilbl" data-pt="<strong>V4 · Versão final.</strong> Aprovada — SUS 83.9 (n=52, escala Bangor: Good). O mapa GPS foi <em>removido</em>: no teste de 4 segundos disputava atenção com a velocidade sem trazer valor crítico ao condutor a 120 km/h. Sobra o essencial — velocidade central, alertas ISO-2575 dual-coded (cor + forma) na coluna esquerda, dados secundários (V, °C, km, autonomia) em bordas." data-en="<strong>V4 · Final version.</strong> Approved — SUS 83.9 (n=52, Bangor scale: Good). The GPS map was <em>removed</em>: in the 4-second test it competed for attention with speed without adding critical value for a rider at 120 km/h. Only the essentials remain — central speed, ISO-2575 dual-coded alerts (colour + shape) on the left column, secondary data (V, °C, km, range) at the edges."><strong>V4 · Versão final.</strong> Aprovada — SUS 83.9 (n=52, escala Bangor: Good). O mapa GPS foi <em>removido</em>: no teste de 4 segundos disputava atenção com a velocidade sem trazer valor crítico ao condutor a 120 km/h. Sobra o essencial — velocidade central, alertas ISO-2575 dual-coded (cor + forma) na coluna esquerda, dados secundários (V, °C, km, autonomia) em bordas.</div>
   </div>
 </div>
 
 <div class="tsec rev">
   <div class="tsec-lbl" data-pt="Hie<br>rar<br>quia" data-en="Hie<br>rar<br>chy">Hie<br>rar<br>quia</div>
   <div class="tsec-body">
-    <p data-pt="A hierarquia de informação foi estruturada em <strong>três níveis: crítico, operacional e contextual</strong>. Levando em conta definições feitas a partir do estudo semiótico de esboços de estudantes." data-en="The information hierarchy was structured into <strong>three levels: critical, operational and contextual</strong>. Taking into account definitions derived from the semiotic study of student sketches.">A hierarquia de informação foi estruturada em <strong>três níveis: crítico, operacional e contextual</strong>. Levando em conta definições feitas a partir do estudo semiótico de esboços de estudantes.</p>
+    <p data-pt="A hierarquia foi estruturada em <strong>três níveis: crítico, operacional e contextual</strong>. Estes níveis emergiram de um workshop de co-design com 30 estudantes de engenharia mecânica — analisei os esboços dos participantes para identificar quais os elementos que instintivamente colocam no topo do painel." data-en="The hierarchy was structured in <strong>three levels: critical, operational and contextual</strong>. These levels emerged from a co-design workshop with 30 mechanical engineering students — I analysed the participants' sketches to identify which elements they instinctively placed at the top of the panel.">A hierarquia foi estruturada em <strong>três níveis: crítico, operacional e contextual</strong>. Estes níveis emergiram de um workshop de co-design com 30 estudantes de engenharia mecânica — analisei os esboços dos participantes para identificar quais os elementos que instintivamente colocam no topo do painel.</p>
     <p data-pt="A <strong>tipografia foi escolhida por legibilidade em condições adversas</strong> — fontes com espaçamento generoso, sem serifas, com abertura de contadores ampla. Os ícones usam formas distintas (não apenas cor) para serem reconhecíveis com visão periférica ou em daltonismo." data-en="<strong>Typography was selected for legibility in adverse conditions</strong> — typefaces with generous spacing, no serifs, wide counter apertures. Icons use distinct shapes (not just colour) to be recognisable with peripheral vision or in colour blindness.">A <strong>tipografia foi escolhida por legibilidade em condições adversas</strong> — fontes com espaçamento generoso, sem serifas, com abertura de contadores ampla. Os ícones usam formas distintas (não apenas cor) para serem reconhecíveis com visão periférica ou em daltonismo.</p>
   </div>
 </div>
 
-<div class="igrid c3 rev">
-  <div class="icell r1">
-    <img src="assets/moto_heat1.png" alt="Sistema de alertas">
-    <div class="ilbl" data-pt="Heatmap — velocimetro" data-en="Heatmap — speedometer">Heatmap — velocimetro</div>
+<div class="tsec rev">
+  <div class="tsec-lbl" data-pt="Attention<br>Map" data-en="Attention<br>Map">Attention<br>Map</div>
+  <div class="tsec-body">
+    <p data-pt="Para validar a hierarquia final usei um <strong>five-second test adaptado para 4 segundos</strong> — o tempo real que um condutor tem para consultar o painel a 120 km/h. Os pontos de fixação de 30 participantes foram agregados num mapa de calor sobre wireframe, revelando onde a atenção realmente cai." data-en="To validate the final hierarchy I used a <strong>five-second test adapted to 4 seconds</strong> — the actual time a rider has to consult the panel at 120 km/h. Fixation points from 30 participants were aggregated into a heatmap over the wireframe, revealing where attention actually lands.">Para validar a hierarquia final usei um <strong>five-second test adaptado para 4 segundos</strong> — o tempo real que um condutor tem para consultar o painel a 120 km/h. Os pontos de fixação de 30 participantes foram agregados num mapa de calor sobre wireframe, revelando onde a atenção realmente cai.</p>
+    <p data-pt="<strong>Verde intenso</strong> = zona olhada primeiro. <strong>Vermelho/rosa</strong> = periferia ignorada. Confirmou que velocidade (VEL) e GPS têm de partilhar a zona central; dados secundários (voltagem, autonomia, hora) migram para bordas; alertas críticos ocupam a coluna esquerda — quadrante mais ignorado pelo olhar directo, mas o mais preservado pela visão periférica." data-en="<strong>Deep green</strong> = zones looked at first. <strong>Red/pink</strong> = ignored periphery. Confirmed that speed (VEL) and GPS must share the central zone; secondary data (voltage, range, time) migrate to edges; critical alerts occupy the left column — the quadrant most ignored by direct gaze but the most preserved by peripheral vision."><strong>Verde intenso</strong> = zona olhada primeiro. <strong>Vermelho/rosa</strong> = periferia ignorada. Confirmou que velocidade (VEL) e GPS têm de partilhar a zona central; dados secundários (voltagem, autonomia, hora) migram para bordas; alertas críticos ocupam a coluna esquerda — quadrante mais ignorado pelo olhar directo, mas o mais preservado pela visão periférica.</p>
   </div>
-  <div class="icell r1">
-    <img src="assets/moto_heat2.png" alt="Navegação GPS">
-    <div class="ilbl" data-pt="Heatmap — piscas/setas" data-en="Heatmap — indicators/arrows">Heatmap — piscas/setas</div>
+</div>
+
+<div class="igrid c2 rev">
+  <div class="icell r16">
+    <img src="assets/amover_heatmap.png" alt="Attention heatmap sobre wireframe — 30 participantes, teste de 4 segundos">
+    <div class="ilbl" data-pt="Mapa de atenção — 30 participantes, teste de 4 segundos. Verde = zonas mais olhadas; vermelho = periferia ignorada." data-en="Attention map — 30 participants, 4-second test. Green = most-looked zones; red = ignored periphery.">Mapa de atenção — 30 participantes, teste de 4 segundos. Verde = zonas mais olhadas; vermelho = periferia ignorada.</div>
   </div>
-  <div class="icell r1">
-    <img src="assets/moto_heat3.png" alt="Configuração">
-    <div class="ilbl" data-pt="Heatmap — icones" data-en="Heatmap — icons">Heatmap — icones</div>
+  <div class="icell r16">
+    <img src="assets/amover_wireframe.png" alt="Wireframe final — zonas de composição derivadas do heatmap">
+    <div class="ilbl" data-pt="Wireframe final — zonas de composição derivadas do heatmap. Eixos guiam o olhar; áreas periféricas alojam alertas e controlos secundários." data-en="Final wireframe — composition zones derived from the heatmap. Axes guide the gaze; peripheral areas house alerts and secondary controls.">Wireframe final — zonas de composição derivadas do heatmap. Eixos guiam o olhar; áreas periféricas alojam alertas e controlos secundários.</div>
   </div>
 </div>
 
@@ -355,26 +378,35 @@ nav {
     <span style="color:var(--yellow);">km/h</span>
   </div>
   <p style="font-size:11px;color:rgba(245,240,232,.4);text-transform:uppercase;letter-spacing:.12em;margin-top:16px;"
-    data-pt="— Motorbike Dashboard · HCI · Ergonomia · Embedded UI · Mestrado UTAD"
-    data-en="— Motorbike Dashboard · HCI · Ergonomics · Embedded UI · MSc UTAD">
-    — Motorbike Dashboard · HCI · Ergonomia · Embedded UI · Mestrado UTAD
+    data-pt="— A-MoVeR Dashboard · Media XLab UTAD · HCI · Ergonomia · Embedded UI · SUS 83.9 (n=52)"
+    data-en="— A-MoVeR Dashboard · Media XLab UTAD · HCI · Ergonomics · Embedded UI · SUS 83.9 (n=52)">
+    — A-MoVeR Dashboard · Media XLab UTAD · HCI · Ergonomia · Embedded UI · SUS 83.9 (n=52)
   </p>
 </div>
 
 <div class="cta-row rev">
-  <div class="cta-title">Motorbike<br>Dashboard</div>
+  <div class="cta-title">A-MoVeR<br>Dashboard</div>
   <a href="https://www.figma.com/proto/ZhPeI3JnitRsGyehLN78l8" target="_blank" class="cta-btn" data-pt="Ver protótipo ↗" data-en="View prototype ↗">Ver protótipo ↗</a>
 </div>
 
 <script>
-let currentLang = 'pt';
+let currentLang = 'en';
+function applyLang() {
+  document.documentElement.lang = currentLang;
+  var lt = document.getElementById('lang-toggle');
+  if (lt) lt.textContent = currentLang === 'pt' ? 'EN' : 'PT';
+  document.querySelectorAll('[data-pt][data-en]').forEach(el => {
+    if (el.dataset[currentLang]) el.innerHTML = el.dataset[currentLang];
+  });
+}
 function toggleLang() {
   currentLang = currentLang === 'pt' ? 'en' : 'pt';
-  document.documentElement.lang = currentLang;
-  document.getElementById('lang-toggle').textContent = currentLang === 'pt' ? 'EN' : 'PT';
-  document.querySelectorAll('[data-pt][data-en]').forEach(el => {
-    el.innerHTML = el.dataset[currentLang];
-  });
+  applyLang();
+}
+if (document.readyState === 'loading') {
+  document.addEventListener('DOMContentLoaded', applyLang);
+} else {
+  applyLang();
 }
 const obs = new IntersectionObserver(es => es.forEach(e => {
   if(e.isIntersecting) e.target.classList.add('vis');

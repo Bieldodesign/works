@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="pt">
+<html lang="en">
 <head>
 <meta charset="UTF-8">
 <link rel="icon" type="image/png" href="assets/ico.png">
@@ -265,7 +265,7 @@ nav {
 <div class="hero rev">
   <div class="hero-left">
     <div>
-      <div class="hero-cat" data-pt="Web App · B2B · FlutterFlow · Mestrado UTAD · Em Desenvolvimento" data-en="Web App · B2B · FlutterFlow · MSc UTAD · In Development">Web App · B2B · FlutterFlow · Mestrado UTAD · Em Desenvolvimento</div>
+      <div class="hero-cat" data-pt="Web App · B2B · Design Case Study · FlutterFlow · Mestrado UTAD" data-en="Web App · B2B · Design Case Study · FlutterFlow · MSc UTAD">Web App · B2B · Design Case Study · FlutterFlow · Mestrado UTAD</div>
       <h1 class="hero-title">2A<br>Con<span class="a">sul</span><br><span class="o">ting</span></h1>
       <p class="hero-sub" data-pt="Plataforma de gestão de projectos para empresa de consultoria IT. Sistema com 4 perfis de utilizador distintos — Admin, GP, TM e DEV — com gestão de clientes, projectos, tarefas e indicadores de execução. Desenvolvida com FlutterFlow no contexto do mestrado." data-en="Project management platform for an IT consulting firm. System with 4 distinct user profiles — Admin, PM, TM and DEV — covering client management, projects, tasks and execution metrics. Built with FlutterFlow as part of the MSc programme.">Plataforma de gestão de projectos para empresa de consultoria IT. Sistema com 4 perfis de utilizador distintos — Admin, GP, TM e DEV — com gestão de clientes, projectos, tarefas e indicadores de execução. Desenvolvida com FlutterFlow no contexto do mestrado.</p>
     </div>
@@ -341,21 +341,39 @@ nav {
   </p>
 </div>
 
+<div class="tsec rev">
+  <div class="tsec-lbl" data-pt="Estado<br>do<br>Projecto" data-en="Project<br>Status">Estado<br>do<br>Projecto</div>
+  <div class="tsec-body">
+    <p data-pt="O <strong>trabalho de UX/UI está entregue</strong>: arquitectura de informação para os 4 perfis, fluxos de navegação, sistema de componentes em Figma, e high-fidelity dos ecrãs principais. A implementação low-code em FlutterFlow segue no âmbito da disciplina de Engenharia Informática — enquanto o design está fechado, o build cobre 60% das rotas planeadas." data-en="The <strong>UX/UI work is complete</strong>: information architecture for the 4 profiles, navigation flows, Figma component system, and high-fidelity screens for the main routes. Low-code implementation in FlutterFlow is ongoing within the Computer Engineering course — while design is closed, the build covers 60% of the planned routes.">O <strong>trabalho de UX/UI está entregue</strong>: arquitectura de informação para os 4 perfis, fluxos de navegação, sistema de componentes em Figma, e high-fidelity dos ecrãs principais. A implementação low-code em FlutterFlow segue no âmbito da disciplina de Engenharia Informática — enquanto o design está fechado, o build cobre 60% das rotas planeadas.</p>
+    <p data-pt="<strong>Aprendizagem principal:</strong> desenhar um sistema com 4 perfis obriga a decidir cedo o que é permissão e o que é preferência. As primeiras iterações tinham todos os perfis a ver a mesma dashboard com toggles — foi rejeitado porque criava fricção cognitiva sem valor. A versão final entrega vistas dedicadas por perfil; menos flexível, muito mais rápido de operar." data-en="<strong>Main learning:</strong> designing a 4-profile system forces you to decide early what is permission and what is preference. The first iterations had all profiles seeing the same dashboard with toggles — rejected because it created cognitive friction without value. The final version delivers dedicated views per profile; less flexible, much faster to operate.">
+    <strong>Aprendizagem principal:</strong> desenhar um sistema com 4 perfis obriga a decidir cedo o que é permissão e o que é preferência. As primeiras iterações tinham todos os perfis a ver a mesma dashboard com toggles — foi rejeitado porque criava fricção cognitiva sem valor. A versão final entrega vistas dedicadas por perfil; menos flexível, muito mais rápido de operar.</p>
+  </div>
+</div>
+
 <div class="cta-row rev">
   <div class="cta-title">2A<br>Consulting</div>
-  <span class="cta-btn cta-disabled" data-pt="Em desenvolvimento →" data-en="In development →">Em desenvolvimento →</span>
+  <a href="portfolio.html#work" class="cta-btn" data-pt="Ver outros casos →" data-en="See other cases →">Ver outros casos →</a>
 </div>
 
 <script>
-let currentLang = 'pt';
+let currentLang = 'en';
 
+function applyLang() {
+  document.documentElement.lang = currentLang;
+  var lt = document.getElementById('lang-toggle');
+  if (lt) lt.textContent = currentLang === 'pt' ? 'EN' : 'PT';
+  document.querySelectorAll('[data-pt][data-en]').forEach(el => {
+    if (el.dataset[currentLang]) el.innerHTML = el.dataset[currentLang];
+  });
+}
 function toggleLang() {
   currentLang = currentLang === 'pt' ? 'en' : 'pt';
-  document.documentElement.lang = currentLang;
-  document.getElementById('lang-toggle').textContent = currentLang === 'pt' ? 'EN' : 'PT';
-  document.querySelectorAll('[data-pt][data-en]').forEach(el => {
-    el.innerHTML = el.dataset[currentLang];
-  });
+  applyLang();
+}
+if (document.readyState === 'loading') {
+  document.addEventListener('DOMContentLoaded', applyLang);
+} else {
+  applyLang();
 }
 
 const obs = new IntersectionObserver(es => es.forEach(e => {
