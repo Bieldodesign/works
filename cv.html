@@ -402,6 +402,7 @@ body.mode-dense .specs                        { display: none; }
 body.mode-dense .tsec[data-section="research"]{ display: none; }
 body.mode-dense .tsec[data-section="skills"]  { display: none; }
 body.mode-dense .tsec[data-section="tools"]   { display: none; }
+body.mode-dense .tsec[data-section="projects"]{ display: none; }
 
 /* Tsec restantes: Profile, Experience, Education */
 body.mode-dense .tsec { grid-template-columns: 130px 1fr; }
@@ -498,6 +499,13 @@ body.mode-landscape .cv-main .col-l { border-right: var(--border); }
 --------------------------------------------------------------------------- */
 
 @media print {
+  /* Sem isto o browser descarta fundos ao imprimir — os blocos escuros
+     (.hero-right, .cta) ficariam com texto claro sobre papel branco. */
+  *, *::before, *::after {
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+  }
+
   body { background: white; font-size: 10px; line-height: 1.4; }
   body::before { display: none; }
   nav { display: none !important; }
@@ -769,6 +777,20 @@ body.mode-landscape .cv-main .col-l { border-right: var(--border); }
         </ul>
       </div>
 
+    </div>
+  </div>
+
+  <!-- ACADEMIC PROJECTS -->
+  <div class="tsec" data-section="projects">
+    <div class="tsec-lbl">Pro<br>jects</div>
+    <div class="tsec-body">
+      <ul class="xp-bullets">
+        <li><strong>2A Consulting SI</strong> — UX/UI Designer · UTAD</li>
+        <li><strong>App Favo</strong> — UI Designer · LabES, UFES</li>
+        <li><strong>Design em Parceria</strong> — Social design &amp; wayfinding · ProDesign, UFES</li>
+        <li><strong>Projeto EVA</strong> — LabTAR, UFES</li>
+        <li><strong>SiGI</strong> — IFES</li>
+      </ul>
     </div>
   </div>
 
